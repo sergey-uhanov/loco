@@ -1,0 +1,52 @@
+{
+  "name": "simpl-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^3.0.3",
+    "browserify": "^17.0.1",
+    "css-loader": "^7.1.2",
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dest": "^0.2.3",
+    "gulp-file-include": "^2.3.0",
+    "gulp-filter": "^9.0.1",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^5.0.0",
+    "i": "^0.3.7",
+    "npm": "^10.9.1",
+    "sass": "^1.81.1",
+    "style-loader": "^4.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^11.1.15"
+  }
+}
