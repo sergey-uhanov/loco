@@ -11,7 +11,7 @@ node_modules
 images-con
 
 #dist
-assets
+#assets
 dist-ssr
 *.local
 .env
