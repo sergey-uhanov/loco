@@ -23,7 +23,7 @@ const sass = gulpSass(dartSass);
 // Пути к файлам и папкам
 const paths = {
 	styles: {
-		src: 'src/scss/style.scss',
+		src: 'src/scss/**/*.scss',
 		dest: 'dist/css/',
 	},
 	scripts: {

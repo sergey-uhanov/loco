@@ -1,58 +1,284 @@
 @use "_mixins.scss" as mix;
 //====================================================================================================
+.header {
+  padding: mix.rem(24) 0;
+  font-weight: 600;
+  font-size: 0.69rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: #453;
+
+  &__container {
+    position: relative;
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mix.respond-to('tablet') {
+      flex-grow: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: mix.rem(48);
+    @include mix.respond-to('tablet') {
+      column-gap: 3rem;
+    }
+    @include mix.respond-to('500') {
+      column-gap: 5rem;
+    }
+  }
+
+
+  &__link {
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    color: #fff;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__link:hover {
+    opacity: 0.5;
+  }
+
+  &__logo {
+    margin-right: 8.7rem;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__logo:hover {
+    opacity: 0.5;
+  }
+}
+
+.popup-button {
+  border: 1px solid rgba(253, 253, 253, 0.32);
+  font-weight: 600;
+  font-size: 0.69rem;
+  letter-spacing: 0.06em;
+  padding: mix.rem(17) mix.rem(48);
+  margin-left: 2.2rem;
+  transition: border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
+  @include mix.respond-to('tablet') {
+    padding: mix.rem(14.5) mix.rem(35);
+    margin-left: 0.5rem;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.popup-button:hover {
+  border-radius: 10px;
+  transform: scale(1.05);
+}
+
+.popup-button:active {
+
+  transform: scale(0.95);
+}
+
+.menu__list_pc-menu {
+  @include mix.respond-to('tablet') {
+    display: none;
+  }
+}
+
+.logo-main-link {
+  font-weight: 400;
+  font-size: 0.88rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
 
 //====================================================================================================
-header{
-	color: red;
+.menu-burger {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #080808;
+  padding-top: mix.rem(212);
+  padding-left: mix.rem(212);
+  transition: transform 1s ease;
+  transform: translateX(0%);
+  @include mix.respond-to('mobile') {
+    padding-top: mix.rem(356);
+    padding-left: mix.rem(188);
+  }
+  @include mix.respond-to(600) {
+    padding-top: mix.rem(152);
+    padding-left: 86px;
+  }
+
+  &__list {
+    max-width: mix.rem(233);
+    @include mix.respond-to('mobileSmall') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--white);
+    opacity: 0.5;
+    transition: transform 0.3s ease-in-out;
+    @include mix.respond-to('mobileSmall') {
+      font-size: 1.62rem;
+
+    }
+  }
+  &__item:hover{
+    transform: scale(1.1);
+  }
+  &__item_button {
+    display: none;
+    @include mix.respond-to(767) {
+      display: block;
+      width: 9.87rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__item_active {
+    opacity: 1;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: mix.rem(41);
+  }
+
 }
+
+.menu-burger_hidden {
+  transform: translateX(-100%);
+}
+
+
 //Burger
 
 .icon-menu {
-	display: none;
-	@media (max-width: 768px) {
-		display: block;
-		position: relative;
-		width: mix.rem(30);
-		height: mix.rem(18);
-		z-index: 5;
-		@media (any-hover: none) {
-			cursor: default;
-		}
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: mix.rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - mix.rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - mix.rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - mix.rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
+  @include mix.respond-to('tablet') {
+    display: block;
+    position: absolute;
+    left: 13.21rem;
+    bottom: mix.rem(13);
+    width: mix.rem(28);
+    height: mix.rem(18);
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span {
+      transition: all 0.3s ease 0s;
+      position: absolute;
+      left: 2px;
+      bottom: 5px;
+      width: 100%;
+      height: mix.rem(1);
+      background-color: var(--white);
+      @include mix.respond-to('tablet') {
+        left: 0;
+      }
+    }
+    &::before {
+      content: "";
+      transition: all 0.3s ease 0s;
+      left: 2px;
+      position: absolute;
+      width: 100%;
+      height: mix.rem(1);
+      background-color: var(--white);
+      @include mix.respond-to('tablet') {
+        left: 0;
+      }
+    }
+    &::after {
+      content: "Menu";
+      transition: all 0.3s ease 0s;
+      left: 53px;
+      bottom: 12px;
+      position: absolute;
+      width: 100%;
+      height: mix.rem(2);
+      @include mix.respond-to('tablet') {
+        left: 53px;
+      }
+      @media (max-width: 767px) {
+        content: '';
+        display: none;
+      }
+
+    }
+    &::before {
+      top: 5px;
+    }
+
+    span {
+
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before,
+      &::after {
+      }
+
+      &::before {
+        top: calc(50% - mix.rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - mix.rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+  @include mix.respond-to('mobile') {
+    left: 12.41rem;
+  }
+  @include mix.respond-to(767) {
+    left: auto;
+    right: 23px;
+    top: 0px;
+
+  }
+}
+
+.icon-menu_open {
+  &:after {
+    display: none;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  span {
+    transform: rotate(-45deg);
+    top: 5px;
+  }
+
 }

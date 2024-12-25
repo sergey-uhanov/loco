@@ -1,0 +1,2 @@
+(()=>{"use strict";var e,t,n;e=document.querySelector(".menu-burger"),(t=document.querySelector(".icon-menu")).addEventListener("click",(function(){e.classList.toggle("menu-burger_hidden"),t.classList.toggle("icon-menu_open")})),n=window.location.pathname,document.querySelectorAll("".concat(".menu-burger__item"," a")).forEach((function(e){e.getAttribute("href")===n&&e.parentElement.classList.add("menu-burger__item_active")}))})();
+//# sourceMappingURL=bundle.js.map

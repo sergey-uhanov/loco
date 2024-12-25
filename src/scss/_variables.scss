@@ -1,29 +1,44 @@
 @use "_mixins.scss" as mixins;
+@use "sass:math";
+
 :root {
   --font-family: "Montserrat", sans-serif;
   --second-family: "FreightBigProLight-Italic", sans-serif;
   --third-family: "Adieu", sans-serif;
   --font3: "Roboto", sans-serif;
+
+  --pri-color: #080808;
+  --sec-color: #828282;
+  --white: #fff;
+
+
 }
 
-$maineColor: var(--aluminium);
-$fontSize: mixins.rem(14);
+$maineColor: var(--font-family);
+$fontSize: mixins.rem(16);
 $minWidth: 350;
 $maxWidth: 1440;
-$maxWidthContainer: 1260;
-$containerPadding: 180;
+$maxWidthContainer: 1314;
+$containerPadding: 126;
 $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: mixins.rem($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
-$tablet: mixins.rem(1023.98); // Планшети, деякі телефони в горизонтальному положенні
-$mobile: mixins.rem(767.98); // Телефони L
-$mobileSmall: mixins.rem(350); // Телефони S
+$tablet: mixins.rem(1024); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: mixins.rem(768); // Телефони L
+$mobileSmall: mixins.rem(375); // Телефони S
 
 [class*="__container"] {
   @if ($maxWidthContainer>0) {
     max-width: mixins.rem($containerWidth);
+    padding: 0 mixins.rem(62) 0 mixins.rem(64);
     margin: 0 auto;
   }
-  @media (max-width: 1920px) {
-    padding: 0 30px;
+  @media(max-width: $tablet) {
+    padding: 0 mixins.rem(56)
+  }
+  @media(max-width: $mobile) {
+    padding: 0 mixins.rem(48)
+  }
+  @media(max-width: $mobileSmall) {
+    padding: 0 mixins.rem(24)
   }
 }
