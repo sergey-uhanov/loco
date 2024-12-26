@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 images-con
 
-#dist
+dist
 assets
 dist-ssr
 *.local

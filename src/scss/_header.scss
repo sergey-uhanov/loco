@@ -6,10 +6,12 @@
   font-size: 0.69rem;
   letter-spacing: 0.06em;
   color: var(--white);
-  background-color: #453;
+
+
 
   &__container {
     position: relative;
+    z-index: 10;
   }
 }
 
@@ -32,7 +34,8 @@
   &__list {
     display: flex;
     align-items: center;
-    column-gap: mix.rem(48);
+
+    column-gap: 3.2rem;
     @include mix.respond-to('tablet') {
       column-gap: 3rem;
     }
@@ -116,6 +119,7 @@
   padding-left: mix.rem(212);
   transition: transform 1s ease;
   transform: translateX(0%);
+  z-index: 10;
   @include mix.respond-to('mobile') {
     padding-top: mix.rem(356);
     padding-left: mix.rem(188);
