@@ -1,9 +1,0 @@
-@use "_header.scss";
-@use "home.scss";
-@use "_reset.scss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-body{
-  color: var(--pri-color);
-  font-family: var(--font-family);
-}

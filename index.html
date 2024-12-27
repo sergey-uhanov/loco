@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="menu-burger menu-burger_hidden">
+        <ul class="menu-burger__list">
+            <li class="menu-burger__item"><a href="/">Home</a></li>
+            <li class="menu-burger__item"><a href="/projects">Projects</a></li>
+            <li class="menu-burger__item"><a href="/about">About us</a></li>
+            <li class="menu-burger__item"><a href="/blog">Blog</a></li>
+            <li class="menu-burger__item"><a href="/contacts">Contacts</a></li>
+            <li class="menu-burger__item_button popup-button"><a href="/">Send Request</a></li>
+
+        </ul>
+    </div>
+    <div class="header__container">
+        <button type="button" class="icon-menu "><span></span></button>
+        <div class="header__menu menu">
+
+            <div class="menu__logo"><a href="/" class="  logo-main-link">Logo</a></div>
+            <nav class="menu__body">
+                <ul class="menu__list  menu__list_pc-menu">
+                    <li class="menu__item"><a href="/projects.html" class="menu__link">Projects</a></li>
+                    <li class="menu__item"><a href="/about.html" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="/blog.html" class="menu__link">Blog</a></li>
+                    <li class="menu__item"><a href="/contacts.html" class="menu__link">Contacts</a></li>
+                </ul>
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="/" class="menu__link "> En</a></li>
+                    <li class="menu__item">
+                        <button class="popup-button">Send Request</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="first-screen">
+        <div class="first-screen__container">
+            <div class="background-slider">
+                <div class="main-swiper">
+                    <div class=" main-swiper__wrapper swiper-wrapper">
+                        <div class="main-swiper__slide swiper-slide" style="background-image: url('./assets/Rectangle.webp')"></div>
+                        <div class="main-swiper__slide swiper-slide" style="background-image: url('assets/Rectangle2.webp')"></div>
+<!--                        <div class="main-swiper__slide swiper-slide" style="background-image: url('./assets/Rectangle.webp')"></div>-->
+<!--                        <div class="main-swiper__slide swiper-slide" style="background-image: url('./assets/Rectangle2.webp')"></div>-->
+<!--                        <div class="main-swiper__slide swiper-slide" style="background-image: url('./assets/Rectangle2.webp')"></div>-->
+                    </div>
+                    <!-- Навигация -->
+                    <div class="main-swiper__nav-block">
+
+                        <div class="main-swiper__scrollbar-container">
+                            <div class="main-swiper__button-prev">
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 9L1 5L5 1" stroke="white" stroke-width="0.75"/>
+                                </svg>
+                            </div>
+                            <span class="main-swiper__current-slide">1</span>
+                            <div class="swiper-scrollbar main-swiper__scrollbar">
+                                <div class="main-swiper__custom-scrollbar"></div>
+                            </div>
+                            <span class="main-swiper__total-slides">2</span>
+                            <div class="main-swiper__button-next">
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L1 9" stroke="white" stroke-width="0.75"/>
+                                </svg>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second-screen">
+
+    </section>
+</main>
+
+
+<script type="module" src="./js/bundle.js"></script>
+</body>
+</html>
