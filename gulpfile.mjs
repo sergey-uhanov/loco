@@ -150,7 +150,7 @@ export const deploy = gulp.series(  (done) => {
 		path.join(process.cwd(), 'dist'),
 		{
 			branch: 'ghp', // Указание ветки
-			gitignore: false,
+
 		},
 		(err) => {
 			if (err) {
