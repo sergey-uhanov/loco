@@ -10,17 +10,19 @@ export function initSwiper() {
     const swiper = new Swiper('.main-swiper', {
         modules: [Navigation, Pagination, Scrollbar],
         direction: 'horizontal',
-        loop: false, // Зацикливание
-        slidesPerView: 1.2, // Показывает 1 целый слайд + часть следующего
-        spaceBetween: 0, // Расстояние между слайдами
+        loop: false,
+
+        slidesPerView: "auto",
+        lidesPerView: 'auto',
+        spaceBetween: 0,
         autoplay: {
-            delay: 5000, // Интервал автопрокрутки
+            delay: 5000,
             disableOnInteraction: false,
         },
         scrollbar: {
             el: '.main-swiper__scrollbar',
-            draggable: true, // Включаем возможность перетаскивания
-            snapOnRelease: true, // Автоматический переход к ближайшему слайду
+            draggable: true,
+            snapOnRelease: true,
         },
         on: {
             init: function () {
@@ -62,7 +64,7 @@ function updateSlideNumbers(swiper) {
 
     if (currentSlideEl && totalSlidesEl) {
         currentSlideEl.textContent = `0${swiper.realIndex + 1}`;
-        totalSlidesEl.textContent =`0${ swiper.slides.length}`;
+        totalSlidesEl.textContent = `0${swiper.slides.length}`;
     } else {
         console.warn('Элементы .swiper-current-slide или .swiper-total-slides не найдены в DOM.');
     }

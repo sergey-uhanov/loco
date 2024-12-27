@@ -16,6 +16,8 @@ import webpackStream from 'webpack-stream';
 import gulpFilter from 'gulp-filter';
 import webp from 'gulp-webp';
 import replace from 'gulp-replace';
+import ghPages from 'gh-pages';
+import path from 'path';
 
 const bs = browserSync.create();
 const sass = gulpSass(dartSass);
@@ -46,6 +48,9 @@ const paths = {
 		src: 'src/assets/**/*',
 		dest: 'dist/assets',
 	},
+	buildFolder:{
+		src: 'dist',
+	}
 };
 
 // Очистка папки dist перед сборкой
@@ -117,6 +122,7 @@ export const replaceHtml = async () => {
 		.pipe(gulp.dest('dist')); // Сохранение изменений
 };
 
+
 // Локальный сервер
 export const serve = () => {
 	bs.init({
@@ -130,7 +136,7 @@ export const serve = () => {
 	gulp.watch(paths.assets.src, assets);
 };
 
-// Основные задачи
+
 export const build = gulp.series(
 	clean,
 	gulp.parallel(styles, scripts, images, fonts, html, assets, convertWebp),
@@ -139,5 +145,22 @@ export const build = gulp.series(
 
 export const dev = gulp.series(build, serve);
 
-// Экспорт по умолчанию
+export const deploy = gulp.series(build , (done) => {
+	ghPages.publish(
+		path.join(process.cwd(), 'dist'), // Путь к папке 'dist'
+		{
+			branch: 'gh-pages', // Указание ветки
+			message: 'Auto-generated commit', // Сообщение коммита
+		},
+		(err) => {
+			if (err) {
+				console.error('Ошибка деплоя:', err);
+			} else {
+				console.log('Успешный деплой!');
+			}
+			done();
+		}
+	);
+});
+
 export default dev;

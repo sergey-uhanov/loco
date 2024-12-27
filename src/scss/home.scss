@@ -35,21 +35,23 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    @include mix.respond-to('tablet') {
-      max-width: 863px;
+    @include mix.respond-to(1440){
+      max-width: 85.3vw;
     }
     @include mix.respond-to('tablet') {
-      max-width: 863px;
+      max-width: 84.3vw;
     }
+
     @include mix.respond-to('mobile') {
-      max-width: 656px;
+      max-width: 85vw;
     }
     @include mix.respond-to(600) {
-      max-width: 470px;
+      max-width: 84.3vw;
     }
     @include mix.respond-to('mobileSmall') {
-      max-width: 316px;
+      max-width: 84.3vw;
     }
+
   }
 
 
