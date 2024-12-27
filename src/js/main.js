@@ -8,3 +8,4 @@ initSwiper();
 openBurger()
 setActiveMenu('.menu-burger__item')
 
+console.log("pojgvbpojbpojpOJvbp;")

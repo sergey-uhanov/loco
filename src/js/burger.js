@@ -6,5 +6,6 @@ export const openBurger = () => {
 		containerMenuBurger.classList.toggle('menu-burger_hidden');
 		burgerButton.classList.toggle('icon-menu_open');
 	});
+	console.log("pojgvbpojbpojpOJvbp;")
 };
 

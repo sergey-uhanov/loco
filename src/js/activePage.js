@@ -7,4 +7,6 @@ export function setActiveMenu(selector) {
             link.parentElement.classList.add('menu-burger__item_active'); // Добавляем класс
         }
     });
+    console.log("pojgvbpojbpojpOJvbp;")
 }
+console.log("pojgvbpojbpojpOJvbp;")

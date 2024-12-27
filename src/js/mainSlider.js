@@ -11,7 +11,6 @@ export function initSwiper() {
         modules: [Navigation, Pagination, Scrollbar],
         direction: 'horizontal',
         loop: false,
-
         slidesPerView: "auto",
         lidesPerView: 'auto',
         spaceBetween: 0,
