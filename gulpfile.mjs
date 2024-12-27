@@ -150,7 +150,7 @@ export const deploy = gulp.series(  (done) => {
 		path.join(process.cwd(), 'dist'),
 		{
 			branch: 'ghp', // Указание ветки
-
+			message: 'Auto-generated commit'
 		},
 		(err) => {
 			if (err) {
