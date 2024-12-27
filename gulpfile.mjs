@@ -147,7 +147,7 @@ export const dev = gulp.series(build, serve);
 
 export const deploy = gulp.series(build , (done) => {
 	ghPages.publish(
-		path.join(process.cwd(), 'dist'), // Путь к папке 'dist'
+		path.join(process.cwd(), 'dist'),
 		{
 			branch: 'gh-pages', // Указание ветки
 			message: 'Auto-generated commit', // Сообщение коммита
