@@ -4,8 +4,8 @@ import { initSwiper } from './mainSlider.js';
 import Swiper from "swiper";
 
 
-initSwiper();
-openBurger()
-setActiveMenu('.menu-burger__item')
-
-console.log("pojgvbpojbpojpOJvbp;")
+document.addEventListener('DOMContentLoaded', () => {
+    initSwiper();
+    openBurger();
+    setActiveMenu('.menu-burger__item');
+});

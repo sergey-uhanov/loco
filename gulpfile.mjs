@@ -16,8 +16,9 @@ import webpackStream from 'webpack-stream';
 import gulpFilter from 'gulp-filter';
 import webp from 'gulp-webp';
 import replace from 'gulp-replace';
-import ghPages from 'gh-pages';
+// import ghPages from 'gulp-gh-pages';
 import path from 'path';
+import ghPages  from 'gh-pages';
 
 const bs = browserSync.create();
 const sass = gulpSass(dartSass);
@@ -48,9 +49,8 @@ const paths = {
 		src: 'src/assets/**/*',
 		dest: 'dist/assets',
 	},
-	buildFolder:{
-		src: 'dist',
-	}
+	deploy: 'dist/**/*',
+
 };
 
 // Очистка папки dist перед сборкой
@@ -145,22 +145,14 @@ export const build = gulp.series(
 
 export const dev = gulp.series(build, serve);
 
-export const deploy = gulp.series(  (done) => {
-	ghPages.publish(
-		path.join(process.cwd(), 'dist'),
-		{
-			branch: 'ghp', // Указание ветки
-			message: 'Auto-generated commit'
-		},
-		(err) => {
-			if (err) {
-				console.error('Ошибка деплоя:', err);
-			} else {
-				console.log('Успешный деплой!');
-			}
-			done();
-		}
-	);
-});
+// export const deploy = () => {
+// 	return gulp.src(paths.deploy)
+// 		.pipe(ghPages());
+// };
+export const deploy = (cb) => {
+	ghPages.publish('dist', {
+		message: 'Deploy with fixed images'
+	}, cb);
+};
 
 export default dev;
