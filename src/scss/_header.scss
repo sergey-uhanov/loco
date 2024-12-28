@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
 
-    column-gap: 3.2rem;
+    column-gap: 3rem;
     @include mix.respond-to('tablet') {
       column-gap: 3rem;
     }

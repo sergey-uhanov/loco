@@ -16,7 +16,6 @@ import webpackStream from 'webpack-stream';
 import gulpFilter from 'gulp-filter';
 import webp from 'gulp-webp';
 import replace from 'gulp-replace';
-// import ghPages from 'gulp-gh-pages';
 import path from 'path';
 import ghPages  from 'gh-pages';
 
@@ -118,7 +117,7 @@ export const convertWebp = async () => {
 // Замена ссылок на изображения в HTML
 export const replaceHtml = async () => {
 	return gulp.src('dist/**/*.html') // Путь к HTML в папке dist
-		.pipe(replace(/\.(png|jpg|jpeg)(\?[^"]*)?/g, '.webp$2')) // Заменяем расширения
+		.pipe(replace(/\.(png|jpg|jpeg)(\?[^"]*)?/g, '.webp$2'))
 		.pipe(gulp.dest('dist')); // Сохранение изменений
 };
 
@@ -145,10 +144,7 @@ export const build = gulp.series(
 
 export const dev = gulp.series(build, serve);
 
-// export const deploy = () => {
-// 	return gulp.src(paths.deploy)
-// 		.pipe(ghPages());
-// };
+
 export const deploy = (cb) => {
 	ghPages.publish('dist', {
 		message: 'Deploy with fixed images'

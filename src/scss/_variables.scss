@@ -1,8 +1,16 @@
 @use "_mixins.scss" as mixins;
 @use "sass:math";
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.montserrat-norm {
+               font-family: "Montserrat", serif;
+               font-optical-sizing: auto;
+               font-weight: 400;
+               font-style: normal;
+             }
 :root {
-  --font-family: "Montserrat", sans-serif;
+  --font-family: 'Montserrat', sans-serif;
   --second-family: "FreightBigProLight-Italic", sans-serif;
   --third-family: "Adieu", sans-serif;
   --font3: "Roboto", sans-serif;

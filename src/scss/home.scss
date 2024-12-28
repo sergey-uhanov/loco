@@ -4,22 +4,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 744px;
-
-  width: 100% ;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
   z-index: 1;
   @include mix.respond-to('tablet') {
-    height: 710px;
+
   }
   @include mix.respond-to('mobile') {
-    height: 959px;
+    height: 100vh;
   }
+
   @include mix.respond-to(600) {
-    height: 650px;
-  }
-  @include mix.respond-to('mobileSmall') {
-    height: 542px;
+    height: 100vh;
   }
 }
 
@@ -35,7 +32,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    @include mix.respond-to(1440){
+    @include mix.respond-to(1440) {
       max-width: 85.3vw;
     }
     @include mix.respond-to('tablet') {
@@ -54,9 +51,6 @@
 
   }
 
-
-
-
   &__nav-block {
     font-family: var(--font-family);
     color: var(--white);
@@ -68,23 +62,27 @@
     right: 160px;
     width: mix.rem(274);
     display: flex;
-    //align-items: center;
     height: 10px;
-    @include mix.respond-to('tablet'){
+    @include mix.respond-to('tablet') {
       top: 430px;
       right: 155px;
       width: mix.rem(236)
     }
-    @include mix.respond-to('mobile'){
+    @include mix.respond-to('mobile') {
       top: 575px;
       right: 125px;
       width: mix.rem(236)
-    }@include mix.respond-to('mobileSmall'){
-      top: 140px;
+    }
+    @include mix.respond-to('mobileSmall') {
+      top: 144px;
       right: 170px;
-      width: mix.rem(177)
+      width: 11.66rem
+    }
+    @include mix.respond-to(374) {
+      right: 106px;
     }
   }
+
   &__scrollbar {
     height: 3px; /* Высота полосы */
     border-radius: 5px;
@@ -112,9 +110,11 @@
     width: 100%;
     z-index: 10;
   }
-&__current-slide{
 
-}
+  &__current-slide {
+
+  }
+
   &__button-next {
     padding: 5px;
     cursor: pointer;
@@ -127,10 +127,246 @@
   }
 }
 
-
 .first-screen {
-  &__container {
-    height: 744px;
+  font-family: 'Montserrat', sans-serif;
+
+  &__content {
+    position: relative;
+    z-index: 9;
+    color: var(--white);
+    height: 650px;
+    pointer-events: none;
+    height: calc(100vh - 95px);
+    @include mix.respond-to('tablet') {
+      height: calc(100vh - 90px);
+    }
+    @include mix.respond-to(600) {
+      height: calc(100vh - 62px);
+    }
+
+  }
+
+  &__title-wrapper {
+    position: relative;
+    z-index: 9;
+    padding-top: 11.6rem;
+    padding-left: 12.4rem;
+    @include mix.respond-to('tablet') {
+      padding-top: 12.1rem;
+      padding-left: 6.2rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding-top: 18.4rem;
+      padding-left: 4.7rem;
+      max-width: 19.4rem;
+    }
+    @include mix.respond-to('600') {
+      padding-top: 10rem;
+      padding-left: 0rem;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3.4rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    @include mix.respond-to('tablet') {
+      font-size: 3rem;
+      letter-spacing: 0.01em;
+    }
+    @include mix.respond-to('mobile') {
+      font-size: 2.7rem;
+      line-height: 1.25;
+    }
+    @include mix.respond-to('600') {
+      font-size: 2.5rem;
+      line-height: 0.9752;
+
+    }
+  }
+
+  &__sub-title {
+    margin-top: 2.7rem;
+    margin-left: 1.1rem;
+    font-weight: 700;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    position: relative;
+    max-width: mix.rem(106);
+    @include mix.respond-to('tablet') {
+      margin-top: 1.9rem;
+      margin-left: 1.2rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-top: 1.8rem;
+    }
+    @include mix.respond-to(600) {
+      margin-top: 2.3rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__sub-title:after {
+    content: '';
+    height: 1px;
+    width: 56px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    position: absolute;
+    right: -61px;
+    bottom: 3px;
+  }
+
+  &__sub-title:before {
+    content: '';
+    height: 1px;
+    width: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    position: absolute;
+    left: -15px;
+    bottom: 3px;
+  }
+
+  &__footer {
+    color: var(--white);
+    display: flex;
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    bottom: 41px;
+    @include mix.respond-to('tablet') {
+      bottom: 31px;
+
+    }
+    @include mix.respond-to(600) {
+      bottom: 23px;
+    }
+  }
+
+  &__location {
+    display: flex;
+    gap: 15px;
+    margin-right: 7.73rem;
+    @include mix.respond-to('tablet') {
+      margin-right: 4.83rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-right: 4rem;
+    }
+    @include mix.respond-to(650) {
+      display: none;
+    }
+  }
+
+  &__item {
+    transition: color 0.3s ease;
+    pointer-events: auto;
+  }
+
+  &__item:hover {
+    color: #828282;
+  }
+
+  &__select {
+    margin-right: mix.rem(72);
+    @include mix.respond-to('tablet') {
+      margin-right: 2.6rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-right: 2rem;
+    }
+  }
+
+  &__contact-phone {
+    margin-right: 33px;
+    @include mix.respond-to('tablet') {
+      margin-right: 2.5rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-right: 2rem;
+    }
+    @include mix.respond-to(600) {
+      position: absolute;
+      bottom: 17px;
+      left: 171px;
+    }
+  }
+
+  &__email {
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.16em;
+    @include mix.respond-to('tablet') {
+      font-weight: 600;
+      font-size: 0.69rem;
+      letter-spacing: 0.06em;
+    }
+    @include mix.respond-to(600) {
+      white-space: nowrap;
+      position: absolute;
+      bottom: -2px;
+      left: 168px;
+    }
+  }
+
+  &__trasnsperent-text {
+    max-width: 7rem;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    right: 52px;
+    top: 583px;
+    transform: rotate(-90deg);
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 0.9752;
+    letter-spacing: 0.04em;
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--white);
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      line-height: 0.9752;
+      letter-spacing: 0.04em;
+      right: 22px;
+      top: 573px;
+    }
+    @include mix.respond-to('mobile') {
+      font-size: 2rem;
+      line-height: 0.9752;
+      letter-spacing: 0.04em;
+      right: -154px;
+      top: 693px;
+      max-width: 26rem;
+    }
+    @include mix.respond-to(600) {
+      font-size: 1.12rem;
+      line-height: 0.9752;
+      letter-spacing: 0.04em;
+      right: -158px;
+      top: 321px;
+      max-width: 26rem;
+      color: var(--white);
+    }
+    @include mix.respond-to(374) {
+      right: -142px;
+    }
+
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 0.69rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+      @include mix.respond-to(600) {
+        display: none;
+      }
+    }
   }
 }
 
