@@ -1,7 +1,5 @@
 @use "_mixins.scss" as mixins;
 @use "sass:math";
-//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .montserrat-norm {
                font-family: "Montserrat", serif;
@@ -24,7 +22,7 @@
 
 $maineColor: var(--font-family);
 $fontSize: mixins.rem(16);
-$minWidth: 350;
+$minWidth: 320;
 $maxWidth: 1440;
 $maxWidthContainer: 1314;
 $containerPadding: 126;

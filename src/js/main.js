@@ -6,6 +6,7 @@ import Swiper from "swiper";
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
     initSwiper();
     openBurger();
     setActiveMenu('.menu-burger__item');

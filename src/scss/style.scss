@@ -2,6 +2,12 @@
 @use "home.scss";
 @use "_reset.scss";
 @use "_select.scss";
+@use "_double-poster.scss";
+@use "_full-poster.scss";
+@use "_photos-collage.scss";
+@use "_circle-collage.scss";
+
+
 body{
   color: var(--pri-color);
   font-family: var(--font-family);

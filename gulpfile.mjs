@@ -147,7 +147,7 @@ export const dev = gulp.series(build, serve);
 
 export const deploy = (cb) => {
 	ghPages.publish('dist', {
-		message: 'Deploy with fixed images'
+		message: 'Deploy with fixed '
 	}, cb);
 };
 

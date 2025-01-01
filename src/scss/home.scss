@@ -59,8 +59,8 @@
     letter-spacing: 0.06em;
     position: absolute;
     top: 455px;
-    right: 160px;
-    width: mix.rem(274);
+    right: 165px;
+    width: 17.92rem;
     display: flex;
     height: 10px;
     @include mix.respond-to('tablet') {
@@ -118,7 +118,7 @@
   &__button-next {
     padding: 5px;
     cursor: pointer;
-    margin-left: 8px;
+    margin-left: -8px;
   }
 
   &__button-prev {
@@ -321,40 +321,44 @@
     position: absolute;
     z-index: 9;
     right: 52px;
-    top: 583px;
+    bottom: 50px;
     transform: rotate(-90deg);
     font-weight: 700;
     font-size: 3rem;
     line-height: 0.9752;
     letter-spacing: 0.04em;
     color: transparent;
+
     -webkit-text-stroke: 0.5px var(--white);
     @include mix.respond-to('tablet') {
       font-size: 2rem;
       line-height: 0.9752;
       letter-spacing: 0.04em;
       right: 22px;
-      top: 573px;
+      bottom: 55px;
     }
     @include mix.respond-to('mobile') {
       font-size: 2rem;
       line-height: 0.9752;
       letter-spacing: 0.04em;
-      right: -154px;
-      top: 693px;
-      max-width: 26rem;
+      right: -2px;
+      bottom: 59px;
+      white-space: nowrap;
     }
     @include mix.respond-to(600) {
+      position: absolute;
       font-size: 1.12rem;
       line-height: 0.9752;
       letter-spacing: 0.04em;
-      right: -158px;
-      top: 321px;
-      max-width: 26rem;
+      right: -33px;
+      bottom: 62px;
+      height: 30px;
+      white-space: nowrap;
       color: var(--white);
     }
     @include mix.respond-to(374) {
-      right: -142px;
+      right: -24px;
+      bottom: 104px;
     }
 
     span {
@@ -363,6 +367,7 @@
       font-size: 0.69rem;
       letter-spacing: 0.06em;
       margin-bottom: 10px;
+
       @include mix.respond-to(600) {
         display: none;
       }
@@ -370,7 +375,302 @@
   }
 }
 
+.company-philosophy {
+  position: relative;
+  padding-top: mix.rem(140);
+  padding-left: 8.22rem;
+  padding-bottom: mix.rem(140);
 
+  @include mix.respond-to('tablet') {
+    padding-top: mix.rem(124);
+    padding-left: 6.22rem;
+    padding-bottom: mix.rem(124);
+  }
+  @include mix.respond-to('mobile') {
+    padding-top: mix.rem(102);
+    padding-left: 4.72rem;
+    padding-bottom: 6.1rem;
+  }
+  @include mix.respond-to(600) {
+    padding-top: mix.rem(24.5);
+    padding-left: 4.72rem;
+    padding-left: 0rem;
+    padding-bottom: mix.rem(64);
+  }
+
+  &__big-img {
+    position: absolute;
+    right: 0;
+    @include mix.respond-to(1220) {
+      img {
+        width: 349px;
+      }
+    }
+    @include mix.respond-to(1056) {
+      display: none;
+    }
+  }
+
+  &__top-block {
+    max-width: mix.rem(515);
+    padding-top: mix.rem(80);
+    padding-bottom: mix.rem(262);
+    @include mix.respond-to('tablet') {
+      padding-top: mix.rem(56);
+      padding-bottom: mix.rem(193);
+      max-width: mix.rem(448);
+    }
+    @include mix.respond-to('mobile') {
+      padding-top: mix.rem(0);
+      padding-bottom: mix.rem(204);
+      max-width: mix.rem(520);
+    }
+    @include mix.respond-to('600') {
+      padding-bottom: mix.rem(198);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--pri-color);
+    margin-bottom: 2rem;
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 0.8rem;
+    }
+    @include mix.respond-to(600) {
+      font-size: 1.62rem;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 0.88rem;
+    line-height: 1.7066;
+    color: var(--pri-color);
+    opacity: 0.7;
+  }
+
+  &__description:nth-child(2) {
+    margin-bottom: 0.8rem;
+  }
+
+  &__description:nth-child(3) {
+    margin-bottom: 3.7rem;
+    @include mix.respond-to('tablet') {
+      margin-bottom: 2.3rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 2.1rem;
+    }
+  }
+
+  &__link {
+    max-width: mix.rem(174);
+    width: 100%;
+    position: relative;
+    font-weight: 700;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pri-color);
+    transition: opacity 0.3s ease;
+    margin-left: 1.1rem;
+  }
+
+  &__link::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 56px;
+    background: #828282;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    opacity: 0.3;
+  }
+
+  &__link:hover {
+    opacity: 0.5;
+  }
+
+  &__bottom-block {
+    display: flex;
+    column-gap: 20.8rem;
+    @include mix.respond-to('tablet') {
+      column-gap: 13rem;
+    }
+    @include mix.respond-to('mobile') {
+      column-gap: 4.9rem;
+    }
+    @include mix.respond-to(600) {
+      flex-direction: column;
+    }
+  }
+
+  &__double-img {
+    position: relative;
+  }
+
+  &__main-img {
+
+    @include mix.respond-to('tablet') {
+      width: 190px;
+    }
+    @include mix.respond-to('mobile') {
+      width: 153px;
+    }
+    @include mix.respond-to(600) {
+      width: 131px;
+    }
+  }
+
+  &__auxiliary-img {
+    position: absolute;
+    top: mix.rem(-124);
+    left: mix.rem(238);
+    @include mix.respond-to('tablet') {
+      width: 190px;
+      top: -5.95rem;
+      left: 9.7rem;
+    }
+    @include mix.respond-to('mobile') {
+      width: 383px;
+      top: -8.75rem;
+      left: 8.7rem;
+    }
+    @include mix.respond-to(600) {
+      width: 264px;
+      top: -7.15rem;
+      left: 3.8rem;
+    }
+    @include mix.respond-to(374) {
+      width: 220px;
+    }
+  }
+
+  &__quote {
+    max-width: mix.rem(380);
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.7066;
+    color: var(--pri-color);
+    opacity: 0.7;
+    padding-top: mix.rem(152);
+    position: relative;
+    @include mix.respond-to('tablet') {
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7066;
+      padding-top: 3.45rem;
+      max-width: 19.65rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding-top: 13.25rem;
+      max-width: 17.85rem;
+    }
+    @include mix.respond-to(600) {
+      max-width: 100%;
+      padding-top: 4.9rem;
+      padding-left: 2.56rem;
+    }
+  }
+
+  &__quote::before {
+    content: '“';
+    display: block;
+    position: absolute;
+    left: -50px;
+    transform: translateY(-7px);
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #080808;
+    @include mix.respond-to('tablet') {
+      left: -30px;
+      font-size: 1.62rem;
+      transform: translateY(-3px);
+    }
+    @include mix.respond-to(600) {
+      left: 0px;
+    }
+  }
+}
+
+.posters-section {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(15, 15, 15) 0%, rgb(8, 8, 8) 100%);
+  padding: 9.05rem 0 0 0 ;
+
+  @include mix.respond-to('tablet') {
+    padding: 7.85rem 0 0 0;
+  }
+  @include mix.respond-to('mobile') {
+    padding: 6.75rem 0 0 0;
+  }
+  @include mix.respond-to(600){
+    padding: 5.3rem 0 0 0;
+  }
+
+  &__text {
+    max-width: 28.16rem;
+    margin: 0 auto;
+    color: var(--white);
+    padding-bottom: mix.rem(135);
+    @include mix.respond-to('tablet') {
+      padding-bottom:7.3rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding-bottom:6rem;
+    }
+    @include mix.respond-to(600){
+      padding-bottom:3.5rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--white);
+    margin-bottom: mix.rem(34);
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      margin-bottom:1.7rem
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom:1.5rem
+    }
+    @include mix.respond-to(600){
+      text-align:left;
+      font-size: 1.62rem;
+      margin-bottom: 0.9rem;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 0.88rem;
+    line-height: 1.7066;
+    text-align: center;
+    color: #828282;
+    @include mix.respond-to(600){
+      text-align: left;
+    }
+  }
+  &__posters-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: mix.rem(8);
+  }
+  @include mix.respond-to('mobile'){
+    gap: mix.rem(5);
+  }
+
+}
 
 
 
