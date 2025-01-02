@@ -1,0 +1,48 @@
+@use "_mixins.scss" as mix;
+
+.small-footer {
+  color: var(--sec-color);
+
+  padding-bottom: mix.rem(26);
+  &__content {
+    height: mix.rem(26);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    font-weight: 300;
+    font-size: 0.75rem;
+    line-height: 1.52375;
+    color: var(--sec-color);
+  }
+  &__logo-block{
+    font-weight: 300;
+    font-size: 0.75rem;
+    line-height: 1.52375;
+    display: flex;
+    column-gap:1.9rem;
+
+  }
+  &__logo{
+    width: 5.06rem;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 0.94rem;
+    line-height: 0.8;
+    position: relative;
+    text-align: right;
+    font-weight: 400;
+    font-size: 0.94rem;
+    line-height: 0.8;
+    span{
+      display: block;
+      text-align: left;
+      font-family: var(--third-family);
+      font-weight: 400;
+      font-size: 0.81rem;
+      line-height: 0.8;
+
+    }
+  }
+}

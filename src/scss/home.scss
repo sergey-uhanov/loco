@@ -603,7 +603,7 @@
 
 .posters-section {
   background: radial-gradient(50% 50% at 50% 50%, rgb(15, 15, 15) 0%, rgb(8, 8, 8) 100%);
-  padding: 9.05rem 0 0 0 ;
+  padding: 9.05rem 0 0 0;
 
   @include mix.respond-to('tablet') {
     padding: 7.85rem 0 0 0;
@@ -611,7 +611,7 @@
   @include mix.respond-to('mobile') {
     padding: 6.75rem 0 0 0;
   }
-  @include mix.respond-to(600){
+  @include mix.respond-to(600) {
     padding: 5.3rem 0 0 0;
   }
 
@@ -621,13 +621,13 @@
     color: var(--white);
     padding-bottom: mix.rem(135);
     @include mix.respond-to('tablet') {
-      padding-bottom:7.3rem;
+      padding-bottom: 7.3rem;
     }
     @include mix.respond-to('mobile') {
-      padding-bottom:6rem;
+      padding-bottom: 6rem;
     }
-    @include mix.respond-to(600){
-      padding-bottom:3.5rem;
+    @include mix.respond-to(600) {
+      padding-bottom: 3.5rem;
     }
   }
 
@@ -639,13 +639,13 @@
     margin-bottom: mix.rem(34);
     @include mix.respond-to('tablet') {
       font-size: 2rem;
-      margin-bottom:1.7rem
+      margin-bottom: 1.7rem
     }
     @include mix.respond-to('mobile') {
-      margin-bottom:1.5rem
+      margin-bottom: 1.5rem
     }
-    @include mix.respond-to(600){
-      text-align:left;
+    @include mix.respond-to(600) {
+      text-align: left;
       font-size: 1.62rem;
       margin-bottom: 0.9rem;
     }
@@ -657,20 +657,229 @@
     line-height: 1.7066;
     text-align: center;
     color: #828282;
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       text-align: left;
     }
   }
-  &__posters-wrapper{
+
+  &__posters-wrapper {
     display: flex;
     flex-direction: column;
     gap: mix.rem(8);
   }
-  @include mix.respond-to('mobile'){
+
+  @include mix.respond-to('mobile') {
     gap: mix.rem(5);
   }
 
 }
 
+.footer {
+  padding-top: 123px;
+  padding-bottom: 10.7rem;
+  position: relative;
 
+  background-image: url("../assets/footer-bgi.webp");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: var(--white);
+  z-index: -1;
+ @include mix.respond-to('tablet') {
+   padding-top: 100px;
+ }
+  @include mix.respond-to('mobile') {
+   padding-top: 86px;
+ }
+  @include mix.respond-to(600) {
+   padding-top: 58px;
+ }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.91); /* Полупрозрачный чёрный слой */
+    pointer-events: none; /* Слой не мешает взаимодействию */
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 0 8.3rem 0 8.1rem;
+    @include mix.respond-to('tablet') {
+      padding: 0 6.4rem 0 6.3rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding: 0 6.7rem 0 4.7rem;
+    }
+    @include mix.respond-to(600){
+      padding: 0;
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 1.1rem;
+    @include mix.respond-to(600){
+      font-size: 1.62rem;
+    }
+  }
+  &__description {
+    font-weight: 300;
+    font-size: 0.88rem;
+    line-height: 1.7066;
+    max-width: mix.rem(390);
+    margin-bottom: 3.8rem;
+    opacity: 0.6;
+    @include mix.respond-to('tablet') {
+      margin-bottom: 3.5rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 3rem;
+    }
+    @include mix.respond-to(600) {
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__contacts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+    @include mix.respond-to('tablet') {
+      margin-bottom: 3.8rem;
+    }
+    @include mix.respond-to('mobile'){
+      flex-wrap: wrap;
+      justify-content: end;
+      row-gap: mix.rem(58);
+      margin-bottom: 0;
+    }
+    @include mix.respond-to(600){
+      justify-content: flex-start;
+    }
+  }
+  &__locations{
+    display: flex;
+    gap: mix.rem(106);
+    @include mix.respond-to('tablet') {
+      gap:2.82rem;
+    }
+    @include mix.respond-to('mobile') {
+
+
+    }
+    @include mix.respond-to(600){
+      flex-wrap: wrap;
+      row-gap: 2.5rem;
+    }
+  }
+  &__location-item:nth-child(1){
+    width: 129px;
+    @include mix.respond-to('mobile') {
+      width: 100%;
+      max-width: 129px;
+    }
+  }
+  &__location-item:nth-child(2){
+    width: 158px;
+    @include mix.respond-to('mobile') {
+      width: 100%;
+      max-width: 158px;
+      margin-right: 1.6rem;
+    }
+    @include mix.respond-to(600){
+      margin-right: 0rem;
+      max-width: 134px;
+    }
+  }
+  &__location-item:nth-child(3){
+    @include mix.respond-to('mobile') {
+      width: 160px;
+      @include mix.respond-to('mobile') {
+        width: 100%;
+        max-width: 160px;
+      }
+    }
+  }
+
+  &__row{
+    max-width: 160px;
+    opacity: 0.6;
+    font-weight: 300;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+  }
+  &__row:not(:last-child){
+    margin-bottom: 0.5rem;
+  }
+  &__row:first-child{
+    letter-spacing: 0.0em;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.36528;
+    @include mix.respond-to(600){
+      margin-bottom: 1rem;
+    }
+  }
+  &__strange-block{
+    position: relative;
+    top: 6px;
+    @include mix.respond-to('mobile') {
+      top: 0;
+      right: 21px;
+    }
+    @include mix.respond-to(600){
+      right: 0;
+      top: -1rem;
+    }
+  }
+  &__email{
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.4rem;
+    @include mix.respond-to('mobile') {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__country-link{
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+  }
+  &__country-link:not(:last-child){
+    margin-right: 0.8rem;
+  }
+  &__country-link:hover{
+    color: #567;
+  }
+  &__button{
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    padding: 17px 48px;
+    background: var(--white);
+    color: var(--pri-color);
+    @include mix.respond-to('mobile') {
+      position: relative;
+      top: -45px;
+    }
+    @include mix.respond-to(600){
+      position: static;
+      margin-top: 1.8rem;
+    }
+  }
+  &__small-footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+
+  }
+}
 

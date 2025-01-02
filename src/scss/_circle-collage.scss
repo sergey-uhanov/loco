@@ -1,7 +1,7 @@
 @use "_mixins.scss" as mix;
 
 .circle-collage {
-  padding: mix.rem(350) 0 mix.rem(345) 0;
+  padding: mix.rem(350) 0 21.16rem 0;
   position: relative;
   overflow: hidden;
   @include mix.respond-to('tablet') {
@@ -127,7 +127,7 @@
   }
 
   &__photo-item:nth-child(5) {
-    bottom: 9px;
+    bottom: 2px;
     left: 0px;
     @include mix.respond-to('tablet') {
       display: none;
@@ -136,7 +136,7 @@
   }
 
   &__photo-item:nth-child(6) {
-    bottom: 9px;
+    bottom: 2px;
     left: 215px;
     @include mix.respond-to('tablet') {
       bottom: 38px;
@@ -157,7 +157,7 @@
   }
 
   &__photo-item:nth-child(7) {
-    bottom: -33px;
+    bottom: -43px;
     right: 379px;
     width: 364px;
     @include mix.respond-to('tablet') {
@@ -178,7 +178,7 @@
   }
 
   &__photo-item:nth-child(8) {
-    bottom: 50px;
+    bottom: 42px;
     right: 0px;
     @include mix.respond-to('tablet') {
       bottom: 71px;
