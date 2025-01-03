@@ -7,9 +7,11 @@
 @use "_photos-collage.scss";
 @use "_circle-collage.scss";
 @use "_small-footer.scss";
+@use "_popup.scss";
 
 
 body{
   color: var(--pri-color);
   font-family: var(--font-family);
+  overflow-x: hidden;
 }

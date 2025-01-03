@@ -9,8 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.min.css">
+    <script type="module" src="./js/bundle.js" defer></script>
 </head>
 <body>
+<div class="popup" id="popup">
+    <div class="popup__content">
+        <span class="popup__close-btn" id="closePopup"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)" fill="white" />
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)" fill="white" />
+</svg></span>
+        <h2>Всплывающее окно</h2>
+        <p>Это пример popup с блокировкой скролла страницы.</p>
+        <button>Дополнительное действие</button>
+    </div>
+</div>
 @@include('../partials/header.html')
 
 <main>
@@ -29,7 +41,7 @@
                              style="background-image: url('./assets/Rectangle2.png')"></div>
                     </div>
                     <!-- Навигация -->
-                    <div class="main-swiper__nav-block">
+                    <div class="main-swiper__nav-block right-element">
 
                         <div class="main-swiper__scrollbar-container">
                             <div class="main-swiper__button-prev">
@@ -56,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="first-screen__trasnsperent-text">
+            <div class="first-screen__trasnsperent-text right-element">
                 <span>Next Project</span>
                 Perfect
                 proportions
@@ -181,7 +193,7 @@
                             Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam
                             eu enim sed, ornare pretium velit.
                         </div>
-                        <div class="photos-collage__button">Make request</div>
+                        <div class="photos-collage__button openPopup">Make request</div>
                     </div>
                 </div>
                 <div class="photos-collage__background">
@@ -283,24 +295,15 @@
                 </div>
             </div>
 
-            <button class="footer__button">Make request</button>
+            <button class="footer__button openPopup">Make request</button>
         </div>
     </div>
-    <div class="footer__small-footer small-footer">
-        <div class="small-footer__container">
-            <div class="small-footer__content">
-                <div class="small-footer__copyright">© Copyright 2018. All rights reserved</div>
-                <div class="small-footer__logo-block">
-                    <div class="small-footer__slogan">
-                        Made with love in
-                    </div>
-                    <div class="small-footer__logo"><span>The First</span>The Last </div>
-                </div>
-            </div>
-        </div>
+    <div class="footer__small-footer ">
+        @@include('../partials/small-footer.html')
     </div>
+    <div class="footer__plug"></div>
 </footer>
 
-<script type="module" src="./js/bundle.js"></script>
+
 </body>
 </html>

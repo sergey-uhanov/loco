@@ -1,0 +1,29 @@
+@use "_mixins.scss" as mix;
+.popup {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  //background-color: rgba(8, 8, 8, 0.9);
+}
+.open{
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup{
+  &__content{
+    max-width: mix.rem(1046);
+    margin: mix.rem(75) auto 0 auto;
+    background-color: white;
+
+  }
+  &__close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
