@@ -9,8 +9,174 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.min.css">
+    <script type="module" src="./js/bundle.js" defer></script>
+    <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
 </head>
 <body>
+<div class="popup " id="popup">
+    <span class="popup__close-btn" id="closePopup"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)"
+        fill="white"/>
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)"
+        fill="white"/>
+</svg></span>
+    <div class="popup__content ">
+        <form action="#" method="post" class="popup-form" novalidate data-js-form>
+            <div class="popup-form__group">
+                <h2 class="popup-form__title">Calculate the cost of work</h2>
+                <ul class="popup-form__text-inputs">
+                    <li class="popup-form__text-input-item field">
+                        <input required aria-errormessage="name-errors" name="userName" type="text" minlength="4"
+                               maxlength="10"
+                               class="field__input" id="user-name"
+                               placeholder=" ">
+                        <label for="user-name" class="field__label">Name</label>
+                        <span class="field__errors" id="name-errors" data-js-form-field-errors></span>
+                    </li>
+                    <li class="popup-form__text-input-item field">
+                        <input required aria-errormessage="last-name-errors" name="lastName" type="text" minlength="4"
+                               maxlength="10"
+                               class="field__input" id="last-name"
+                               placeholder=" ">
+                        <label for="last-name" class="field__label">Last name</label>
+                        <span class="field__errors" id="last-name-errors" data-js-form-field-errors></span>
+                    </li>
+                    <li class="popup-form__text-input-item field">
+                        <input required type="tel" aria-errormessage="phone-errors" name="phone" minlength="4"
+                               maxlength="10"
+                               class="field__input" id="phone"
+                               placeholder=" ">
+                        <label for="phone" class="field__label">Phone</label>
+                        <span class="field__errors" id="phone-errors" data-js-form-field-errors></span>
+                    </li>
+                    <li class="popup-form__text-input-item field">
+                        <input required type="text" aria-errormessage="city-errors" name="city" minlength="4"
+                               maxlength="10"
+                               class="field__input" id="city"
+                               placeholder=" ">
+                        <label for="city" class="field__label">Your city</label>
+                        <span class="field__errors" id="city-errors" data-js-form-field-errors></span>
+                    </li>
+                    <li class="popup-form__text-input-item field ">
+                        <input
+                                required
+                                aria-errormessage="email-errors"
+                                type="email"
+                                pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}"
+                                title="Email address must be formatted as [email@example.com]"
+                                class="field__input"
+                                id="email"
+                                placeholder=" "
+                                name="email">
+                        <label for="email" class="field__label">Email</label>
+                        <span class="field__errors" id="email-errors" data-js-form-field-errors></span>
+                    </li>
+                    <li class="popup-form__text-input-item ">
+                        <div class="popup-form__text-input-item custom-select">
+                            <button id="buttonSelectValue" class="custom-select__button" type="button">
+                                <span id="selectValue" class="custom-select__label">Property type</span>
+                            </button>
+                            <ul class="custom-select__dropdown">
+                                <li class="custom-select__item" data-value="option1">Вариант 1</li>
+                                <li class="custom-select__item" data-value="option2">Вариант 2</li>
+                                <li class="custom-select__item" data-value="option3">Вариант 3</li>
+                            </ul>
+                        </div>
+                        <span class="field__errors field__errors_select" id="place-errors"
+                              data-js-form-field-errors></span>
+                    </li>
+                    <li class="popup-form__text-input-item field field field__input--full-width">
+                        <input required name="comment" type="text" class="field__input" id="comment"
+                               placeholder=" ">
+                        <label for="comment" class="field__label">Your comment</label>
+                        <span class="field__errors" id="comments-errors" data-js-form-field-errors></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-form__group popup-form__group_right-padding">
+                <h4 class="popup-form__subtitle">Area (m2)</h4>
+                <fieldset class="custom-radio">
+                    <div class="custom-radio__group">
+
+                        <input required type="radio" id="option1" name="options"
+                               value="50" class="custom-radio__input">
+                        <label for="option1" class="custom-radio__label">to 50</label>
+
+                        <input required type="radio" id="option2" name="options"
+                               value="50-150" class="custom-radio__input">
+                        <label for="option2" class="custom-radio__label">50-150</label>
+
+                        <input required type="radio" id="option3" name="options"
+                               value="150-250" class="custom-radio__input">
+                        <label for="option3" class="custom-radio__label">150-250</label>
+
+                        <input required type="radio" id="option4" name="options"
+                               value="250-400" class="custom-radio__input">
+                        <label for="option4" class="custom-radio__label">250-400</label>
+
+                        <input required type="radio" id="option5" name="options"
+                               value="400-600" class="custom-radio__input">
+                        <label for="option5" class="custom-radio__label">400-600</label>
+
+
+                        <input required type="radio" id="option6" name="options"
+                               value="600-800" class="custom-radio__input">
+                        <label for="option6" class="custom-radio__label">600-800</label>
+
+
+                        <input required type="radio" id="option7" name="options"
+                               value="800-1000"
+                               class="custom-radio__input">
+                        <label for="option7" class="custom-radio__label">800-1000</label>
+
+
+                        <input required type="radio" id="option8" name="options"
+                               value="1000+" class="custom-radio__input">
+                        <label for="option8" class="custom-radio__label">1000+</label>
+
+
+                        <span class="field__errors field__errors_radiobuttons" id="option"
+                              data-js-form-field-errors></span>
+                    </div>
+
+                </fieldset>
+                <div class="popup-form__button-block">
+                    <div class="file-upload">
+                        <input type="file" id="file-upload__input" name="userFile" class="file-upload__input"/>
+                        <label for="file-upload__input" class="file-upload__label">
+                            <span class="file-upload__icon"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                  <rect y="4" width="9" height="1" fill="#3A3E4B"/>
+                                  <rect x="4" width="1" height="9" fill="#3A3E4B"/>
+                                </svg></span>
+                            <div class="file-upload__text">Attach your file <span>File size not more than 10 MB</span>
+                            </div>
+
+
+                        </label>
+
+                    </div>
+                    <button class="popup-form__button" type="submit">Send Request</button>
+                </div>
+                <div class="popup-form__description">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    <span>when looking</span> at its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English.
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="popup__success-message success-message success-message_hidden">
+        <h4 class="success-message__title">Thank you for your message!</h4>
+        <p class="success-message__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            ullamcorper eu mauris vitae posuere. Ut at
+            luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.</p>
+        <button class="success-message__button ">Send again</button>
+    </div>
+</div>
 <header class="header">
     <div class="menu-burger menu-burger_hidden">
         <ul class="menu-burger__list">
@@ -19,7 +185,7 @@
             <li class="menu-burger__item"><a href="/about">About us</a></li>
             <li class="menu-burger__item"><a href="/blog">Blog</a></li>
             <li class="menu-burger__item"><a href="/contacts">Contacts</a></li>
-            <li class="menu-burger__item_button popup-button"><a href="/">Send Request</a></li>
+            <li  class="menu-burger__item_button popup-button openPopup">Send Request</li>
 
         </ul>
     </div>
@@ -38,7 +204,7 @@
                 <ul class="menu__list">
                     <li class="menu__item"><a href="/" class="menu__link "> En</a></li>
                     <li class="menu__item">
-                        <button class="popup-button">Send Request</button>
+                        <button  class="popup-button openPopup">Send Request</button>
                     </li>
                 </ul>
             </nav>
@@ -62,7 +228,7 @@
                              style="background-image: url('./assets/Rectangle2.webp')"></div>
                     </div>
                     <!-- Навигация -->
-                    <div class="main-swiper__nav-block">
+                    <div class="main-swiper__nav-block right-element">
 
                         <div class="main-swiper__scrollbar-container">
                             <div class="main-swiper__button-prev">
@@ -89,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="first-screen__trasnsperent-text">
+            <div class="first-screen__trasnsperent-text right-element">
                 <span>Next Project</span>
                 Perfect
                 proportions
@@ -176,6 +342,7 @@
     </section>
 
     <section class="posters-section">
+
         <div class="posters-section__container">
             <div class="posters-section__text">
                 <div class="posters-section__title">Our Projects</div>
@@ -189,10 +356,14 @@
                     <div class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf2-pc.webp"
                              alt="photo apartment interior">
+                        <div class="double-poster__description">Eyewear store interior</div>
+                        <a href="#" class="double-poster__link">Discover more</a>
                     </div>
                     <div class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf1-pc.webp"
                              alt="photo apartment interior">
+                        <div class="double-poster__description">Eyewear store interior</div>
+                        <a href="#" class="double-poster__link">Discover more</a>
                     </div>
                 </div>
                 <div class="posters-section__item full-poster ">
@@ -200,18 +371,22 @@
                         <source media="(max-width: 768px)" srcset="./assets/posterfull21-mobile.webp">
                         <img class="full-poster__item" src="./assets/posterfull1-pc.webp" alt="photo apartment interior">
                     </picture>
-
+                    <div class="full-poster__description">Residence by the <br> lighthouse</div>
+                    <a href="#" class="full-poster__link">Discover more</a>
                 </div>
                 <div class="posters-section__item double-poster">
                     <div class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf3-pc.webp"
                              alt="photo apartment interior">
+                        <div class="double-poster__description">Eyewear store interior</div>
+                        <a href="#" class="double-poster__link">Discover more</a>
                     </div>
-                    <div class="double-poster__poster-wrapper  double-poster__poster-wrapper_white-bc">
+                    <a href="#" class="double-poster__poster-wrapper  double-poster__poster-wrapper_white-bc">
                         <div class="double-poster__title-card">See more 60 projects</div>
                         <img class="double-poster__microposter" src="./assets/postermicro1.webp"
                              alt="photo apartment interior">
-                    </div>
+
+                    </a>
                 </div>
             </div>
         </div>
@@ -224,7 +399,7 @@
                             Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam
                             eu enim sed, ornare pretium velit.
                         </div>
-                        <div class="photos-collage__button">Make request</div>
+                        <button class="photos-collage__button openPopup">Make request</button>
                     </div>
                 </div>
                 <div class="photos-collage__background">
@@ -326,24 +501,27 @@
                 </div>
             </div>
 
-            <button class="footer__button">Make request</button>
+            <button class="footer__button openPopup">Make request</button>
         </div>
     </div>
-    <div class="footer__small-footer small-footer">
-        <div class="small-footer__container">
-            <div class="small-footer__content">
-                <div class="small-footer__copyright">© Copyright 2018. All rights reserved</div>
-                <div class="small-footer__logo-block">
-                    <div class="small-footer__slogan">
-                        Made with love in
-                    </div>
-                    <div class="small-footer__logo"><span>The First</span>The Last </div>
+    <div class="footer__small-footer ">
+        <div class="small-footer">
+    <div class="small-footer__container">
+        <div class="small-footer__content">
+            <div class="small-footer__copyright">© Copyright 2018. All rights reserved</div>
+            <div class="small-footer__logo-block">
+                <div class="small-footer__slogan">
+                    Made with love in
                 </div>
+                <div class="small-footer__logo"><span>The First</span>The Last </div>
             </div>
         </div>
     </div>
+</div>
+    </div>
+
 </footer>
 
-<script type="module" src="./js/bundle.js"></script>
+
 </body>
 </html>
