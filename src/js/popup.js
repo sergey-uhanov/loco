@@ -3,9 +3,8 @@ export function initPopup() {
     const closePopup = document.getElementById('closePopup');
     const popup = document.getElementById('popup');
     const rightSideElement = document.querySelectorAll('.right-element');
-    const vw = document.documentElement.clientWidth / 100;
-
     const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const againRequestButton = document.querySelector('.success-message__button')
 
     // Открытие popup
     openPopupButtons.forEach((button) => {
@@ -19,6 +18,7 @@ export function initPopup() {
     closePopup.addEventListener('click', () => {
         popup.classList.toggle('open');
         unlockScroll();
+        resetStatePopup()
     });
 
     // Закрытие при клике вне области popup
@@ -26,7 +26,9 @@ export function initPopup() {
         if (event.target === popup) {
             popup.classList.toggle('open');
             unlockScroll();
+            resetStatePopup()
         }
+
     });
 
     const scrollController = {
@@ -74,4 +76,47 @@ export function initPopup() {
 
         });
     }
+    window.addEventListener('click', (event) => {
+        if (event.target === againRequestButton) {
+            resetStatePopup()
+        }
+    })
+}
+
+
+function resetStatePopup(){
+    const form = document.querySelector('.popup-form');
+    document.querySelector('.popup__content').classList.remove('popup__content_hidden');
+    document.querySelector('.success-message').classList.add('success-message_hidden');
+    clearForm(form)
+}
+
+function clearForm(formElement) {
+    if (!formElement || !(formElement instanceof HTMLFormElement)) {
+        console.warn('Передан неверный элемент формы');
+        return;
+    }
+
+    // Сбрасываем стандартные поля формы
+    formElement.reset();
+
+    // Очищаем кастомные поля, если они есть
+    const selectValueElement = document.querySelector('#selectValue');
+    if (selectValueElement) {
+        selectValueElement.textContent = 'Property type'; // Устанавливаем значение по умолчанию
+    }
+
+    // Убираем отображаемые ошибки (если есть)
+    const errorElements = formElement.querySelectorAll('#place-errors');
+    errorElements.forEach((errorElement) => {
+        errorElement.innerHTML = '';
+    });
+
+    // Обнуляем состояние aria-invalid для всех полей
+    const inputFields = formElement.querySelectorAll('[aria-invalid="true"]');
+    inputFields.forEach((field) => {
+        field.removeAttribute('aria-invalid');
+    });
+
+
 }

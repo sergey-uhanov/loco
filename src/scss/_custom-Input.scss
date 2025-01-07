@@ -1,0 +1,74 @@
+@use "_mixins.scss" as mix;
+.field {
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 312px;
+  height: 23px;
+  @include mix.respond-to('tablet') {
+    max-width: 280px;
+  }
+  @include mix.respond-to('mobile') {
+    margin: 1.1rem 0;
+    max-width: 100%;
+  }
+
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(186, 186, 186, 0.59);
+    outline: none;
+    background: transparent;
+  }
+
+  &__input--full-width {
+    max-width: 100%;
+  }
+
+  &__label {
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+    font-size: 1rem;
+    color: grey;
+    transition: 0.3s ease;
+    cursor: text;
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    color: #3a3e4b;
+  }
+
+  &__input:not(:placeholder-shown) + &__label,
+  &__input:focus + &__label {
+    color: #000;
+    font-size: 0.8rem;
+    top: -0.8rem;
+    left: -1.5rem;
+    background: #fff;
+    padding: 0 0.2rem;
+  }
+  &__errors{
+    font-size: 0.8rem;
+    color: red;
+    position: relative;
+    left: 90px;
+    @include mix.respond-to(600){
+      font-size: 0.5rem;
+    }
+  }
+  &__errors_radiobuttons{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+  }
+  &__errors_select{
+    position: absolute;
+    bottom: -15px;
+    @include mix.respond-to(600){
+      bottom: -20px;
+    }
+  }
+}

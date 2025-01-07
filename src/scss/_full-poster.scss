@@ -1,7 +1,61 @@
 @use "_mixins.scss" as mix;
 .full-poster{
   max-width: 100%;
+  position: relative;
   &__item{
     max-width: 100%;
+  }
+  &__description{
+    position: absolute;
+    bottom: mix.rem(27);
+    left: mix.rem(30);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.26;
+    color: #fafafa;
+    @include mix.respond-to('mobile') {
+      bottom: 4.18rem;
+      left: 2.07rem;
+    }
+  }
+  &__link{
+    position: absolute;
+    bottom: mix.rem(35);
+    right: mix.rem(150);
+    font-weight: 700;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    @include mix.respond-to('mobile') {
+      bottom: 1.78rem;
+      right: auto;
+      left: 3rem;
+    }
+  }
+  &__link:hover{
+    color: var(--sec-color);
+  }
+  &__link:before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 9px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    bottom: 5px;
+    left: -15px;
+  }
+
+  &__link:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 63px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    bottom: 5px;
+    right: -75px;
   }
 }

@@ -8,10 +8,13 @@
 @use "_circle-collage.scss";
 @use "_small-footer.scss";
 @use "_popup.scss";
+@use "_custom-input.scss";
+
 
 
 body{
   color: var(--pri-color);
   font-family: var(--font-family);
   overflow-x: hidden;
+
 }

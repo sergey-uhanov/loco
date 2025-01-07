@@ -2,9 +2,10 @@
 
 .double-poster {
   display: flex;
-
   gap: mix.rem(8);
   max-width: 100%;
+  position: relative;
+
   @include mix.respond-to('mobile') {
     flex-wrap: wrap;
     gap: mix.rem(5);
@@ -14,6 +15,8 @@
     background-color: var(--white);
     max-width: 40.81rem;
     width: 100%;
+    position: relative;
+    z-index: 8;
     @include mix.respond-to('mobile') {
       max-width: 42rem;
     }
@@ -21,30 +24,73 @@
 
   &__item {
     width: 100%;
+    position: relative;
+    z-index: 9;
+  }
+  &__description{
+    position: absolute;
+    bottom: 71px;
+    left: 32px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.26;
+    color: #fafafa;
+    z-index: 10;
+  }
 
+  &__link{
+    position: absolute;
+    bottom: 35px;
+    left: 45px;
+    z-index: 10;
+    font-weight: 700;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: color 0.2s ease;
+    @include mix.respond-to('mobile') {
+      bottom: mix.rem(28);
+      left: mix.rem(48);
+    }
+  }
+  &__link:hover{
+    color: var(--sec-color);
+  }
+  &__link:before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 9px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    bottom: 5px;
+    left: -15px;
+  }
+
+  &__link:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 63px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    bottom: 5px;
+    right: -75px;
   }
 
   &__poster-wrapper_white-bc {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 40.81rem;
     width: 100%;
-
-
-
     @include mix.respond-to('tablet') {
       max-width: 42rem;
-
     }
-
     @include mix.respond-to('mobile') {
       max-width: 42rem;
       aspect-ratio: 1 / 1;
-
-    }
-    @include mix.respond-to(600) {
 
     }
   }
@@ -56,6 +102,7 @@
     color: #080808;
     margin-bottom: 23px;
     padding-top: 17%;
+    transition: color 0.2s ease;
     @include mix.respond-to("tablet") {
       font-size: 1.25rem;
       line-height: 1.26776;
@@ -66,12 +113,16 @@
       margin-bottom: 2rem;
       padding-top: 22%;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       padding-top: 19.8%;
       margin-bottom: 1rem;
     }
   }
-
+  &__poster-wrapper_white-bc:hover{
+    .double-poster__title-card{
+      color: var(--sec-color);
+    }
+  }
   &__microposter {
     max-width: 15.69rem;
     @include mix.respond-to(1439) {
