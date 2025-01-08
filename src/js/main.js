@@ -5,6 +5,8 @@ import {customSelect} from './select.js';
 import {initPopup} from "./popup.js";
 import {popupSelect} from "./selectPopup.js";
 import {FormsValidation} from "./validateForm.js";
+import {initNewsSlider} from "./newsSlider.js";
+import {newsSelect} from "./newsSelect.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,4 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPopup();
     popupSelect()
     new FormsValidation()
+    initNewsSlider()
+    newsSelect()
 });

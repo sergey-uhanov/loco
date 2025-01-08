@@ -27,7 +27,8 @@
     position: relative;
     z-index: 9;
   }
-  &__description{
+
+  &__description {
     position: absolute;
     bottom: 71px;
     left: 32px;
@@ -37,8 +38,18 @@
     color: #fafafa;
     z-index: 10;
   }
+  &__description_alt {
+    position: absolute;
+    bottom: 58px;
+    left: 54px;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.269;
+    color: #fff;
+    z-index: 10;
+  }
 
-  &__link{
+  &__link {
     position: absolute;
     bottom: 35px;
     left: 45px;
@@ -54,10 +65,12 @@
       left: mix.rem(48);
     }
   }
-  &__link:hover{
+
+  &__link:hover {
     color: var(--sec-color);
   }
-  &__link:before{
+
+  &__link:before {
     content: '';
     position: absolute;
     height: 1px;
@@ -68,7 +81,7 @@
     left: -15px;
   }
 
-  &__link:after{
+  &__link:after {
     content: '';
     position: absolute;
     height: 1px;
@@ -77,6 +90,20 @@
     display: block;
     bottom: 5px;
     right: -75px;
+  }
+
+  &__link_alt-color {
+    color: var(--pri-color);
+    bottom: 3.5rem;
+    left: 4.6rem;
+    @include mix.respond-to('tablet'){
+      bottom: 2.9rem;
+      left: 4.1rem;
+    }
+  }
+
+  &__link_alt-color:after, &__link_alt-color:before {
+    background: #838383;
   }
 
   &__poster-wrapper_white-bc {
@@ -109,7 +136,6 @@
       padding-top: 13.6%;
     }
     @include mix.respond-to('mobile') {
-      padding-top: 0;
       margin-bottom: 2rem;
       padding-top: 22%;
     }
@@ -118,11 +144,13 @@
       margin-bottom: 1rem;
     }
   }
-  &__poster-wrapper_white-bc:hover{
-    .double-poster__title-card{
+
+  &__poster-wrapper_white-bc:hover {
+    .double-poster__title-card {
       color: var(--sec-color);
     }
   }
+
   &__microposter {
     max-width: 15.69rem;
     @include mix.respond-to(1439) {
@@ -138,6 +166,45 @@
       max-width: 7.56rem;
     }
   }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #080808;
+    max-width: 22rem;
+    position: absolute;
+    left: mix.rem(56);
+    bottom: 13.46rem;
+    line-height: 1.3;
+    @include mix.respond-to('tablet') {
+      font-size: 1.25rem;
+      bottom: 13.66rem;
+      left: 2.7rem;
+      line-height: 1.2;
+      max-width: 15.6rem;
+    }
+  }
+
+  &__subtitle {
+    position: absolute;
+    bottom: mix.rem(125);
+    left: mix.rem(56);
+    font-weight: 300;
+    font-size: 0.88rem;
+    line-height: 1.7066;
+    color: #080808;
+    opacity: 0.7;
+    max-width: mix.rem(433);
+    @include mix.respond-to('tablet') {
+      left: 2.9rem;
+      max-width: 20rem;
+      bottom: 6.41rem;
+    }
+    @include mix.respond-to(374){
+      display: none;
+    }
+  }
+
 }
 
 

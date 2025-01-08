@@ -1,0 +1,53 @@
+@use "_mixins.scss" as mix;
+
+.news-swiper {
+  &__slide{
+    display: flex !important;
+    flex-direction: column;
+    row-gap: mix.rem(8);
+  }
+  &__nav-block {
+    color: #080808;
+    display: flex;
+    gap: mix.rem(32);
+    align-items: center;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    justify-content: center;
+    margin-top: mix.rem(96);
+    @include mix.respond-to("tablet") {
+      margin-top: 3.7rem;
+    }
+  }
+
+  &__pagination{
+    display: flex;
+    align-items: center;
+  }
+
+  &__pagination-item {
+    cursor: pointer; /* Курсор при наведении */
+    background-color: transparent !important;
+    margin:0  mix.rem(10);
+  }
+
+  &__slide {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+
+}
+
+
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.active {
+  transform: scale(1.5);
+}

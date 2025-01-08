@@ -13,6 +13,19 @@
     position: relative;
     z-index: 10;
   }
+  &_dark{
+    color: var(--pri-color);
+    .menu__link{
+      color: var(--pri-color);
+    }
+    .popup-button{
+      border-color: var(--sec-color);
+    }
+    .icon-menu::before, .icon-menu span{
+      background-color: var(--pri-color);
+    }
+  }
+
 }
 
 .menu {

@@ -107,7 +107,7 @@ function clearForm(formElement) {
     }
 
     // Убираем отображаемые ошибки (если есть)
-    const errorElements = formElement.querySelectorAll('#place-errors');
+    const errorElements = formElement.querySelectorAll('[data-js-form-field-errors]');
     errorElements.forEach((errorElement) => {
         errorElement.innerHTML = '';
     });

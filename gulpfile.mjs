@@ -91,6 +91,9 @@ export const html = () =>
             fileInclude({
                 prefix: '@@', // Префикс для директив
                 basepath: 'src/partials', // Относительный путь к файлам
+                context: { // Глобальные переменные
+                    className: 'header--white', // Укажите значение по умолчанию
+                },
             })
         )
         .pipe(gulp.dest(paths.html.dest)) // Сохранение собранного HTML
