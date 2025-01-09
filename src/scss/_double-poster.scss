@@ -10,6 +10,14 @@
     flex-wrap: wrap;
     gap: mix.rem(5);
   }
+  &_alt{
+    @include mix.respond-to('mobile') {
+      flex-wrap: nowrap;
+    }
+    @include mix.respond-to(500){
+      flex-wrap: wrap;
+    }
+  }
 
   &__poster-wrapper {
     background-color: var(--white);

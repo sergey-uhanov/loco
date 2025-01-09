@@ -1,12 +1,6 @@
 @use "_mixins.scss" as mixins;
 @use "sass:math";
 
-//.montserrat-norm {
-//  font-family: "Montserrat", serif;
-//  font-optical-sizing: auto;
-//  font-weight: 400;
-//  font-style: normal;
-//}
 @font-face {
   font-family: 'Adieu';
   src: url('../fonts/adieu.woff') format('woff');

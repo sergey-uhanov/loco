@@ -4,6 +4,7 @@ export function newsSelect(){
     const dropdownItems = document.querySelectorAll('.custom-dropdown__item');
 
     // Toggle dropdown visibility
+    if(dropdownToggle) {
     dropdownToggle.addEventListener('click', () => {
         const isOpen = dropdownMenu.hasAttribute('hidden');
         dropdownMenu.toggleAttribute('hidden', !isOpen);
@@ -30,4 +31,5 @@ export function newsSelect(){
             dropdownToggle.setAttribute('aria-expanded', false);
         }
     });
+    }
 }
