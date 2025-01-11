@@ -306,6 +306,7 @@
   &__slide {
     max-width: mix.rem(316);
     margin-right: 48px;
+    transition: transform 0.3s ease-in;
     @include mix.respond-to('tablet') {
       max-width: mix.rem(293);
       margin-right: 40px;
@@ -320,6 +321,10 @@
       margin-right: 26px;
     }
 
+  }
+
+  &__slide:hover{
+    transform: scale(1.03) !important;
   }
 
   &__img {

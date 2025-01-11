@@ -4,6 +4,8 @@
   padding: 10.95rem 0 23rem 0;
   color: var(--white);
 
+
+
   @include mix.respond-to('tablet') {
     padding: 8.55rem 0 8.8rem 0;
   }
@@ -13,6 +15,25 @@
   @include mix.respond-to(600) {
     padding: 6.05rem 0 5.85rem 0;
   }
+
+  &_white{
+    color: var(--pri-color);
+    .photos-collage__button{
+      border: 1px solid rgba(0, 0, 0, 0.32);
+      white-space: nowrap;
+    }
+
+    @include mix.respond-to('tablet') {
+      padding: 7.25rem 0 7.9rem 0;
+    }
+    @include mix.respond-to('tablet') {
+      padding: 5.85rem 0 6.5rem 0;
+    }
+    @include mix.respond-to('tablet') {
+      padding: 5.25rem 0 5.4rem 0;
+    }
+  }
+
   &__container {
     position: relative;
   }

@@ -1,27 +1,38 @@
 @use "_mixins.scss" as mix;
 //====================================================================================================
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   padding: mix.rem(24) 0;
   font-weight: 600;
   font-size: 0.69rem;
   letter-spacing: 0.06em;
-  color: var(--white);
-
+  //color: var(--white);
+  color: rgba(186, 186, 186, 0.55);
+  width: 100%;
+  transition: background-color 0.6s ease;
 
 
   &__container {
     position: relative;
     z-index: 10;
+
+
   }
-  &_dark{
+
+  &_dark {
     color: var(--pri-color);
-    .menu__link{
+
+    .menu__link {
       color: var(--pri-color);
     }
-    .popup-button{
+
+    .popup-button {
       border-color: var(--sec-color);
     }
-    .icon-menu::before, .icon-menu span{
+
+    .icon-menu::before, .icon-menu span {
       background-color: var(--pri-color);
     }
   }
@@ -163,9 +174,11 @@
 
     }
   }
-  &__item:hover{
+
+  &__item:hover {
     transform: scale(1.1);
   }
+
   &__item_button {
     display: none;
     @include mix.respond-to(767) {

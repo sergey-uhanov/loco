@@ -1,0 +1,82 @@
+@use "_mixins.scss" as mix;
+
+.posters-section {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(15, 15, 15) 0%, rgb(8, 8, 8) 100%);
+  padding: 9.05rem 0 0 0;
+  position: relative;
+
+  @include mix.respond-to('tablet') {
+    padding: 7.85rem 0 0 0;
+  }
+  @include mix.respond-to('mobile') {
+    padding: 6.75rem 0 0 0;
+  }
+  @include mix.respond-to(600) {
+    padding: 5.3rem 0 0 0;
+  }
+
+  &__text {
+    max-width: 28.16rem;
+    margin: 0 auto;
+    color: var(--white);
+    padding-bottom: mix.rem(135);
+    @include mix.respond-to('tablet') {
+      padding-bottom: 7.3rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding-bottom: 6rem;
+    }
+    @include mix.respond-to(600) {
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--white);
+    margin-bottom: mix.rem(34);
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      margin-bottom: 1.7rem
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 1.5rem
+    }
+    @include mix.respond-to(600) {
+      text-align: left;
+      font-size: 1.62rem;
+      margin-bottom: 0.9rem;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 0.88rem;
+    line-height: 1.7066;
+    text-align: center;
+    color: #828282;
+    @include mix.respond-to(600) {
+      text-align: left;
+    }
+  }
+
+  &__posters-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: mix.rem(8);
+  }
+  @include mix.respond-to('tablet'){
+    gap: mix.rem(6);
+  }
+  @include mix.respond-to('mobile') {
+    gap: mix.rem(5);
+  }
+
+  &_white-bg {
+    padding: 0;
+    background: transparent;
+  }
+
+}

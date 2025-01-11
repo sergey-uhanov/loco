@@ -1,34 +1,65 @@
 @use "_mixins.scss" as mix;
 
 .news-swiper {
-  &__slide{
+
+  &__wrapper{
+    height: auto !important;
+  }
+  &__slide {
     display: flex !important;
     flex-direction: column;
     row-gap: mix.rem(8);
   }
+
   &__nav-block {
     color: #080808;
     display: flex;
-    gap: mix.rem(32);
+
     align-items: center;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    justify-content: center;
     margin-top: mix.rem(96);
+    max-width: mix.rem(240);
+    margin-left: auto;
+    margin-right: auto;
     @include mix.respond-to("tablet") {
-      margin-top: 3.7rem;
+      margin-top: 4.2rem;
+      max-width: 15.1rem;
+    }
+    @include mix.respond-to("mobile") {
+      margin-top: 3.1rem;
+      max-width: mix.rem(216);
+    }
+    @include mix.respond-to(600) {
+      margin-top: 2.9rem;
+      max-width: 12.8rem;
     }
   }
 
-  &__pagination{
+  &__button-prev {
+    margin-right: 18px;
+  }
+
+  &__button-next {
+    margin-left: 40px;
+  }
+
+  &__pagination {
     display: flex;
     align-items: center;
+  }
+
+  &__total-slides {
+    margin-left: 34px;
   }
 
   &__pagination-item {
     cursor: pointer; /* Курсор при наведении */
     background-color: transparent !important;
-    margin:0  mix.rem(10);
+    margin: 0 mix.rem(10);
+    @include mix.respond-to(600){
+      margin: 0 mix.rem(4);
+    }
   }
 
   &__slide {
@@ -39,7 +70,6 @@
 
 
 }
-
 
 
 .swiper-slide-active {

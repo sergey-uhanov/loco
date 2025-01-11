@@ -12,6 +12,8 @@
 @use "_news.scss";
 @use "_news-slider.scss";
 @use "_one-news.scss";
+@use "_projects.scss";
+@use "_posters.scss";
 
 
 
@@ -19,5 +21,7 @@ body{
   color: var(--pri-color);
   font-family: var(--font-family);
   overflow-x: hidden;
-
+}
+.page-wrapper{
+  overflow: visible;
 }

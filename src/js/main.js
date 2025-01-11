@@ -8,6 +8,8 @@ import {FormsValidation} from "./validateForm.js";
 import {initNewsSlider} from "./newsSlider.js";
 import {newsSelect} from "./newsSelect.js";
 import {smallSlider} from "./smallSlider.js";
+import {elevationCompensation} from "./header.js";
+import {projects} from "./projects.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,5 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initNewsSlider()
     newsSelect()
     smallSlider()
-
+    elevationCompensation()
+    projects()
 });
