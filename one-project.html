@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <script type="module" src="./js/bundle.js" defer></script>
+    <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
+    <title>One project</title>
+</head>
+<body>
+<div class="popup " id="popup">
+    <span class="popup__close-btn" id="closePopup"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)"
+        fill="white"/>
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)"
+        fill="white"/>
+</svg></span>
+  <div class="popup__content ">
+    <form action="#" method="post" class="popup-form" novalidate data-js-form>
+      <div class="popup-form__group">
+        <h2 class="popup-form__title">Calculate the cost of work</h2>
+        <ul class="popup-form__text-inputs">
+          <li class="popup-form__text-input-item field">
+            <input required aria-errormessage="name-errors" name="userName" type="text" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="user-name"
+                   placeholder=" ">
+            <label for="user-name" class="field__label">Name</label>
+            <span class="field__errors" id="name-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field">
+            <input required aria-errormessage="last-name-errors" name="lastName" type="text" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="last-name"
+                   placeholder=" ">
+            <label for="last-name" class="field__label">Last name</label>
+            <span class="field__errors" id="last-name-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field">
+            <input required type="tel" aria-errormessage="phone-errors" name="phone" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="phone"
+                   placeholder=" ">
+            <label for="phone" class="field__label">Phone</label>
+            <span class="field__errors" id="phone-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field">
+            <input required type="text" aria-errormessage="city-errors" name="city" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="city"
+                   placeholder=" ">
+            <label for="city" class="field__label">Your city</label>
+            <span class="field__errors" id="city-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field ">
+            <input
+                    required
+                    aria-errormessage="email-errors"
+                    type="email"
+                    pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}"
+                    title="Email address must be formatted as [email@example.com]"
+                    class="field__input"
+                    id="email"
+                    placeholder=" "
+                    name="email">
+            <label for="email" class="field__label">Email</label>
+            <span class="field__errors" id="email-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item ">
+            <div class="popup-form__text-input-item custom-select">
+              <button id="buttonSelectValue" class="custom-select__button" type="button">
+                <span id="selectValue" class="custom-select__label">Property type</span>
+              </button>
+              <ul class="custom-select__dropdown">
+                <li class="custom-select__item" data-value="option1">Вариант 1</li>
+                <li class="custom-select__item" data-value="option2">Вариант 2</li>
+                <li class="custom-select__item" data-value="option3">Вариант 3</li>
+              </ul>
+            </div>
+            <span class="field__errors field__errors_select" id="place-errors"
+                  data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field field field__input--full-width">
+            <input required name="comment" type="text" class="field__input" id="comment"
+                   placeholder=" ">
+            <label for="comment" class="field__label">Your comment</label>
+            <span class="field__errors" id="comments-errors" data-js-form-field-errors></span>
+          </li>
+        </ul>
+      </div>
+      <div class="popup-form__group popup-form__group_right-padding">
+        <h4 class="popup-form__subtitle">Area (m2)</h4>
+        <fieldset class="custom-radio">
+          <div class="custom-radio__group">
+
+            <input required type="radio" id="option1" name="options"
+                   value="50" class="custom-radio__input">
+            <label for="option1" class="custom-radio__label">to 50</label>
+
+            <input required type="radio" id="option2" name="options"
+                   value="50-150" class="custom-radio__input">
+            <label for="option2" class="custom-radio__label">50-150</label>
+
+            <input required type="radio" id="option3" name="options"
+                   value="150-250" class="custom-radio__input">
+            <label for="option3" class="custom-radio__label">150-250</label>
+
+            <input required type="radio" id="option4" name="options"
+                   value="250-400" class="custom-radio__input">
+            <label for="option4" class="custom-radio__label">250-400</label>
+
+            <input required type="radio" id="option5" name="options"
+                   value="400-600" class="custom-radio__input">
+            <label for="option5" class="custom-radio__label">400-600</label>
+
+
+            <input required type="radio" id="option6" name="options"
+                   value="600-800" class="custom-radio__input">
+            <label for="option6" class="custom-radio__label">600-800</label>
+
+
+            <input required type="radio" id="option7" name="options"
+                   value="800-1000"
+                   class="custom-radio__input">
+            <label for="option7" class="custom-radio__label">800-1000</label>
+
+
+            <input required type="radio" id="option8" name="options"
+                   value="1000+" class="custom-radio__input">
+            <label for="option8" class="custom-radio__label">1000+</label>
+
+
+            <span class="field__errors field__errors_radiobuttons" id="option"
+                  data-js-form-field-errors></span>
+          </div>
+
+        </fieldset>
+        <div class="popup-form__button-block">
+          <div class="file-upload">
+            <input type="file" id="file-upload__input" name="userFile" class="file-upload__input"/>
+            <label for="file-upload__input" class="file-upload__label">
+                            <span class="file-upload__icon"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                  <rect y="4" width="9" height="1" fill="#3A3E4B"/>
+                                  <rect x="4" width="1" height="9" fill="#3A3E4B"/>
+                                </svg></span>
+              <div class="file-upload__text">Attach your file <span>File size not more than 10 MB</span>
+              </div>
+
+
+            </label>
+
+          </div>
+          <button class="popup-form__button" type="submit">Send Request</button>
+        </div>
+        <div class="popup-form__description">
+          It is a long established fact that a reader will be distracted by the readable content of a page
+          <span>when looking</span> at its layout. The point of using Lorem Ipsum is that it has a
+          more-or-less normal
+          distribution of letters, as opposed to using 'Content here, content here', making it look like
+          readable English.
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="popup__success-message success-message success-message_hidden">
+    <h4 class="success-message__title">Thank you for your message!</h4>
+    <p class="success-message__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+      ullamcorper eu mauris vitae posuere. Ut at
+      luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.</p>
+    <button class="success-message__button ">Send again</button>
+  </div>
+</div>
+
+<header class="header header--white">
+    <div class="menu-burger menu-burger_hidden">
+        <ul class="menu-burger__list">
+            <li class="menu-burger__item"><a href="/">Home</a></li>
+            <li class="menu-burger__item"><a href="/projects">Projects</a></li>
+            <li class="menu-burger__item"><a href="/about">About us</a></li>
+            <li class="menu-burger__item"><a href="/blog">Blog</a></li>
+            <li class="menu-burger__item"><a href="/contacts">Contacts</a></li>
+            <li  class="menu-burger__item_button popup-button openPopup">Send Request</li>
+
+        </ul>
+    </div>
+    <div class="header__container">
+        <button type="button" class="icon-menu "><span></span></button>
+        <div class="header__menu menu">
+
+            <div class="menu__logo"><a href="/" class="  logo-main-link">Logo</a></div>
+            <nav class="menu__body">
+                <ul class="menu__list  menu__list_pc-menu">
+                    <li class="menu__item"><a href="/projects.html" class="menu__link">Projects</a></li>
+                    <li class="menu__item"><a href="/about.html" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="/blog.html" class="menu__link">Blog</a></li>
+                    <li class="menu__item"><a href="/contacts.html" class="menu__link">Contacts</a></li>
+                </ul>
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="/" class="menu__link "> En</a></li>
+                    <li class="menu__item">
+                        <button  class="popup-button openPopup">Send Request</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="first-screen-project">
+        <picture class="first-screen-project__background">
+            <source srcset="./assets/poster-full-small.webp" media="(max-width: 600px)" type="image/webp">
+            <source srcset="./assets/poster-full-mobile.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="./assets/poster-full-mid.webp" media="(max-width: 1024px)" type="image/webp">
+            <img class="first-screen-project__img-background" src="./assets/poster-full-pc.webp" alt="background image">
+        </picture>
+        <div class="first-screen-project__container">
+            <div class="first-screen-project__title"><span>Residence</span> by the lighthouse</div>
+            <div class="first-screen-project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare
+                pretium velit.
+            </div>
+            <ul class="first-screen-project__sub-title">
+                <li class="first-screen-project__item ">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                            <path d="M6.21191 0.00333482C2.80106 -0.106167 0 2.49519 0 5.71972C0 9.37922 3.6865 12.035 5.75277 15.8544C5.85768 16.0484 6.15072 16.0486 6.25599 15.8547C8.12524 12.418 11.32 10.1135 11.9121 6.80266C12.5251 3.37656 9.85812 0.120438 6.21191 0.00333482ZM6.00409 8.71572C4.26719 8.71572 2.8591 7.37431 2.8591 5.71972C2.8591 4.06514 4.26722 2.72372 6.00409 2.72372C7.74099 2.72372 9.1491 4.06514 9.1491 5.71972C9.1491 7.37431 7.74099 8.71572 6.00409 8.71572Z"
+                                  fill="white"/>
+                        </g>
+                    </svg>
+                    Lodz, Poland
+                </li>
+                <li class="first-screen-project__item ">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                            <path d="M11.9828 3.37682C12.6049 3.37682 13.1087 2.88342 13.1087 2.26916V1.10985C13.1087 0.495039 12.6054 0 11.9828 0C11.3602 0 10.8574 0.49449 10.8574 1.10985V2.26971C10.858 2.88342 11.3607 3.37682 11.9828 3.37682Z"
+                                  fill="white"/>
+                            <path d="M15.9827 1.91962H13.7164V2.48389C13.7164 3.41518 12.9488 4.17395 12.0024 4.17395C11.0548 4.17395 10.2889 3.41518 10.2889 2.48389V1.91962H5.71552V2.48389C5.71552 3.41518 4.94687 4.17395 4.00098 4.17395C3.05508 4.17395 2.28699 3.41573 2.28699 2.48389V1.91962L0 1.8916V15.9999H1.14377H14.8579L16 15.9966L15.9827 1.91962ZM14.8568 14.8764H1.14377V5.86345H14.8579V14.8764H14.8568Z"
+                                  fill="white"/>
+                            <path d="M3.9842 3.37682C4.60625 3.37682 5.11069 2.88342 5.11069 2.26916V1.10985C5.11069 0.49449 4.60625 0 3.9842 0C3.36214 0 2.85938 0.49449 2.85938 1.10985V2.26971C2.85938 2.88342 3.36159 3.37682 3.9842 3.37682Z"
+                                  fill="white"/>
+                            <path d="M7.51969 7.07275H5.71875V8.63974H7.51969V7.07275Z" fill="white"/>
+                            <path d="M10.4335 7.07275H8.63086V8.63974H10.4335V7.07275Z" fill="white"/>
+                            <path d="M13.131 7.07275H11.3301V8.63974H13.131V7.07275Z" fill="white"/>
+                            <path d="M7.51969 9.6748H5.71875V11.2407H7.51969V9.6748Z" fill="white"/>
+                            <path d="M10.4335 9.6748H8.63086V11.2407H10.4335V9.6748Z" fill="white"/>
+                            <path d="M13.131 9.6748H11.3301V11.2407H13.131V9.6748Z" fill="white"/>
+                            <path d="M7.51969 12.3286H5.71875V13.8945H7.51969V12.3286Z" fill="white"/>
+                            <path d="M4.6592 9.6748H2.85938V11.2407H4.6592V9.6748Z" fill="white"/>
+                            <path d="M4.6592 12.3286H2.85938V13.8945H4.6592V12.3286Z" fill="white"/>
+                            <path d="M10.4335 12.3286H8.63086V13.8945H10.4335V12.3286Z" fill="white"/>
+                            <path d="M13.131 12.3286H11.3301V13.8945H13.131V12.3286Z" fill="white"/>
+                        </g>
+                    </svg>
+                    16.10.2018
+                </li>
+                <li class="first-screen-project__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                            <path d="M1.08447 9.27465L8.44739 2.04785L9.67463 3.25266L2.31172 10.4795L1.08447 9.27465Z"
+                                  fill="white"/>
+                            <path d="M0 11.5455L1.80627 10.7857L0.774337 9.77246L0 11.5455Z" fill="white"/>
+                            <path d="M11.5148 1.44561C11.8535 1.11304 11.8535 0.573919 11.5148 0.241212C11.1713 -0.0804041 10.631 -0.0804041 10.2876 0.241212L9.67407 0.843411L10.9013 2.04809L11.5148 1.44561Z"
+                                  fill="white"/>
+                            <path d="M8.85449 1.64672L9.26362 1.24512L10.4906 2.44979L10.0816 2.85126L8.85449 1.64672Z"
+                                  fill="white"/>
+                            <path d="M14.5533 4.07576H15.9994V1.07031L0.790039 16H15.9994V14.8643H14.5533C14.3935 14.8643 14.264 14.7372 14.264 14.5804C14.264 14.4236 14.3935 14.2965 14.5533 14.2965H15.9994V13.1609H15.1317C14.972 13.1609 14.8425 13.0337 14.8425 12.877C14.8425 12.7202 14.972 12.593 15.1317 12.593H15.9994V11.4574H14.5533C14.3935 11.4574 14.264 11.3303 14.264 11.1735C14.264 11.0167 14.3935 10.8896 14.5533 10.8896H15.9994V9.75395H15.1317C14.972 9.75395 14.8425 9.62683 14.8425 9.47004C14.8425 9.31326 14.972 9.18613 15.1317 9.18613H15.9994V8.0505H14.5533C14.3935 8.0505 14.264 7.92337 14.264 7.76659C14.264 7.6098 14.3935 7.48268 14.5533 7.48268H15.9994V6.34704H15.1317C14.972 6.34704 14.8425 6.21992 14.8425 6.06313C14.8425 5.90634 14.972 5.77922 15.1317 5.77922H15.9994V4.64358H14.5533C14.3935 4.64358 14.264 4.51646 14.264 4.35967C14.264 4.20288 14.3935 4.07576 14.5533 4.07576ZM13.6856 13.4448C13.6856 13.6016 13.5561 13.7287 13.3964 13.7287H7.07442C6.95748 13.7287 6.85199 13.6595 6.80722 13.5533C6.76245 13.4473 6.78731 13.3251 6.86992 13.244L13.1919 7.03865C13.2746 6.95742 13.399 6.93316 13.5071 6.9771C13.6151 7.02105 13.6856 7.12446 13.6856 7.23938V13.4448Z"
+                                  fill="white"/>
+                        </g>
+                    </svg>
+                    80 sq.m
+                </li>
+            </ul>
+
+        </div>
+        <div class="first-screen-project__social">
+            <div class="first-screen-project__social-title">Share:</div>
+            <ul class="first-screen-project__social-list">
+                <li class="first-screen-project__social-item">
+                    <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.70961 0.805868V2.15341H3.87117C3.2062 2.15341 3.08092 2.45593 3.08092 2.88677V3.85847H4.66143L4.44941 5.37103H3.08092V9.25783H1.43294V5.37103H0.0644531V3.85847H1.43294V2.7401C1.43294 1.44756 2.27139 0.741699 3.48568 0.741699C4.06392 0.741699 4.56506 0.778367 4.70961 0.805868Z" fill="white" />
+                    </svg>
+                </li>
+                <li class="first-screen-project__social-item">
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.741943 8.29178C1.6558 8.90228 2.74076 9.25783 3.90723 9.25783C7.70558 9.25783 9.78239 5.98125 9.78239 3.14005C9.78239 3.04691 9.78038 2.95483 9.77636 2.86275C10.1799 2.55936 10.5302 2.18093 10.8065 1.7498C10.4366 1.92118 10.0385 2.03615 9.62086 2.08725C10.0471 1.82272 10.3737 1.4001 10.5287 0.898715C10.1296 1.14462 9.68729 1.32346 9.21727 1.4198C8.84086 1.00251 8.30392 0.741699 7.71011 0.741699C6.5698 0.741699 5.64487 1.70349 5.64487 2.89042C5.64487 3.05968 5.66349 3.22309 5.69872 3.38063C3.98272 3.29122 2.46046 2.43534 1.44294 1.13451C1.2653 1.4528 1.16314 1.82112 1.16314 2.21552C1.16314 2.96122 1.52748 3.61962 2.08153 4.00497C1.74286 3.99486 1.42482 3.89746 1.14603 3.73618C1.14603 3.74523 1.14603 3.75428 1.14603 3.76333C1.14603 4.80442 1.8586 5.67413 2.80215 5.8716C2.62954 5.9211 2.44687 5.94665 2.25867 5.94665C2.12531 5.94665 1.99598 5.93388 1.87018 5.90833C2.13236 6.76313 2.89525 7.38481 3.79854 7.40131C3.09201 7.97828 2.20281 8.32105 1.2346 8.32105C1.06803 8.32105 0.903982 8.31254 0.741943 8.29178Z" fill="white" />
+                    </svg>
+                </li>
+                <li class="first-screen-project__social-item">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_159)">
+                            <path d="M11.5777 11.0349V11.0344H11.5804V7.05934C11.5804 5.1147 11.1618 3.6167 8.88834 3.6167C7.79544 3.6167 7.06202 4.21644 6.7626 4.78502H6.73099V3.79825H4.57544V11.0344H6.81996V7.45134C6.81996 6.50793 6.99879 5.59567 8.16712 5.59567C9.31828 5.59567 9.33544 6.67231 9.33544 7.51186V11.0349H11.5777Z" fill="white" />
+                            <path d="M0.920898 3.79834H3.16812V11.0345H0.920898V3.79834Z" fill="white" />
+                            <path d="M2.04398 0.193359C1.32546 0.193359 0.742432 0.776392 0.742432 1.49491C0.742432 2.21342 1.32546 2.80865 2.04398 2.80865C2.7625 2.80865 3.34553 2.21342 3.34553 1.49491C3.34508 0.776392 2.76204 0.193359 2.04398 0.193359V0.193359Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_159">
+                                <rect width="10.8387" height="10.8387" fill="white" transform="translate(0.742432 0.193359)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </li>
+                <li class="first-screen-project__social-item">
+                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_165)">
+                            <path d="M5.38494 3.29035L6.15913 2.51616C7.01428 1.66101 8.40076 1.66101 9.25591 2.51616C10.1111 3.37131 10.1111 4.75778 9.25591 5.61293L8.48171 6.38713M6.93333 7.93551L5.38494 9.4839C4.52979 10.3391 3.14332 10.3391 2.28817 9.4839C1.43301 8.62875 1.43302 7.24228 2.28817 6.38713L3.83655 4.83874" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.83423 7.93493L7.7052 4.06396" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_165">
+                                <rect width="10.0645" height="10.0645" fill="white" transform="translate(0.742188 0.967773)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="text-section text-section_small-pt">
+        <div class="text-section__container">
+            <div class="text-section__content">
+                <h3 class="text-section__title text-section__title_alt-mb">
+                    Donec et ipsum nec quam posuere maximus eu in erat. Duis laoreet finibus consectetur.
+                </h3>
+                <p class="text-section__paragraph text-section__paragraph_alt-width">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida urna. Donec blandit sapien eu
+                    diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam. Donec et ipsum nec quam posuere
+                    maximus eu in erat. Duis laoreet finibus consectetur. Nullam pulvinar ex sit amet leo gravida, sed
+                    mattis enim vehicula. Duis purus nisl, consectetur ut est non, placerat eleifend turpis. Duis auctor
+                    suscipit arcu. Aenean leo est, rutrum a eleifend eget, tempor nec urna. Proin finibus lobortis arcu
+                    dictum convallis. Ut fermentum eu magna vel laoreet. In lacus augue, malesuada id elit sit amet, varius
+                    imperdiet ex. Nullam blandit lobortis posuere:
+                </p>
+                <a href="#" class="text-section__link ">Discover more</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="one-project-posters">
+        <div class="one-project-posters__container">
+            <div class=" full-poster  full-poster_alt">
+                <picture>
+
+                    <img class="full-poster__item" src="./assets/poster-one-news-pc-full.webp"
+                         alt="photo apartment interior">
+                </picture>
+
+            </div>
+            <div class="double-poster double-poster_alt">
+                <div class="double-poster__poster-wrapper">
+                    <img class="double-poster__item" src="./assets/poster-one-news-pc-half.webp"
+                         alt="photo apartment interior">
+                </div>
+                <div class="double-poster__poster-wrapper">
+                    <img class="double-poster__item" src="./assets/poster-one-news-pc-half2.webp"
+                         alt="photo apartment interior">
+                </div>
+
+
+                </a>
+            </div>
+            <div class=" full-poster  full-poster_alt">
+                <picture>
+                    <img class="full-poster__item" src="./assets/poster-one-news-pc-full.webp"
+                         alt="photo apartment interior">
+                </picture>
+
+            </div>
+
+            <button class="one-project-posters__btn">View more photo</button>
+        </div>
+    </section>
+
+    <section class="photos-collage photos-collage_dark-bg">
+        <div class="photos-collage__container">
+            <div class="photos-collage__content">
+                <div class="photos-collage__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="photos-collage__description">
+                    <div class="photos-collage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam
+                        eu enim sed, ornare pretium velit.
+                    </div>
+                    <button class="photos-collage__button openPopup">Make request</button>
+                </div>
+            </div>
+            <div class="photos-collage__background">
+                <img class="photos-collage__photo-item" src="./assets/collage10.webp" width="258" height="307"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage9.webp" width="211" height="273"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage8.webp"
+                     width="258" height="307"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage7.webp"
+                     width="211" height="273"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage6.webp"
+                     width="258" height="307"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage5.webp"
+                     width="258" height="307"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage4.webp"
+                     width="211" height="273"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage3.webp"
+                     width="211" height="273"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage2.webp"
+                     width="211" height="273"
+                     alt="photo interiera">
+                <img class="photos-collage__photo-item" src="./assets/collage1.webp"
+                     width="258" height="307"
+                     alt="photo interiera">
+            </div>
+        </div>
+    </section>
+
+    <section class="next-project">
+        <div class="next-project__container">
+            <div class="next-project__sub-title">
+                Next project
+            </div>
+            <div class="next-project__title">
+                Perfect proportions
+            </div>
+            <div class=" full-poster  full-poster_alt">
+                <picture>
+                    <source srcset="./assets/one-news-mobile-fullposter.webp" media="(max-width: 600px)" type="image/png">
+                    <img class="full-poster__item" src="./assets/poster-one-news-pc-full.webp"
+                         alt="photo apartment interior">
+                </picture>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
