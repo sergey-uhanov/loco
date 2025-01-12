@@ -1,0 +1,230 @@
+@use "_mixins.scss" as mix;
+
+.first-screen-project {
+  height: 100vh ;
+  display: flex;
+  align-items: center;
+
+
+  &__img-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  &__container {
+    transform: translateY(-45%);
+    width: 100%;
+    margin-left: mix.rem(133);
+    color: #fff;
+    @include mix.respond-to('tablet') {
+      margin-left: mix.rem(105);
+      transform: translateY(-37%);
+    }
+    @include mix.respond-to('mobile') {
+      margin-left: 4.87rem;
+      transform: translateY(-41%);
+    }
+    @include mix.respond-to(600) {
+      margin-left: 0rem;
+      transform: translateY(-28%);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      max-width: mix.rem(297);
+      span {
+        display: block;
+      }
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 1.6rem;
+    }
+    @include mix.respond-to(600) {
+      margin-bottom: 0.6rem;
+      font-size: 1.62rem;
+      line-height: 1.3;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    max-width: mix.rem(462);
+    margin-bottom: mix.rem(62);
+    @include mix.respond-to('tablet') {
+      margin-bottom: 3rem;
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 2rem;
+    }
+    @include mix.respond-to(600) {
+      margin-bottom: 2rem;
+
+    }
+  }
+
+  &__sub-title {
+    display: flex;
+    column-gap: 2rem;
+    @include mix.respond-to(600) {
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+  }
+
+  &__item {
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    bottom: mix.rem(40);
+    left: mix.rem(40);
+    display: flex;
+    gap: mix.rem(111);
+    color: #fff;
+
+    @include mix.respond-to('tablet') {
+      bottom: 2rem;
+      left: 3.6rem;
+      gap: 3.23rem;
+      align-items: center;
+    }
+    @include mix.respond-to('mobile') {
+      left: 3rem;
+      gap: 1.7rem;
+    }
+    @include mix.respond-to(600) {
+      left: 1.4rem;
+      bottom: 1.5rem;
+      gap: 0.9rem;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+
+  }
+
+}
+
+.one-project-posters{
+  padding-top: 2.7rem;
+  padding-bottom: 8.8rem;
+
+  @include mix.respond-to('tablet') {
+    padding-bottom: 7.9rem;
+  }
+  @include mix.respond-to('mobile') {
+    padding-bottom: 6.5rem;
+  }
+  @include mix.respond-to(600) {
+    padding-bottom: 4.7rem;
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    @include mix.respond-to('tablet') {
+
+    }
+  }
+
+  &__btn{
+    border: 1px solid #080808;
+    background: #fff;
+    opacity: 0.32;
+    padding: 17px 48px;
+    max-width: mix.rem(205);
+    white-space: nowrap;
+    margin: mix.rem(70) auto 0 auto;
+    font-weight: 600;
+    font-size: 0.69rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #080808;
+    @include mix.respond-to('tablet') {
+      margin: 3.9rem auto 0 auto;
+    }
+    @include mix.respond-to('mobile') {
+      margin: 3.1rem auto 0 auto;
+    }
+  }
+}
+
+.next-project{
+  position: relative;
+  //top: -1px;
+  background: #000 ;
+
+  &__sub-title{
+    font-weight: 700;
+    font-size: 0.5rem;
+    line-height: 1.7;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #828282;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @include mix.respond-to('mobile') {
+      font-size: 0.5rem;
+      line-height: 1.34;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: mix.rem(130);
+
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      margin-bottom: mix.rem(96);
+    }
+    @include mix.respond-to('mobile') {
+
+      margin-bottom: mix.rem(72);
+    }
+    @include mix.respond-to(600) {
+      font-size: 1.62rem;
+      margin-bottom: 2.8rem;
+    }
+
+  }
+
+}

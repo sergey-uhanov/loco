@@ -4,7 +4,6 @@ export function elevationCompensation() {
 
     if (header && body) {
         const headerHeight = header.offsetHeight;
-        console.log(headerHeight)
         body.style.marginTop = `${headerHeight}px`;
     } else {
         console.warn('Header or body element not found!');
