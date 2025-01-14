@@ -4,6 +4,7 @@
   padding: mix.rem(350) 0 21.16rem 0;
   position: relative;
   overflow: hidden;
+  color: var(--pri-color);
   @include mix.respond-to('tablet') {
     padding: 21.37rem 0 20.46rem 0;
   }
@@ -14,6 +15,11 @@
     padding: 17.97rem 0 16.26rem 0;
   }
 
+  &_dark-bg{
+    background-color: #080808;
+    color: #fff;
+  }
+
   &__content {
     max-width: mix.rem(427);
     margin: 0 auto;
@@ -22,7 +28,7 @@
   &__title {
     font-weight: 700;
     font-size: 3.5rem;
-    color: var(--pri-color);
+
     margin-bottom: 1.5rem;
     @include mix.respond-to('tablet') {
       font-size: 3rem;
