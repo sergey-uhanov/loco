@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.min.css">
+    <script type="module" src="./js/bundle.js" defer></script>
+    <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
+</head>
+<body>
+<div class="popup " id="popup">
+    <span class="popup__close-btn" id="closePopup"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)"
+        fill="white"/>
+  <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)"
+        fill="white"/>
+</svg></span>
+  <div class="popup__content ">
+    <form action="#" method="post" class="popup-form" novalidate data-js-form>
+      <div class="popup-form__group">
+        <h2 class="popup-form__title">Calculate the cost of work</h2>
+        <ul class="popup-form__text-inputs">
+          <li class="popup-form__text-input-item field">
+            <input required aria-errormessage="name-errors" name="userName" type="text" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="user-name"
+                   placeholder=" ">
+            <label for="user-name" class="field__label">Name</label>
+            <span class="field__errors" id="name-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field">
+            <input required aria-errormessage="last-name-errors" name="lastName" type="text" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="last-name"
+                   placeholder=" ">
+            <label for="last-name" class="field__label">Last name</label>
+            <span class="field__errors" id="last-name-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field">
+            <input required type="tel" aria-errormessage="phone-errors" name="phone" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="phone"
+                   placeholder=" ">
+            <label for="phone" class="field__label">Phone</label>
+            <span class="field__errors" id="phone-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field">
+            <input required type="text" aria-errormessage="city-errors" name="city" minlength="4"
+                   maxlength="10"
+                   class="field__input" id="city"
+                   placeholder=" ">
+            <label for="city" class="field__label">Your city</label>
+            <span class="field__errors" id="city-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field ">
+            <input
+                    required
+                    aria-errormessage="email-errors"
+                    type="email"
+                    pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}"
+                    title="Email address must be formatted as [email@example.com]"
+                    class="field__input"
+                    id="email"
+                    placeholder=" "
+                    name="email">
+            <label for="email" class="field__label">Email</label>
+            <span class="field__errors" id="email-errors" data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item ">
+            <div class="popup-form__text-input-item custom-select">
+              <button id="buttonSelectValue" class="custom-select__button" type="button">
+                <span id="selectValue" class="custom-select__label">Property type</span>
+              </button>
+              <ul class="custom-select__dropdown">
+                <li class="custom-select__item" data-value="option1">Вариант 1</li>
+                <li class="custom-select__item" data-value="option2">Вариант 2</li>
+                <li class="custom-select__item" data-value="option3">Вариант 3</li>
+              </ul>
+            </div>
+            <span class="field__errors field__errors_select" id="place-errors"
+                  data-js-form-field-errors></span>
+          </li>
+          <li class="popup-form__text-input-item field field field__input--full-width">
+            <input required name="comment" type="text" class="field__input" id="comment"
+                   placeholder=" ">
+            <label for="comment" class="field__label">Your comment</label>
+            <span class="field__errors" id="comments-errors" data-js-form-field-errors></span>
+          </li>
+        </ul>
+      </div>
+      <div class="popup-form__group popup-form__group_right-padding">
+        <h4 class="popup-form__subtitle">Area (m2)</h4>
+        <fieldset class="custom-radio">
+          <div class="custom-radio__group">
+
+            <input required type="radio" id="option1" name="options"
+                   value="50" class="custom-radio__input">
+            <label for="option1" class="custom-radio__label">to 50</label>
+
+            <input required type="radio" id="option2" name="options"
+                   value="50-150" class="custom-radio__input">
+            <label for="option2" class="custom-radio__label">50-150</label>
+
+            <input required type="radio" id="option3" name="options"
+                   value="150-250" class="custom-radio__input">
+            <label for="option3" class="custom-radio__label">150-250</label>
+
+            <input required type="radio" id="option4" name="options"
+                   value="250-400" class="custom-radio__input">
+            <label for="option4" class="custom-radio__label">250-400</label>
+
+            <input required type="radio" id="option5" name="options"
+                   value="400-600" class="custom-radio__input">
+            <label for="option5" class="custom-radio__label">400-600</label>
+
+
+            <input required type="radio" id="option6" name="options"
+                   value="600-800" class="custom-radio__input">
+            <label for="option6" class="custom-radio__label">600-800</label>
+
+
+            <input required type="radio" id="option7" name="options"
+                   value="800-1000"
+                   class="custom-radio__input">
+            <label for="option7" class="custom-radio__label">800-1000</label>
+
+
+            <input required type="radio" id="option8" name="options"
+                   value="1000+" class="custom-radio__input">
+            <label for="option8" class="custom-radio__label">1000+</label>
+
+
+            <span class="field__errors field__errors_radiobuttons" id="option"
+                  data-js-form-field-errors></span>
+          </div>
+
+        </fieldset>
+        <div class="popup-form__button-block">
+          <div class="file-upload">
+            <input type="file" id="file-upload__input" name="userFile" class="file-upload__input"/>
+            <label for="file-upload__input" class="file-upload__label">
+                            <span class="file-upload__icon"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                  <rect y="4" width="9" height="1" fill="#3A3E4B"/>
+                                  <rect x="4" width="1" height="9" fill="#3A3E4B"/>
+                                </svg></span>
+              <div class="file-upload__text">Attach your file <span>File size not more than 10 MB</span>
+              </div>
+
+
+            </label>
+
+          </div>
+          <button class="popup-form__button" type="submit">Send Request</button>
+        </div>
+        <div class="popup-form__description">
+          It is a long established fact that a reader will be distracted by the readable content of a page
+          <span>when looking</span> at its layout. The point of using Lorem Ipsum is that it has a
+          more-or-less normal
+          distribution of letters, as opposed to using 'Content here, content here', making it look like
+          readable English.
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="popup__success-message success-message success-message_hidden">
+    <h4 class="success-message__title">Thank you for your message!</h4>
+    <p class="success-message__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+      ullamcorper eu mauris vitae posuere. Ut at
+      luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.</p>
+    <button class="success-message__button ">Send again</button>
+  </div>
+</div>
+
+<header class="header header--white">
+    <div class="menu-burger menu-burger_hidden">
+        <ul class="menu-burger__list">
+            <li class="menu-burger__item"><a href="/">Home</a></li>
+            <li class="menu-burger__item"><a href="/projects">Projects</a></li>
+            <li class="menu-burger__item"><a href="/about">About us</a></li>
+            <li class="menu-burger__item"><a href="/blog">Blog</a></li>
+            <li class="menu-burger__item"><a href="/contacts">Contacts</a></li>
+            <li  class="menu-burger__item_button popup-button openPopup">Send Request</li>
+
+        </ul>
+    </div>
+    <div class="header__container">
+        <button type="button" class="icon-menu "><span></span></button>
+        <div class="header__menu menu">
+
+            <div class="menu__logo"><a href="/" class="  logo-main-link">Logo</a></div>
+            <nav class="menu__body">
+                <ul class="menu__list  menu__list_pc-menu">
+                    <li class="menu__item"><a href="/projects.html" class="menu__link">Projects</a></li>
+                    <li class="menu__item"><a href="/about.html" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="/blog.html" class="menu__link">Blog</a></li>
+                    <li class="menu__item"><a href="/contacts.html" class="menu__link">Contacts</a></li>
+                </ul>
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="/" class="menu__link "> En</a></li>
+                    <li class="menu__item">
+                        <button  class="popup-button openPopup">Send Request</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="main-screen-about">
+        <div class="main-screen-about__container">
+            <div class="main-screen-about__title">
+                Company <br> Philosophy
+            </div>
+            <div class="main-screen-about__text">The basic philosophy of our studio is to create individual,
+                aesthetically stunning solutions for our customers by lightning-fast development of projects employing
+                unique styles and architecture.
+            </div>
+        </div>
+    </section>
+
+    <section class="about-slider-section">
+        <div class="about-slider-section__container">
+            <div class="about-slider">
+                <div class="about-slider__wrapper swiper-wrapper">
+                    <div class="about-slider__slide swiper-slide"><img src="./assets/about-slide1.webp" alt=photo></div>
+                    <div class="about-slider__slide swiper-slide"><img src="./assets/about-slide.webp" alt=photo></div>
+                    <div class="about-slider__slide swiper-slide"><img src="./assets/about-slide1.webp" alt=photo></div>
+
+                </div>
+            </div>
+            <div class="about-slider-section__text">
+                <div class="about-slider-section__title">Company Philosophy</div>
+                <div class="about-slider-section__description">The basic philosophy of our studio is to create
+                    individual, aesthetically stunning solutions for our customers by lightning-fast development of
+                    projects employing unique styles and architecture.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="achievements">
+        <div class="achievements__container">
+            <div class="achievements__img">
+                <img src="./assets/achievements1.webp" alt="achievements">
+            </div>
+            <div class="achievements__text">
+                <ul class="achievements__list-achievements">
+                    <li class="achievements__item"><span>6</span> years
+                        expertise
+                    </li>
+                    <li class="achievements__item"><span>100+</span> completed
+                        projects
+                    </li>
+                    <li class="achievements__item"><span>25+</span> companies
+                        cooperate
+                    </li>
+                    <li class="achievements__item"><span>2014</span> year of
+                        market entry
+
+                    </li>
+                </ul>
+                <div class="achievements__description">
+                    The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our
+                    customers by lightning-fast development of projects employing unique styles and architecture.
+                </div>
+            </div>
+        </div>
+        <div class="achievements__img-small">
+            <img src="./assets/about323.webp" alt="photo">
+        </div>
+    </section>
+
+    <section class="about-team">
+        <div class="about-team__container">
+           <div class="about-team__content">
+               <div class="about-team__top-text">
+                   <div class="about-team__title">Roman Viktorovich</div>
+                   <div class="about-team__position">Founder and CEO of Hilight
+                   </div>
+                   <div class="about-team__description">We can also help you create harmony out of seemingly completely
+                       incompatible elements in the interior or the exterior design.
+                   </div>
+               </div>
+               <div class="about-team__top-image"><img src="./assets/ceo.webp" alt="photo ceo"></div>
+               <div class="about-team__bottom-image"><img src="./assets/team.webp" alt="photo ceo"></div>
+               <div class="about-team__bottom-text">
+                   <ul class="about-team__numbers">
+                       <li class="about-team__item">
+                           <span>5</span> companies
+                           cooperate
+                       </li>
+                       <li class="about-team__item">
+                           <span>4</span> year of
+                           market entry
+                       </li>
+                       <li class="about-team__item">
+                           <span>3</span> companies
+                           cooperate
+                       </li>
+
+                   </ul>
+                   <div class="about-team__text-description">
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl sit risus pharetra nisl metus
+                       aliquet. Nibh eu posuere sodales sem tellus. Vulputate est nisl convallis sed. Fames in dignissim
+                       erat fermentum sed sed. In massa, adipiscing aliquet mi semper facilisis ornare nisi. Non elit amet
+                       enim at cursus mauris senectus dolor ac. Egestas lectus in praesent mi arcu. Vitae nisl viverra enim
+                       nulla at. Fusce porta elementum quis.
+                   </div>
+               </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="circle-collage circle-collage_dark-bg">
+        <div class="circle-collage__container">
+            <div class="circle-collage__content">
+                <div class="circle-collage__title">@lorem.ipsum</div>
+                <div class="circle-collage__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam ullamcorper eu mauris vitae posuere.
+                </div>
+            </div>
+            <div class="circle-collage__background">
+                <img class="circle-collage__photo-item" src="./assets/collage11.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage22.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage44.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage33.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage55.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage66.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage77.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage88.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage101.webp">
+            </div>
+        </div>
+    </section>
+    <section class="describe describe_white-bg">
+        <img class="describe__background" src="./assets/background-poster.webp" alt="background image">
+        <div class="describe__container ">
+            <div class="describe__title">
+                Do you want to work in our team?
+
+            </div>
+            <form action="#" class="describe__form describe__form_white-bg">
+
+                <div class="describe__input-field">
+                    <input
+                            required
+                            type="email"
+                            pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}"
+                            title="Email address must be formatted as [email@example.com]"
+                            class="describe__input"
+                            id="email-describe"
+                            placeholder=" "
+                            name="email">
+
+                    <label for="email-describe" class="describe__label">Email</label>
+                    <button class="describe__submit-btn" type="submit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.5">
+                                <path d="M4 12H20" stroke="white"/>
+                                <path d="M14 6L20 12L14 18" stroke="white"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+
+
+            </form>
+            <div class="describe__description describe__description_white-bg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                posuere. Ut at luctus ligula. Nunc ante felis, aliquam.
+            </div>
+        </div>
+        <div class="describe__footer">
+            <div class="small-footer">
+    <div class="small-footer__container">
+        <div class="small-footer__content">
+            <div class="small-footer__copyright">© Copyright 2018. All rights reserved</div>
+            <div class="small-footer__logo-block">
+                <div class="small-footer__slogan">
+                    Made with love in
+                </div>
+                <div class="small-footer__logo"><span>The First</span>The Last </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
