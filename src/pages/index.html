@@ -74,8 +74,8 @@
                 <div class="first-screen__select ">
                     @@include('../partials/select.html')
                 </div>
-                <div class="first-screen__contact-phone">+380935705222</div>
-                <div class="first-screen__email">info@hi-light.pl</div>
+                <a href="tel:380935705222" class="first-screen__contact-phone">+380935705222</a>
+                <a href="mailto:info@hi-light.pl" class="first-screen__email">info@hi-light.pl</a>
 
             </div>
             <div class="first-screen__content">
@@ -99,6 +99,7 @@
         </div>
         <div class="company-philosophy__container">
             <div class="company-philosophy__top-block">
+                <div class="company-philosophy__name-section">About</div>
                 <div class="company-philosophy__complex-text-unit ">
                     <div class="company-philosophy__title">Company Philosophy</div>
                     <div class="company-philosophy__description">The basic philosophy of our studio is to create
@@ -137,8 +138,8 @@
     </section>
 
     <section class="posters-section">
-
         <div class="posters-section__container">
+            <div class="posters-section__name-section">Projects</div>
             <div class="posters-section__text">
                 <div class="posters-section__title">Our Projects</div>
                 <div class="posters-section__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -163,7 +164,7 @@
                         <img class="double-poster__item" src="./assets/posterhalf1-pc.png"
                              alt="photo apartment interior">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <a href="#" class="double-poster__link">Discover more</a>
+                        <div  class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -200,13 +201,13 @@
                         <div class="double-poster__title-card">See more 60 projects</div>
                         <img class="double-poster__microposter" src="./assets/postermicro1.png"
                              alt="photo apartment interior">
-
                     </a>
                 </div>
             </div>
         </div>
         <section class="photos-collage">
             <div class="photos-collage__container">
+                <div class="photos-collage__name-section">Make request</div>
                 <div class="photos-collage__background">
                     <img class="photos-collage__photo-item" src="./assets/collage5.png" width="211" height="273"
 
@@ -279,6 +280,7 @@
 </main>
 <footer class="footer">
     <div class="footer__container">
+        <div class="footer__name-section">Contacts</div>
         <div class="footer__content">
             <div class="footer__title">Drop us a line</div>
             <div class="footer__description">
@@ -322,12 +324,11 @@
             <button class="footer__button openPopup">Make request</button>
         </div>
     </div>
-    <div class="footer__small-footer ">
+    <div class="footer__small-footer">
         @@include('../partials/small-footer.html')
     </div>
 
 </footer>
-
 
 </body>
 </html>

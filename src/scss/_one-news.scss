@@ -1,15 +1,15 @@
 @use 'mixins.scss' as mix;
 
 .one-news-firs-screen {
-  padding-top: 7.3rem;
+  padding-top: 13.4rem;
   @include mix.respond-to('tablet') {
-    padding-top: 4.6rem;
+    padding-top: 10.3rem;
   }
-  @include mix.respond-to('tablet') {
-    padding-top: 3.1rem;
+  @include mix.respond-to('mobile') {
+    padding-top: 8.9rem;
   }
   @include mix.respond-to(600){
-    padding-top: 3.7rem;
+    padding-top: 7.5rem;
   }
 
   &__content-wrapper {

@@ -1,18 +1,18 @@
 @use "_mixins.scss" as mix;
 
 .news-slider-section {
-  padding-top: mix.rem(112);
+  padding-top: 13.1rem;
   padding-bottom: 8.55rem;
   @include mix.respond-to('tablet') {
-    padding-top: 4.4rem;
+    padding-top: 10.1rem;
     padding-bottom: 7.7rem;
   }
   @include mix.respond-to('mobile') {
-    padding-top: 3rem;
-    padding-bottom: 4.7rem;
+    padding-top: 8.7rem;
+    padding-bottom: 6.7rem;
   }
   @include mix.respond-to(600) {
-    padding-top: 3.4rem;
+    padding-top: 7.4rem;
     padding-bottom: 4.9rem;
   }
 
@@ -83,7 +83,13 @@
   &__filter-button {
     color: var(--sec-color);
     white-space: nowrap;
+    transition: opacity 0.2s ease;
+    &:hover{
+      opacity: 0.5;
+    }
   }
+
+
 
   &__filter-button-active {
     color: var(--pri-color);

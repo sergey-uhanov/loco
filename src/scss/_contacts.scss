@@ -6,12 +6,15 @@
 }
 .contact-section {
   height: 100%;
+  padding-top: 6rem;
+
 
   &__layout {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
+    min-height: 100vh;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
     z-index: 1;
@@ -23,6 +26,7 @@
     top: 0;
     left: 0;
     width: 100vw;
+    min-height: 100vh;
     height: 100%;
     z-index: -1;
   }

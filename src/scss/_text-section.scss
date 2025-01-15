@@ -14,14 +14,14 @@
   }
 
   &_small-pt {
-    padding-top: 2.8rem;
+    padding-top: 8.6rem;
 
     @include mix.respond-to('tablet') {
-      padding-top: 2.1rem;
+      padding-top: 7.6rem;
     }
 
     @include mix.respond-to('mobile') {
-      padding-top: 1rem;
+      padding-top: 6.5rem;
       padding-bottom: 3.7rem;
     }
     @include mix.respond-to(600) {

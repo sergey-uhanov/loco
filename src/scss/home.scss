@@ -129,12 +129,17 @@
 
 .first-screen {
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 96px;
+
+  @include mix.respond-to('mobile') {
+    margin-bottom: 60px;
+  }
 
   &__content {
     position: relative;
     z-index: 9;
     color: var(--white);
-    height: 650px;
+
     pointer-events: none;
     height: calc(100vh - 95px);
     @include mix.respond-to('tablet') {
@@ -286,6 +291,10 @@
 
   &__contact-phone {
     margin-right: 33px;
+    transition: opacity 0.3s ease;
+    &:hover{
+      opacity: 0.5;
+    }
     @include mix.respond-to('tablet') {
       margin-right: 2.5rem;
     }
@@ -303,6 +312,10 @@
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.16em;
+    transition: opacity 0.3s ease;
+    &:hover{
+      opacity: 0.5;
+    }
     @include mix.respond-to('tablet') {
       font-weight: 600;
       font-size: 0.69rem;
@@ -379,47 +392,63 @@
 .company-philosophy {
   position: relative;
   padding-top: mix.rem(140);
-  padding-left: 8.22rem;
   padding-bottom: mix.rem(140);
 
   @include mix.respond-to('tablet') {
-    padding-top: mix.rem(124);
+    padding-top: 7.45rem;
     padding-left: 6.22rem;
     padding-bottom: mix.rem(124);
   }
   @include mix.respond-to('mobile') {
-    padding-top: mix.rem(102);
+    padding-top: 8.37rem;
     padding-left: 4.72rem;
     padding-bottom: 6.1rem;
   }
   @include mix.respond-to(600) {
     padding-top: mix.rem(24.5);
-    padding-left: 4.72rem;
-    padding-left: 0rem;
+
+    padding-left: 0;
     padding-bottom: mix.rem(64);
+  }
+
+  &__container {
+    position: relative;
+    padding-left: 8.22rem;
+    @include mix.respond-to('tablet') {
+      padding-left: 6.22rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding-left: 4.72rem;
+    }
+    @include mix.respond-to(600) {
+      padding-left: 0;
+
+    }
   }
 
   &__big-img {
     position: absolute;
     right: 0;
-    @include mix.respond-to(1220) {
+    @include mix.respond-to(1320) {
       img {
         width: 349px;
       }
     }
-    @include mix.respond-to(1056) {
+    @include mix.respond-to(950) {
       display: none;
     }
   }
 
   &__top-block {
-    max-width: mix.rem(515);
+    max-width: 41.18rem;
     padding-top: mix.rem(80);
     padding-bottom: mix.rem(262);
-    @include mix.respond-to('tablet') {
+    padding-left: 8.22rem;
+    @include mix.respond-to(1200) {
+      padding-left: 0;
       padding-top: mix.rem(56);
       padding-bottom: mix.rem(193);
-      max-width: mix.rem(448);
+      max-width: 27.8rem;
     }
     @include mix.respond-to('mobile') {
       padding-top: mix.rem(0);
@@ -428,6 +457,27 @@
     }
     @include mix.respond-to('600') {
       padding-bottom: mix.rem(198);
+    }
+  }
+
+  &__name-section {
+    position: absolute;
+    left: 46px;
+    top: 110px;
+    transform: rotate(-90deg);
+    font-weight: 700;
+    font-size: 0.5rem;
+    line-height: 1.7066;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(130, 130, 130, 0.35);
+    @include mix.respond-to('tablet') {
+      left: -46px;
+      top: 80px;
+    }
+
+    @include mix.respond-to(600) {
+      display: none;
     }
   }
 
@@ -503,14 +553,18 @@
   &__bottom-block {
     display: flex;
     column-gap: 20.8rem;
+    padding-left: 8.22rem;
     @include mix.respond-to('tablet') {
       column-gap: 13rem;
+      padding-left: 0;
     }
     @include mix.respond-to('mobile') {
       column-gap: 4.9rem;
+      padding-left: 0;
     }
     @include mix.respond-to(600) {
       flex-direction: column;
+
     }
   }
 
@@ -604,12 +658,12 @@
 
 .footer {
   padding-top: mix.rem(123);
-  padding-bottom: 10.7rem;
+  //padding-bottom: 10.7rem;
   position: relative;
   background-image: url("../assets/footer-bgi.webp");
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  //overflow: hidden;
   color: var(--white);
   z-index: -1;
 
@@ -618,7 +672,7 @@
   }
   @include mix.respond-to('mobile') {
     padding-top: 86px;
-    padding-bottom:  6.6rem;
+    //padding-bottom: 6.6rem;
   }
   @include mix.respond-to(600) {
     padding-top: 58px;
@@ -635,15 +689,50 @@
     pointer-events: none; /* Слой не мешает взаимодействию */
   }
 
-  &_contact-section{
+  &_contact-section {
     position: relative;
     z-index: 2;
     padding-top: 5.58rem;
-    background-image:none;
+    background-image: none;
     background-color: transparent;
   }
-  &_contact-section::after{
-    background-color:transparent;
+
+  &_contact-section::after {
+    background-color: transparent;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__name-section {
+    position: absolute;
+    top: 16px;
+    left: 40px;
+    font-weight: 700;
+    font-size: .5rem;
+    line-height: 1.7066;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.13);
+    transform: rotate(-90deg);
+    z-index: 2;
+
+    @include mix.respond-to(600) {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -55px;
+      width: 50px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.13);
+      display: block;
+    }
   }
 
   &__content {
@@ -831,16 +920,19 @@
       margin-top: 1.8rem;
     }
   }
+
   &__button:hover {
     background: var(--sec-color);
   }
 
   &__small-footer {
     position: relative;
-    bottom: 0;
+    margin-top: 7.3rem;
     z-index: 10;
     width: 100%;
-
+  @include mix.respond-to('mobile') {
+    margin-top: 3.2rem;
+  }
   }
 
 }

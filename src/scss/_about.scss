@@ -6,7 +6,7 @@
   width: 100vw;
   background: url("../assets/main-about.webp") 50%/cover no-repeat;
   color: var(--white);
-  @include mix.respond-to('mobile'){
+  @include mix.respond-to('mobile') {
     margin-top: 65px;
   }
 
@@ -238,10 +238,12 @@
 
     grid-row-start: 1;
     grid-row-end: 3;
+
     img {
-      width: 100%;
+      width: 93%;
 
     }
+
     @include mix.respond-to('tablet') {
       grid-column: 1;
       grid-row: auto;

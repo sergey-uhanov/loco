@@ -15,6 +15,36 @@
     padding: 5.3rem 0 0 0;
   }
 
+  &__container{
+    position: relative;
+  }
+
+  &__name-section{
+    position: absolute;
+    top: 26px;
+    left: 40px;
+    font-weight: 700;
+    font-size: .5rem;
+    line-height: 1.7066;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.13);
+    transform: rotate(-90deg);
+    @include mix.respond-to(600){
+      display: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -55px;
+      width: 50px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.13);
+      display: block;
+    }
+  }
+
   &__text {
     max-width: 28.16rem;
     margin: 0 auto;

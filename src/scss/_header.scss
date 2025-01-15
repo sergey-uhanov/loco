@@ -136,11 +136,13 @@
 .menu-burger {
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 105vh;
   width: 100%;
+  overflow-y: auto;
   background-color: #080808;
   padding-top: mix.rem(212);
   padding-left: mix.rem(212);
+  padding-bottom: 40px;
   transition: transform 1s ease;
   transform: translateX(0%);
   z-index: 10;

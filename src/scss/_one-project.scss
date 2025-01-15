@@ -16,21 +16,21 @@
   }
 
   &__container {
-    transform: translateY(-45%);
+    //transform: translateY(-45%);
     width: 100%;
     margin-left: mix.rem(133);
     color: #fff;
     @include mix.respond-to('tablet') {
       margin-left: mix.rem(105);
-      transform: translateY(-37%);
+
     }
     @include mix.respond-to('mobile') {
       margin-left: 4.87rem;
-      transform: translateY(-41%);
+
     }
     @include mix.respond-to(600) {
       margin-left: 0rem;
-      transform: translateY(-28%);
+
     }
   }
 
@@ -133,7 +133,12 @@
     height: 24px;
     border: 1px solid var(--white);
     border-radius: 50px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
 }

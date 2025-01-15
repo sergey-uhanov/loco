@@ -24,7 +24,6 @@
     }
 
 
-
     @include mix.respond-to('tablet') {
       padding: 7.25rem 0 7.9rem 0;
     }
@@ -37,7 +36,7 @@
   }
 
   &_dark-bg {
-    background: #000 ;
+    background: #000;
   }
 
   &__container {
@@ -45,8 +44,30 @@
     z-index: 2;
   }
 
-  &__content {
-
+  &__name-section{
+    position: absolute;
+    top: 46px;
+    left: 40px;
+    font-weight: 700;
+    font-size: .5rem;
+    line-height: 1.7066;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.13);
+    transform: rotate(-90deg);
+    @include mix.respond-to(600){
+      display: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -55px;
+      width: 50px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.13);
+      display: block;
+    }
   }
 
   &__title {
@@ -58,6 +79,7 @@
     margin-bottom: 1.63rem;
     position: relative;
     z-index: 2;
+    pointer-events: none;
     @include mix.respond-to('tablet') {
       text-align: center;
       margin: 0 auto 1.63rem auto;
@@ -67,11 +89,10 @@
     }
     @include mix.respond-to('600') {
       text-align: left;
-      margin: 0;
       font-size: 1.62rem;
       line-height: 1.21154;
       max-width: 18.5rem;
-      margin-bottom: 1.3rem;
+      margin: 0 0 1.3rem 0;
     }
   }
 
@@ -99,6 +120,7 @@
     margin-bottom: mix.rem(41);
     position: relative;
     z-index: 2;
+    pointer-events: none;
     @include mix.respond-to('tablet') {
       margin-bottom: 3.9rem;
     }
@@ -165,7 +187,8 @@
     top: 3.1rem;
     left: -23.15rem;
     transform: rotate(-5.99deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -176,7 +199,8 @@
     top: 2rem;
     left: -19.95rem;
     transform: rotate(-0.33deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -186,7 +210,8 @@
     top: 1.1rem;
     left: -16.65rem;
     transform: rotate(-5.81deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -196,7 +221,8 @@
     top: -0.1rem;
     left: -13.25rem;
     transform: rotate(-1.72deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -206,7 +232,8 @@
     top: -1.8rem;
     left: -9rem;
     transform: rotate(-10.5deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -216,7 +243,8 @@
     top: -2.9rem;
     left: -6.65rem;
     transform: rotate(-6deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -226,7 +254,8 @@
     top: -3.7rem;
     left: -3.45rem;
     transform: rotate(-0deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -236,7 +265,8 @@
     top: -4.5rem;
     left: -0.05rem;
     transform: rotate(-5.81deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -246,7 +276,8 @@
     top: -6rem;
     left: 3.25rem;
     transform: rotate(-1.72deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
       z-index: 5;
     }
@@ -256,7 +287,8 @@
     top: -8rem;
     left: 7.35rem;
     transform: rotate(-10.5deg);
-    &:hover{
+
+    &:hover {
       transform: rotate(0deg);
 
     }
