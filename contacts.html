@@ -1,22 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.min.css">
     <script type="module" src="./js/bundle.js" defer></script>
     <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
+    <title>Contacts</title>
 </head>
-<body>
+<body class="body">
 <section class="preloader">
     <div class="preloader__content">HI  <span class="preloader__number"> 0</span></div>
 </section>
-<div class="popup " id="popup">
+<div class="page-wrapper contact-page">
+    <div class="popup " id="popup">
     <span class="popup__close-btn" id="closePopup"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
   <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)"
@@ -180,8 +182,8 @@
     <button class="success-message__button ">Send again</button>
   </div>
 </div>
-
-<header class="header header_dark">
+    
+<header class="header  ">
     <div class="menu-burger menu-burger_hidden">
         <ul class="menu-burger__list">
             <li class="menu-burger__item"><a href="/">Home</a></li>
@@ -208,182 +210,66 @@
                 <ul class="menu__list">
                     <li class="menu__item"><a href="/" class="menu__link "> En</a></li>
                     <li class="menu__item">
-                        <button  class="popup-button openPopup popup-button_dark">Send Request</button>
+                        <button  class="popup-button openPopup @@buttonColor">Send Request</button>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
-<main>
-    <section class="main-screen-about">
-        <div class="main-screen-about__container">
-            <div class="main-screen-about__title">
-                Company <br> Philosophy
-            </div>
-            <div class="main-screen-about__text">The basic philosophy of our studio is to create individual,
-                aesthetically stunning solutions for our customers by lightning-fast development of projects employing
-                unique styles and architecture.
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="contact-section">
+            <div class="contact-section__layout"></div>
+            <img class="contact-section__layout-img" src="./assets/footer-bgi.webp" alt="">
+            <div class="footer footer_contact-section">
+                <div class="footer__container">
+                    <div class="footer__content">
+                        <div class="footer__title">Drop us a line</div>
+                        <div class="footer__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                            posuere.
+                        </div>
+                        <div class="footer__contacts">
+                            <div class="footer__locations">
+                                <ul class="footer__location-item">
+                                    <li class="footer__row">Kyiv</li>
+                                    <li class="footer__row">
+                                        <a href="tel:+12095550104" class="footer__phone">(209) 555-0104</a>
+                                    </li>
+                                    <li class="footer__row">6391 Elgin St. Celina,</li>
+                                    <li class="footer__row">Delaware 10299</li>
+                                </ul>
+                                <ul class="footer__location-item">
+                                    <li class="footer__row">Lviv</li>
+                                    <li class="footer__row">
+                                        <a href="tel:+12095550104" class="footer__phone">(209) 555-0104</a>
+                                    </li>
+                                    <li class="footer__row">6391 Elgin St. Celina,</li>
+                                    <li class="footer__row">Delaware 10299</li>
+                                </ul>
+                                <ul class="footer__location-item">
+                                    <li class="footer__row">Kharkiv</li>
+                                    <li class="footer__row">
+                                        <a href="tel:+12095550104" class="footer__phone">(209) 555-0104</a>
+                                    </li>
+                                    <li class="footer__row">6391 Elgin St. Celina,</li>
+                                    <li class="footer__row">Delaware 10299</li>
+                                </ul>
+                            </div>
+                            <div class="footer__strange-block">
+                                <div class="footer__email">info@gmail.com</div>
+                                <a href="#" class="footer__country-link">Fb</a>
+                                <a href="#" class="footer__country-link">In</a>
+                                <a href="#" class="footer__country-link">Be</a>
+                            </div>
+                        </div>
 
-    <section class="about-slider-section">
-        <div class="about-slider-section__container">
-            <div class="about-slider">
-                <div class="about-slider__wrapper swiper-wrapper">
-                    <div class="about-slider__slide swiper-slide"><img src="./assets/about-slide1.webp" alt=photo></div>
-                    <div class="about-slider__slide swiper-slide"><img src="./assets/about-slide.webp" alt=photo></div>
-                    <div class="about-slider__slide swiper-slide"><img src="./assets/about-slide1.webp" alt=photo></div>
-
+                        <button class="footer__button openPopup">Make request</button>
+                    </div>
                 </div>
             </div>
-            <div class="about-slider-section__text">
-                <div class="about-slider-section__title">Company Philosophy</div>
-                <div class="about-slider-section__description">The basic philosophy of our studio is to create
-                    individual, aesthetically stunning solutions for our customers by lightning-fast development of
-                    projects employing unique styles and architecture.
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="achievements">
-        <div class="achievements__container">
-            <div class="achievements__img">
-                <img src="./assets/achievements1.webp" alt="achievements">
-            </div>
-            <div class="achievements__text">
-                <ul class="achievements__list-achievements">
-                    <li class="achievements__item"><span>6</span> years
-                        expertise
-                    </li>
-                    <li class="achievements__item"><span>100+</span> completed
-                        projects
-                    </li>
-                    <li class="achievements__item"><span>25+</span> companies
-                        cooperate
-                    </li>
-                    <li class="achievements__item"><span>2014</span> year of
-                        market entry
-
-                    </li>
-                </ul>
-                <div class="achievements__description">
-                    The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our
-                    customers by lightning-fast development of projects employing unique styles and architecture.
-                </div>
-            </div>
-        </div>
-        <div class="achievements__img-small">
-            <img src="./assets/about323.webp" alt="photo">
-        </div>
-    </section>
-
-    <section class="about-team">
-        <div class="about-team__container">
-           <div class="about-team__content">
-               <div class="about-team__top-text">
-                   <div class="about-team__title">Roman Viktorovich</div>
-                   <div class="about-team__position">Founder and CEO of Hilight
-                   </div>
-                   <div class="about-team__description">We can also help you create harmony out of seemingly completely
-                       incompatible elements in the interior or the exterior design.
-                   </div>
-               </div>
-               <div class="about-team__top-image"><img src="./assets/ceo.webp" alt="photo ceo"></div>
-               <div class="about-team__bottom-image"><img src="./assets/team.webp" alt="photo ceo"></div>
-               <div class="about-team__bottom-text">
-                   <ul class="about-team__numbers">
-                       <li class="about-team__item">
-                           <span>5</span> companies
-                           cooperate
-                       </li>
-                       <li class="about-team__item">
-                           <span>4</span> year of
-                           market entry
-                       </li>
-                       <li class="about-team__item">
-                           <span>3</span> companies
-                           cooperate
-                       </li>
-
-                   </ul>
-                   <div class="about-team__text-description">
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl sit risus pharetra nisl metus
-                       aliquet. Nibh eu posuere sodales sem tellus. Vulputate est nisl convallis sed. Fames in dignissim
-                       erat fermentum sed sed. In massa, adipiscing aliquet mi semper facilisis ornare nisi. Non elit amet
-                       enim at cursus mauris senectus dolor ac. Egestas lectus in praesent mi arcu. Vitae nisl viverra enim
-                       nulla at. Fusce porta elementum quis.
-                   </div>
-               </div>
-           </div>
-        </div>
-    </section>
-
-    <section class="circle-collage circle-collage_dark-bg">
-        <div class="circle-collage__container">
-            <div class="circle-collage__content">
-                <div class="circle-collage__title">@lorem.ipsum</div>
-                <div class="circle-collage__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam ullamcorper eu mauris vitae posuere.
-                </div>
-            </div>
-            <div class="circle-collage__background">
-                <img class="circle-collage__photo-item" src="./assets/collage11.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage22.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage44.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage33.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage55.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage66.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage77.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage88.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage101.webp">
-            </div>
-        </div>
-    </section>
-    <section class="describe describe_white-bg">
-        <img class="describe__background" src="./assets/background-poster.webp" alt="background image">
-        <div class="describe__container ">
-            <div class="describe__title">
-                Do you want to work in our team?
-
-            </div>
-            <form action="#" class="describe__form describe__form_white-bg">
-
-                <div class="describe__input-field">
-                    <input
-                            required
-                            type="email"
-                            pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}"
-                            title="Email address must be formatted as [email@example.com]"
-                            class="describe__input"
-                            id="email-describe"
-                            placeholder=" "
-                            name="email">
-
-                    <label for="email-describe" class="describe__label">Email</label>
-                    <button class="describe__submit-btn" type="submit">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.5">
-                                <path d="M4 12H20" stroke="white"/>
-                                <path d="M14 6L20 12L14 18" stroke="white"/>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-
-
-            </form>
-            <div class="describe__description describe__description_white-bg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
-                posuere. Ut at luctus ligula. Nunc ante felis, aliquam.
-            </div>
-        </div>
-        <div class="describe__footer">
-            <div class="small-footer  ">
+            <div class="footer__small-footer footer__small-footer_contacts">
+                <div class="small-footer  ">
     <div class="small-footer__container">
         <div class="small-footer__content">
             <div class="small-footer__copyright">© Copyright 2018. All rights reserved</div>
@@ -396,9 +282,10 @@
         </div>
     </div>
 </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-</main>
+    </main>
+</div>
 </body>
 </html>

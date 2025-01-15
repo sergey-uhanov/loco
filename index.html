@@ -13,7 +13,9 @@
     <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
 </head>
 <body>
-
+<section class="preloader">
+    <div class="preloader__content">HI  <span class="preloader__number"> 0</span></div>
+</section>
 <div class="popup " id="popup">
     <span class="popup__close-btn" id="closePopup"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +103,7 @@
           <div class="custom-radio__group">
 
             <input required type="radio" id="option1" name="options"
-                   value="50" class="custom-radio__input">
+                   value="50" class="custom-radio__input" >
             <label for="option1" class="custom-radio__label">to 50</label>
 
             <input required type="radio" id="option2" name="options"
@@ -179,7 +181,7 @@
   </div>
 </div>
 
-<header class="header header--white">
+<header class="header  ">
     <div class="menu-burger menu-burger_hidden">
         <ul class="menu-burger__list">
             <li class="menu-burger__item"><a href="/">Home</a></li>
@@ -206,7 +208,7 @@
                 <ul class="menu__list">
                     <li class="menu__item"><a href="/" class="menu__link "> En</a></li>
                     <li class="menu__item">
-                        <button  class="popup-button openPopup">Send Request</button>
+                        <button  class="popup-button openPopup @@buttonColor">Send Request</button>
                     </li>
                 </ul>
             </nav>
@@ -414,32 +416,24 @@
         </div>
         <section class="photos-collage">
             <div class="photos-collage__container">
-                <div class="photos-collage__content">
-                    <div class="photos-collage__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    <div class="photos-collage__description">
-                        <div class="photos-collage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam
-                            eu enim sed, ornare pretium velit.
-                        </div>
-                        <button class="photos-collage__button openPopup">Make request</button>
-                    </div>
-                </div>
                 <div class="photos-collage__background">
-                    <img class="photos-collage__photo-item" src="./assets/collage10.webp" width="258" height="307"
+                    <img class="photos-collage__photo-item" src="./assets/collage5.webp" width="211" height="273"
+
                          alt="photo interiera">
-                    <img class="photos-collage__photo-item" src="./assets/collage9.webp" width="211" height="273"
+                    <img class="photos-collage__photo-item" src="./assets/collage4.webp" width="211" height="273"
+
                          alt="photo interiera">
-                    <img class="photos-collage__photo-item" src="./assets/collage8.webp"
-                         width="258" height="307"
+                    <img class="photos-collage__photo-item" src="./assets/collage3.webp"
+                         width="211" height="273"
                          alt="photo interiera">
-                    <img class="photos-collage__photo-item" src="./assets/collage7.webp"
+                    <img class="photos-collage__photo-item" src="./assets/collage2.webp"
                          width="211" height="273"
                          alt="photo interiera">
                     <img class="photos-collage__photo-item" src="./assets/collage6.webp"
-                         width="258" height="307"
+                         width="211" height="273"
                          alt="photo interiera">
                     <img class="photos-collage__photo-item" src="./assets/collage5.webp"
-                         width="258" height="307"
+                         width="211" height="273"
                          alt="photo interiera">
                     <img class="photos-collage__photo-item" src="./assets/collage4.webp"
                          width="211" height="273"
@@ -451,9 +445,20 @@
                          width="211" height="273"
                          alt="photo interiera">
                     <img class="photos-collage__photo-item" src="./assets/collage1.webp"
-                         width="258" height="307"
+                         width="211" height="273"
                          alt="photo interiera">
                 </div>
+                <div class="photos-collage__content">
+                    <div class="photos-collage__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div class="photos-collage__description">
+                        <div class="photos-collage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam
+                            eu enim sed, ornare pretium velit.
+                        </div>
+                        <button class="photos-collage__button openPopup">Make request</button>
+                    </div>
+                </div>
+
             </div>
         </section>
     </section>
@@ -527,7 +532,7 @@
         </div>
     </div>
     <div class="footer__small-footer ">
-        <div class="small-footer">
+        <div class="small-footer  ">
     <div class="small-footer__container">
         <div class="small-footer__content">
             <div class="small-footer__copyright">© Copyright 2018. All rights reserved</div>
