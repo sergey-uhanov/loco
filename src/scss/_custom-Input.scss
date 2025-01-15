@@ -50,11 +50,28 @@
     background: #fff;
     padding: 0 0.2rem;
   }
-  &__errors{
-    font-size: 0.8rem;
-    color: red;
+  &__error{
+
+    font-size: 0.6rem;
+    color: white;
+    padding: 5px 10px;
+    background: red;
+    border-radius: 5px;
     position: relative;
     left: 90px;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 10px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid red;
+
+    }
     @include mix.respond-to(600){
       font-size: 0.5rem;
     }
@@ -67,6 +84,7 @@
   &__errors_select{
     position: absolute;
     bottom: -15px;
+    left: 0;
     @include mix.respond-to(600){
       bottom: -20px;
     }

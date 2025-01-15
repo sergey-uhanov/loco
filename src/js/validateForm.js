@@ -54,7 +54,7 @@ export class FormsValidation {
         const selectErrorElement = document.querySelector(this.selectors.selectError);
 
         if (selectValueElement.textContent === 'Property type') {
-            selectErrorElement.textContent = 'Please select a value';
+            selectErrorElement.innerHTML = `<span class="field__error">${'Please select a value'}</span>`;
             return false;
         }
 

@@ -3,23 +3,15 @@
 .header {
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   padding: mix.rem(24) 0;
   font-weight: 600;
   font-size: 0.69rem;
   letter-spacing: 0.06em;
-  //color: var(--white);
-  color: rgba(186, 186, 186, 0.55);
+  color: var(--white);
+  background-color: transparent;
   width: 100%;
   transition: background-color 0.6s ease;
-
-
-  &__container {
-    position: relative;
-    z-index: 10;
-
-
-  }
 
   &_dark {
     color: var(--pri-color);
@@ -37,6 +29,10 @@
     }
   }
 
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .menu {
@@ -92,6 +88,7 @@
 }
 
 .popup-button {
+  color: #fff;
   border: 1px solid rgba(253, 253, 253, 0.32);
   font-weight: 600;
   font-size: 0.69rem;
@@ -105,6 +102,9 @@
   }
   @media (max-width: 767px) {
     display: none;
+  }
+  &_dark{
+    color: #080808;
   }
 }
 
@@ -136,7 +136,7 @@
 .menu-burger {
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: #080808;
   padding-top: mix.rem(212);
@@ -276,12 +276,12 @@
       }
 
       &::before {
-        top: calc(50% - mix.rem(1));
+        top: calc(50% - #{mix.rem(1)});
         transform: rotate(-45deg);
       }
 
       &::after {
-        bottom: calc(50% - mix.rem(1));
+        bottom: calc(50% - #{mix.rem(1)});
         transform: rotate(45deg);
       }
     }
@@ -292,7 +292,7 @@
   @include mix.respond-to(767) {
     left: auto;
     right: 23px;
-    top: 0px;
+    top: 0;
 
   }
 }

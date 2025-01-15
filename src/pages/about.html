@@ -13,8 +13,9 @@
     <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
 </head>
 <body>
+@@include('../partials/preloader.html')
 @@include('../partials/popup.html')
-@@include('../partials/header.html')
+@@include('../partials/header.html', { "className": "header_dark","buttonColor":"popup-button_dark" })
 <main>
     <section class="main-screen-about">
         <div class="main-screen-about__container">

@@ -1,0 +1,35 @@
+@use "_mixins.scss" as mix;
+
+.body{
+  height: auto;
+  background-color: #080808;
+}
+.contact-section {
+  height: 100%;
+
+  &__layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+
+  }
+
+  &__layout-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__container{
+    position: relative;
+    z-index: 2;
+  }
+
+}

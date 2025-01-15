@@ -11,13 +11,10 @@ export function initSwiper() {
     const swiper = new Swiper('.main-swiper', {
         modules: [Navigation, Pagination, Scrollbar],
         direction: 'horizontal',
-        loop: false,
+        loop: true,
         slidesPerView: "auto",
         spaceBetween: 0,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
+
         scrollbar: {
             el: '.main-swiper__scrollbar',
             draggable: true,

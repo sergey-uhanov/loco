@@ -11,6 +11,7 @@ import {smallSlider} from "./smallSlider.js";
 import {elevationCompensation} from "./header.js";
 import {projects} from "./projects.js";
 import {aboutSlider} from "./aboutSlider.js";
+import {preloader} from "./preloader.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,4 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
     elevationCompensation()
     projects()
     aboutSlider()
+    preloader()
 });

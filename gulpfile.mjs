@@ -92,7 +92,7 @@ export const html = () =>
                 prefix: '@@', // Префикс для директив
                 basepath: 'src/partials', // Относительный путь к файлам
                 context: { // Глобальные переменные
-                    className: 'header--white', // Укажите значение по умолчанию
+                    className: ' ', // Укажите значение по умолчанию
                 },
             })
         )

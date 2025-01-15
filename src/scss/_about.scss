@@ -1,10 +1,14 @@
 @use "./_mixins.scss" as mix;
 
 .main-screen-about {
-  height: calc(100vh - 95px);
+  margin-top: 95px;
+  height: calc(100vh);
   width: 100vw;
   background: url("../assets/main-about.webp") 50%/cover no-repeat;
   color: var(--white);
+  @include mix.respond-to('mobile'){
+    margin-top: 65px;
+  }
 
 
   &__container {
@@ -218,9 +222,9 @@
     grid-template-rows: auto 76px auto;
     column-gap: 7.35rem;
     @include mix.respond-to('tablet') {
-      grid-template-columns: 100%; // Одна колонка на планшете
-      grid-template-rows: auto; // Убираем фиксированное количество строк
-      column-gap: 0; // Убираем отступы между колонками
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      column-gap: 0;
       row-gap: 3rem;
 
     }
@@ -234,13 +238,17 @@
 
     grid-row-start: 1;
     grid-row-end: 3;
+    img {
+      width: 100%;
 
+    }
     @include mix.respond-to('tablet') {
-      grid-column: 1; // Элемент растягивается на всю ширину
-      grid-row: auto; // Автоматическое расположение по рядам
-      padding-right: 0; // Убираем отступы
+      grid-column: 1;
+      grid-row: auto;
+      padding-right: 0;
       img {
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
       }
     }
 
@@ -249,8 +257,8 @@
         width: 300px;
       }
     }
-    @include mix.respond-to(374){
-      img{
+    @include mix.respond-to(374) {
+      img {
         width: 250px;
       }
     }
@@ -269,8 +277,8 @@
     @include mix.respond-to('tablet') {
       grid-column: 1;
       grid-row: auto;
-      padding-left: 0; // Убираем отступы
-      padding-top: 2rem; // Добавляем отступ сверху
+      padding-left: 0;
+      padding-top: 2rem;
     }
   }
 
@@ -306,11 +314,11 @@
     @include mix.respond-to('tablet') {
       grid-column: 1;
       grid-row: auto;
-      padding-left: 0; // Убираем отступы
+      padding-left: 0;
 
     }
-    @include mix.respond-to(374){
-      img{
+    @include mix.respond-to(374) {
+      img {
         width: 250px;
       }
     }
@@ -328,7 +336,7 @@
     @include mix.respond-to('tablet') {
       grid-column: 1;
       grid-row: auto;
-      padding-top: 2rem; // Добавляем отступ сверху
+      padding-top: 2rem;
     }
   }
 
@@ -337,7 +345,7 @@
     column-gap: 3.8rem;
     margin-bottom: 3rem;
     @include mix.respond-to('mobile') {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
     }
 
   }

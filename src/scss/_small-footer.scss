@@ -8,6 +8,11 @@
     padding-bottom: 3.3rem;
   }
 
+  &_contacts {
+    position: absolute;
+    bottom: 0;
+  }
+
   &__content {
     height: mix.rem(26);
     display: flex;
@@ -33,7 +38,7 @@
     line-height: 1.52375;
     display: flex;
     column-gap: 1.9rem;
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       column-gap: 2.8rem;
     }
 

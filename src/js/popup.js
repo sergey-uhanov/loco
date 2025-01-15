@@ -5,26 +5,43 @@ export function initPopup() {
     const rightSideElement = document.querySelectorAll('.right-element');
     const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
     const againRequestButton = document.querySelector('.success-message__button')
+    const popupContainer = document.querySelector('.popup__content ');
+    const header = document.querySelector('.header');
 
+    const headerHeight = header.offsetHeight;
     // Открытие popup
     openPopupButtons.forEach((button) => {
         button.addEventListener('click', () => {
+            popupContainer.classList.remove('popup__content_close');
             popup.classList.toggle('open');
+            popupContainer.classList.add('popup__content_open');
             lockScroll();
         });
     });
 
     // Закрытие popup
     closePopup.addEventListener('click', () => {
-        popup.classList.toggle('open');
+        popupContainer.classList.remove('popup__content_open');
+        popupContainer.classList.add('popup__content_close');
+
         unlockScroll();
         resetStatePopup()
     });
+    popupContainer.addEventListener('animationend', (e) => {
+        if (e.animationName === 'slit-in-vertical2') {
+            popup.classList.remove('open');
+
+        }
+    })
+
 
     // Закрытие при клике вне области popup
     window.addEventListener('click', (event) => {
         if (event.target === popup) {
-            popup.classList.toggle('open');
+            popupContainer.classList.remove('popup__content_open');
+            // popup.classList.toggle('open');
+
+            popupContainer.classList.add('popup__content_close');
             unlockScroll();
             resetStatePopup()
         }
@@ -44,11 +61,13 @@ export function initPopup() {
             document.body.style.width = '100vw';
             document.body.style.paddingRight = `${window.innerWidth - document.body.offsetWidth}px`;
             document.documentElement.style.scrollBehavior = 'unset';
+
         },
         enabledScroll() {
             document.body.style.cssText = '';
             window.scroll({ top: this.scrollPosition });
             document.documentElement.style.scrollBehavior = '';
+            document.body.style.marginTop = `${headerHeight}px`;
         },
     };
 

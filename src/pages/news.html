@@ -14,9 +14,10 @@
     <title>News</title>
 </head>
 <body>
+@@include('../partials/preloader.html')
 <div class="page-wrapper">
     @@include('../partials/popup.html')
-    @@include('../partials/header.html', { "className": "header_dark" })
+    @@include('../partials/header.html', { "className": "header_dark","buttonColor":"popup-button_dark" })
     <main>
         <section class="news-slider-section">
             <div class="news-slider-section__container">
