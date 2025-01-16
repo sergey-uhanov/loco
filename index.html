@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta
+            name="description"
+            content="Mary's simple recipe for maple bacon donuts
+           makes a sticky, sweet treat with just a hint
+           of salt that you'll keep coming back for.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interiors website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -222,14 +227,33 @@
             <div class="background-slider">
                 <div class="main-swiper">
                     <div class=" main-swiper__wrapper swiper-wrapper">
-                        <div class="main-swiper__slide swiper-slide"
-                             style="background-image: url('./assets/Rectangle.webp')"></div>
-                        <div class="main-swiper__slide swiper-slide"
-                             style="background-image: url('./assets/Rectangle2.webp')"></div>
-                        <div class="main-swiper__slide swiper-slide"
-                             style="background-image: url('./assets/Rectangle.webp')"></div>
-                        <div class="main-swiper__slide swiper-slide"
-                             style="background-image: url('./assets/Rectangle2.webp')"></div>
+                        <div class="main-swiper__slide swiper-slide">
+                            <picture>
+                                <source srcset="./assets/Rectangle1-small.webp" media="(max-width: 768px)">
+
+                                <img src="./assets/Rectangle.webp" alt="Image">
+                            </picture>
+                        </div>
+                        <div class="main-swiper__slide swiper-slide">
+                            <picture>
+                                <source srcset="./assets/Rectangle1-small.webp" media="(max-width: 768px)">
+
+                                <img src="./assets/Rectangle2.webp" alt="Image">
+                            </picture>
+                        </div>
+                        <div class="main-swiper__slide swiper-slide">
+                            <picture>
+                                <source srcset="./assets/Rectangle1-small.webp" media="(max-width: 768px)">
+
+                                <img src="./assets/Rectangle.webp" alt="Image">
+                            </picture>
+                        </div>
+<!--                        <div class="main-swiper__slide swiper-slide"-->
+<!--                             style="background-image: url('./assets/Rectangle2.webp')"></div>-->
+<!--                        <div class="main-swiper__slide swiper-slide"-->
+<!--                             style="background-image: url('./assets/Rectangle.webp')"></div>-->
+<!--                        <div class="main-swiper__slide swiper-slide"-->
+<!--                             style="background-image: url('./assets/Rectangle2.webp')"></div>-->
                     </div>
                     <!-- Навигация -->
                     <div class="main-swiper__nav-block right-element">
@@ -328,7 +352,7 @@
             <div class="company-philosophy__bottom-block">
                 <div class="company-philosophy__double-img">
                     <picture>
-                        <source srcset="./assets/rech-mobilesmall.webp" media="(max-width: 600px)">
+                        <source srcset="./assets/rech-mobilesmall.webp" media="(max-width: 700px)">
                         <source srcset="./assets/rech-mobile.webp" media="(max-width: 768px)">
                         <source srcset="./assets/Rectang1.webp" media="(max-width: 1024px)">
                         <img class="company-philosophy__auxiliary-img" src="./assets/rech-large.webp"
@@ -360,7 +384,7 @@
                 <div class="posters-section__item double-poster">
                     <a href="#" class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf2-pc.webp"
-                             alt="photo apartment interior">
+                             alt="photo apartment interior" width="510" height="510">
                         <div class="double-poster__description">Eyewear store interior</div>
                         <div  class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
@@ -371,7 +395,7 @@
                     </a>
                     <a href="#" class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf1-pc.webp"
-                             alt="photo apartment interior">
+                             alt="photo apartment interior"  width="510" height="510">
                         <div class="double-poster__description">Eyewear store interior</div>
                         <div  class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
@@ -397,7 +421,7 @@
                 <div class="posters-section__item double-poster">
                     <div class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf3-pc.webp"
-                             alt="photo apartment interior">
+                             alt="photo apartment interior"  width="510" height="510">
                         <div class="double-poster__description">Eyewear store interior</div>
                         <div  class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
@@ -473,15 +497,15 @@
                 </div>
             </div>
             <div class="circle-collage__background">
-                <img class="circle-collage__photo-item" src="./assets/collage11.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage22.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage44.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage33.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage55.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage66.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage77.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage88.webp">
-                <img class="circle-collage__photo-item" src="./assets/collage101.webp">
+                <img class="circle-collage__photo-item" src="./assets/collage11.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage22.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage44.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage33.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage55.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage66.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage77.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage88.webp" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage101.webp" alt="picture interirt">
             </div>
         </div>
     </section>
