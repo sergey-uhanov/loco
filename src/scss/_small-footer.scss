@@ -2,7 +2,6 @@
 
 .small-footer {
   color: var(--sec-color);
-
   padding-bottom: mix.rem(26);
   @include mix.respond-to(600) {
     padding-bottom: 3.3rem;

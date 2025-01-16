@@ -29,7 +29,7 @@
 
     }
     @include mix.respond-to(600) {
-      margin-left: 0rem;
+      margin-left: 0;
 
     }
   }
@@ -178,7 +178,12 @@
     font-size: 0.69rem;
     letter-spacing: 0.06em;
     text-align: center;
+    transition: opacity 0.2s ease-in-out;
     color: #080808;
+
+    &:hover{
+      opacity: 1;
+    }
     @include mix.respond-to('tablet') {
       margin: 3.9rem auto 0 auto;
     }

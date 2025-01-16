@@ -1,39 +1,36 @@
 @use "_mixins.scss" as mix;
 
-.body{
-  height: auto;
-  background-color: #080808;
+.body {
+  background-image: url("../assets/footer-bgi.webp");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-attachment: fixed;
+
+
 }
+
 .contact-section {
-  height: 100%;
+
   padding-top: 6rem;
+  padding-bottom: 10rem;
 
 
-  &__layout {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 100vh;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1;
-
-  }
-
-  &__layout-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 100vh;
-    height: 100%;
-    z-index: -1;
-  }
-
-  &__container{
+  &__container {
     position: relative;
     z-index: 2;
   }
 
+  &__footer {
+    position: relative;
+    z-index: 2;
+     flex: 1 1 auto;
+    height: 100%;
+  }
+
+}
+
+.contact-page{
+  display: flex;
+  flex-direction: column;
 }

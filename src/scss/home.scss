@@ -658,12 +658,10 @@
 
 .footer {
   padding-top: mix.rem(123);
-  //padding-bottom: 10.7rem;
   position: relative;
   background-image: url("../assets/footer-bgi.webp");
   background-size: cover;
   background-position: center;
-  //overflow: hidden;
   color: var(--white);
   z-index: -1;
 
@@ -672,7 +670,6 @@
   }
   @include mix.respond-to('mobile') {
     padding-top: 86px;
-    //padding-bottom: 6.6rem;
   }
   @include mix.respond-to(600) {
     padding-top: 58px;
@@ -685,8 +682,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.91); /* Полупрозрачный чёрный слой */
-    pointer-events: none; /* Слой не мешает взаимодействию */
+    background-color: rgba(0, 0, 0, 0.91);
+    pointer-events: none;
   }
 
   &_contact-section {

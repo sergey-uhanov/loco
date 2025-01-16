@@ -20,8 +20,6 @@
     @@include('../partials/header.html')
     <main>
         <section class="contact-section">
-            <div class="contact-section__layout"></div>
-            <img class="contact-section__layout-img" src="./assets/footer-bgi.png" alt="">
             <div class="footer footer_contact-section">
                 <div class="footer__container">
                     <div class="footer__content">
@@ -69,12 +67,12 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__small-footer footer__small-footer_contacts">
-                @@include('../partials/small-footer.html')
-            </div>
         </section>
-
     </main>
+    <div class="contact-section__footer">
+        @@include('../partials/small-footer.html')
+    </div>
 </div>
+
 </body>
 </html>

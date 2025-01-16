@@ -1,5 +1,5 @@
 import Swiper from 'swiper'; // Основной импорт
-import {Navigation, Pagination, Autoplay, Scrollbar} from 'swiper/modules';
+import {Navigation, Pagination, Scrollbar} from 'swiper/modules';
 import 'swiper/css'; // Подключение стилей
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -42,12 +42,17 @@ export function initSwiper() {
             nextEl: '.main-swiper__button-next',
             prevEl: '.main-swiper__button-prev',
         },
-        effect: 'slide', // Плавный переход между слайдами
+        effect: 'slide',
     });
 
 
     function updateProgressBar(swiper) {
-        const progress = swiper.progress; // Текущее состояние прогресса (от 0 до 1)
+
+        const currentSlideIndex = swiper.realIndex;
+
+        const totalSlides = swiper.slides.length;
+        const progress = (currentSlideIndex + 1) / totalSlides;
+
         const scrollbarEl = document.querySelector('.main-swiper__custom-scrollbar');
         if (scrollbarEl) {
             scrollbarEl.style.width = `${progress * 100}%`;
