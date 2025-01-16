@@ -32,6 +32,11 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
     @include mix.respond-to(1440) {
       max-width: 85.3vw;
     }
@@ -69,11 +74,12 @@
       width: mix.rem(236)
     }
     @include mix.respond-to('mobile') {
-      top: 575px;
+      top: auto;
+      bottom: 39%;
       right: 125px;
       width: mix.rem(236)
     }
-    @include mix.respond-to('mobileSmall') {
+    @include mix.respond-to(600) {
       top: 144px;
       right: 170px;
       width: 11.66rem
@@ -404,7 +410,7 @@
     padding-left: 4.72rem;
     padding-bottom: 6.1rem;
   }
-  @include mix.respond-to(600) {
+  @include mix.respond-to(700) {
     padding-top: mix.rem(24.5);
 
     padding-left: 0;
