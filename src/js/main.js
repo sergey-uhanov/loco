@@ -31,4 +31,3 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutSlider()
     preloader()
 });
-console.log('что угодно')
