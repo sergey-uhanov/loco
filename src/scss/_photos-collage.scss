@@ -44,7 +44,7 @@
     z-index: 2;
   }
 
-  &__name-section{
+  &__name-section {
     position: absolute;
     top: 46px;
     left: 40px;
@@ -55,10 +55,11 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.13);
     transform: rotate(-90deg);
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       display: none;
     }
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       top: 5px;

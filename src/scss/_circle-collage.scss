@@ -15,7 +15,7 @@
     padding: 17.97rem 0 16.26rem 0;
   }
 
-  &_dark-bg{
+  &_dark-bg {
     background-color: #080808;
     color: #fff;
   }
@@ -202,8 +202,9 @@
       width: 191px;
     }
   }
+
   &__photo-item:nth-child(9) {
-  display: none;
+    display: none;
     @include mix.respond-to(600) {
       display: block;
       bottom: 5px;

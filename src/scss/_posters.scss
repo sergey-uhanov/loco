@@ -15,11 +15,11 @@
     padding: 5.3rem 0 0 0;
   }
 
-  &__container{
+  &__container {
     position: relative;
   }
 
-  &__name-section{
+  &__name-section {
     position: absolute;
     top: 26px;
     left: 40px;
@@ -30,10 +30,11 @@
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.13);
     transform: rotate(-90deg);
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       display: none;
     }
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       top: 5px;
@@ -97,7 +98,8 @@
     flex-direction: column;
     gap: mix.rem(8);
   }
-  @include mix.respond-to('tablet'){
+
+  @include mix.respond-to('tablet') {
     gap: mix.rem(6);
   }
   @include mix.respond-to('mobile') {

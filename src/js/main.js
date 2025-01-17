@@ -1,16 +1,16 @@
 import {openBurger} from './burger.js'
-import {setActiveMenu} from "./activePage.js";
-import {initSwiper} from './mainSlider.js';
+import {setActiveMenu} from "./active-page.js";
+import {initSwiper} from './main-slider.js';
 import {customSelect} from './select.js';
 import {initPopup} from "./popup.js";
-import {popupSelect} from "./selectPopup.js";
-import {FormsValidation} from "./validateForm.js";
-import {initNewsSlider} from "./newsSlider.js";
-import {newsSelect} from "./newsSelect.js";
-import {smallSlider} from "./smallSlider.js";
+import {popupSelect} from "./select-popup.js";
+import {FormsValidation} from "./validate-form.js";
+import {initNewsSlider} from "./news-slider.js";
+import {newsSelect} from "./news-select.js";
+import {smallSlider} from "./small-slider.js";
 import {elevationCompensation} from "./header.js";
 import {projects} from "./projects.js";
-import {aboutSlider} from "./aboutSlider.js";
+import {aboutSlider} from "./about-slider.js";
 import {preloader} from "./preloader.js";
 
 
@@ -30,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
     projects()
     aboutSlider()
     preloader()
+
 });

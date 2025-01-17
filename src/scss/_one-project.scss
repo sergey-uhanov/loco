@@ -1,7 +1,7 @@
 @use "_mixins.scss" as mix;
 
 .first-screen-project {
-  height: 100vh ;
+  height: 100vh;
   display: flex;
   align-items: center;
 
@@ -143,7 +143,7 @@
 
 }
 
-.one-project-posters{
+.one-project-posters {
   padding-top: 2.7rem;
   padding-bottom: 8.8rem;
 
@@ -157,7 +157,7 @@
     padding-bottom: 4.7rem;
   }
 
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
@@ -166,7 +166,7 @@
     }
   }
 
-  &__btn{
+  &__btn {
     border: 1px solid #080808;
     background: #fff;
     opacity: 0.32;
@@ -181,9 +181,10 @@
     transition: opacity 0.2s ease-in-out;
     color: #080808;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
+
     @include mix.respond-to('tablet') {
       margin: 3.9rem auto 0 auto;
     }
@@ -193,12 +194,12 @@
   }
 }
 
-.next-project{
+.next-project {
   position: relative;
   //top: -1px;
-  background: #000 ;
+  background: #000;
 
-  &__sub-title{
+  &__sub-title {
     font-weight: 700;
     font-size: 0.5rem;
     line-height: 1.7;
@@ -215,7 +216,7 @@
     }
   }
 
-  &__title{
+  &__title {
     font-weight: 700;
     font-size: 2.25rem;
     color: #fff;

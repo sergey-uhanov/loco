@@ -1,41 +1,44 @@
 @use "_mixins.scss" as mix;
 
-.project-first-screen{
+.project-first-screen {
   padding-top: mix.rem(112);
-  padding-bottom: mix.rem(5) ;
-  @include mix.respond-to('tablet'){
+  padding-bottom: mix.rem(5);
+  @include mix.respond-to('tablet') {
     padding-top: 4.2rem;
   }
-  @include mix.respond-to('mobile'){
+  @include mix.respond-to('mobile') {
     padding-top: 2.9rem;
   }
-  @include mix.respond-to(600){
+  @include mix.respond-to(600) {
     padding-top: 3.5rem;
   }
 }
-.projects{
-  &__block{
-    max-width:584px ;
+
+.projects {
+  &__block {
+    max-width: 584px;
     width: 100%;
   }
-  &__text{
+
+  &__text {
     max-width: mix.rem(450);
     font-weight: 300;
     font-size: 0.88rem;
     line-height: 1.7066;
     color: #080808;
     margin-bottom: 2rem;
-    @include mix.respond-to('tablet'){
+    @include mix.respond-to('tablet') {
       margin-left: 6.4rem;
       font-size: 0.88rem;
       line-height: 1.7066;
       margin-bottom: 2.1rem;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       margin-left: 0;
       margin-bottom: 0.2rem;
     }
   }
+
   &__filter-block {
     display: flex;
     justify-content: space-between;

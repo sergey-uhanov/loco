@@ -2,9 +2,10 @@
 
 .news-swiper {
 
-  &__wrapper{
+  &__wrapper {
     height: auto !important;
   }
+
   &__slide {
     display: flex !important;
     flex-direction: column;
@@ -57,7 +58,7 @@
     cursor: pointer; /* Курсор при наведении */
     background-color: transparent !important;
     margin: 0 mix.rem(10);
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       margin: 0 mix.rem(4);
     }
   }

@@ -6,15 +6,11 @@
   background-position: 0 0;
   background-size: cover;
   background-attachment: fixed;
-
-
 }
 
 .contact-section {
-
   padding-top: 6rem;
   padding-bottom: 10rem;
-
 
   &__container {
     position: relative;
@@ -24,13 +20,15 @@
   &__footer {
     position: relative;
     z-index: 2;
-     flex: 1 1 auto;
     height: 100%;
   }
 
 }
-
-.contact-page{
+main{
+  flex: 1 ;
+}
+.contact-page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }

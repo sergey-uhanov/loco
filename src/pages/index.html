@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta
-            name="description"
-            content="Mary's simple recipe for maple bacon donuts
-           makes a sticky, sweet treat with just a hint
-           of salt that you'll keep coming back for.">
+    <meta name="description"
+          content="Discover stylish interior design ideas and a sweet recipe for maple bacon donuts.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interiors website</title>
+    <title>Interior Design Ideas | Maple Bacon Donuts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.min.css">
-    <script type="module" src="./js/bundle.js" defer></script>
-    <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+              rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" sizes="16x16">
 </head>
 <body>
 @@include('../partials/preloader.html')
 @@include('../partials/popup.html')
 @@include('../partials/header.html')
 
-<main>
+<main class="main">
     <section class="first-screen">
         <div class="first-screen__container">
             <div class="background-slider">
@@ -30,26 +31,20 @@
                     <div class=" main-swiper__wrapper swiper-wrapper">
                         <div class="main-swiper__slide swiper-slide">
                             <picture>
-                                <source srcset="./assets/Rectangle1-micro.png" media="(max-width: 500px)">
-                                <source srcset="./assets/Rectangle1-small.png" media="(max-width: 768px)">
 
-                                <img src="./assets/Rectangle.png" alt="Image">
+                                <img src="./assets/Rectangle.png" alt="Image" width="1227" height="744">
                             </picture>
                         </div>
                         <div class="main-swiper__slide swiper-slide">
                             <picture>
-                                <source srcset="./assets/Rectangle1-micro.png" media="(max-width: 500px)">
-                                <source srcset="./assets/Rectangle1-small.png" media="(max-width: 768px)">
 
-                                <img src="./assets/Rectangle2.png" alt="Image">
+                                <img src="./assets/Rectangle2.png" alt="Image" width="1227" height="744">
                             </picture>
                         </div>
                         <div class="main-swiper__slide swiper-slide">
                             <picture>
-                                <source srcset="./assets/Rectangle1-micro.png" media="(max-width: 500px)">
-                                <source srcset="./assets/Rectangle1-small.png" media="(max-width: 768px)">
 
-                                <img src="./assets/Rectangle.png" alt="Image">
+                                <img src="./assets/Rectangle.png" alt="Image" width="1227" height="744">
                             </picture>
                         </div>
 
@@ -149,7 +144,8 @@
                     </picture>
                     <picture>
                         <source srcset="./assets/Rectangle-mobile.png" media="(max-width: 1024px)">
-                        <img class="company-philosophy__main-img" src="./assets/Rectangle-pc.png" alt="photo interiera">
+                        <img class="company-philosophy__main-img" src="./assets/Rectangle-pc.png" alt="photo interiera"
+                             width="316" height="393">
                     </picture>
                 </div>
                 <div class="company-philosophy__quote">We can also help you create harmony out of seemingly completely
@@ -173,9 +169,9 @@
                 <div class="posters-section__item double-poster">
                     <a href="#" class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf2-pc.png"
-                             alt="photo apartment interior" width="510" height="510">
+                             alt="photo apartment interior" width="653" height="653">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <div  class="double-poster__link">Discover more</div>
+                        <div class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -184,9 +180,9 @@
                     </a>
                     <a href="#" class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf1-pc.png"
-                             alt="photo apartment interior"  width="510" height="510">
+                             alt="photo apartment interior" width="653" height="653">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <div  class="double-poster__link">Discover more</div>
+                        <div class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -196,8 +192,10 @@
                 </div>
                 <a href="#" class="posters-section__item full-poster">
                     <picture>
-                        <source media="(max-width: 768px)" srcset="./assets/posterfull21-mobile.png">
-                        <img class="full-poster__item" src="./assets/posterfull1-pc.png" alt="photo apartment interior">
+                        <source media="(max-width: 768px)" srcset="./assets/posterfull21-mobile.png" width="510"
+                                height="510">
+                        <img class="full-poster__item" src="./assets/posterfull1-pc.png" alt="photo apartment interior"
+                             width="1314" height="653">
                     </picture>
                     <div class="full-poster__description">Residence by the <br> lighthouse</div>
                     <div class="full-poster__link">Discover more</div>
@@ -210,9 +208,9 @@
                 <div class="posters-section__item double-poster">
                     <div class="double-poster__poster-wrapper">
                         <img class="double-poster__item" src="./assets/posterhalf3-pc.png"
-                             alt="photo apartment interior"  width="510" height="510">
+                             alt="photo apartment interior" width="653" height="653">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <div  class="double-poster__link">Discover more</div>
+                        <div class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -222,7 +220,7 @@
                     <a href="#" class="double-poster__poster-wrapper  double-poster__poster-wrapper_white-bc">
                         <div class="double-poster__title-card">See more 60 projects</div>
                         <img class="double-poster__microposter" src="./assets/postermicro1.png"
-                             alt="photo apartment interior">
+                             alt="photo apartment interior" width="168" height="233">
                     </a>
                 </div>
             </div>
@@ -231,11 +229,11 @@
             <div class="photos-collage__container">
                 <div class="photos-collage__name-section">Make request</div>
                 <div class="photos-collage__background">
-                    <img class="photos-collage__photo-item" src="./assets/collage5.png" width="211" height="273"
-
+                    <img class="photos-collage__photo-item" src="./assets/collage5.png"
+                         width="211" height="273"
                          alt="photo interiera">
-                    <img class="photos-collage__photo-item" src="./assets/collage4.png" width="211" height="273"
-
+                    <img class="photos-collage__photo-item" src="./assets/collage4.png"
+                         width="211" height="273"
                          alt="photo interiera">
                     <img class="photos-collage__photo-item" src="./assets/collage3.png"
                          width="211" height="273"
@@ -286,7 +284,8 @@
                 </div>
             </div>
             <div class="circle-collage__background">
-                <img class="circle-collage__photo-item" src="./assets/collage11.png" alt="picture interirt">
+                <img class="circle-collage__photo-item" src="./assets/collage11.png" alt="picture interirt" width="399"
+                     height="306">
                 <img class="circle-collage__photo-item" src="./assets/collage22.png" alt="picture interirt">
                 <img class="circle-collage__photo-item" src="./assets/collage44.png" alt="picture interirt">
                 <img class="circle-collage__photo-item" src="./assets/collage33.png" alt="picture interirt">
@@ -351,6 +350,6 @@
     </div>
 
 </footer>
-
+<script type="module" src="./js/bundle.js"></script>
 </body>
 </html>

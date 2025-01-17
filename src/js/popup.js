@@ -65,7 +65,7 @@ export function initPopup() {
         },
         enabledScroll() {
             document.body.style.cssText = '';
-            window.scroll({ top: this.scrollPosition });
+            window.scroll({top: this.scrollPosition});
             document.documentElement.style.scrollBehavior = '';
             document.body.style.marginTop = `${headerHeight}px`;
         },
@@ -78,7 +78,7 @@ export function initPopup() {
         document.body.style.paddingRight = `${scrollBarWidth}px`;
         rightSideElement.forEach((element) => {
             const currentRight = parseInt(getComputedStyle(element).right, 10) || 0;
-            element.style.right = `${currentRight + scrollBarWidth }px `;
+            element.style.right = `${currentRight + scrollBarWidth}px `;
 
 
         });
@@ -91,19 +91,34 @@ export function initPopup() {
         document.body.style.paddingRight = '';
         rightSideElement.forEach((element) => {
             const currentRight = parseInt(getComputedStyle(element).right, 10) || 0;
-            element.style.right = `${currentRight - scrollBarWidth }px `;
+            element.style.right = `${currentRight - scrollBarWidth}px `;
 
         });
     }
+
     window.addEventListener('click', (event) => {
         if (event.target === againRequestButton) {
             resetStatePopup()
         }
     })
+
+    document.getElementById('file-upload__input').addEventListener('change', function (event) {
+
+        const fileInput = event.target;
+        const fileName = fileInput.files[0] ? fileInput.files[0].name : "No file chosen";
+        const fileTextElement = document.querySelector('.file-upload__text');
+
+        // Изменяем текст в элементе
+        if (fileInput.files[0]) {
+            fileTextElement.innerHTML = `File selected: <strong>${fileName}</strong>`;
+        } else {
+            fileTextElement.innerHTML = `Attach your file <span>File size not more than 10 MB</span>`;
+        }
+    });
 }
 
 
-function resetStatePopup(){
+function resetStatePopup() {
     const form = document.querySelector('.popup-form');
     document.querySelector('.popup__content').classList.remove('popup__content_hidden');
     document.querySelector('.success-message').classList.add('success-message_hidden');

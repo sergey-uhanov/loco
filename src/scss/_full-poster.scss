@@ -6,6 +6,7 @@
   transition: transform 0.3s ease;
   overflow: hidden;
   display: inline-block;
+
   &__description,
   &__link,
   &__data {
@@ -15,7 +16,7 @@
   }
 
   &:hover {
-    .full-poster__item{
+    .full-poster__item {
       transform: scale(1.03);
     }
 
@@ -31,7 +32,7 @@
 
   }
 
-  &__data{
+  &__data {
     position: absolute;
     top: 2rem;
     left: 2rem;

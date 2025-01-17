@@ -100,10 +100,11 @@
     padding: mix.rem(14.5) mix.rem(35);
     margin-left: 0.5rem;
   }
-  @media (max-width: 767px) {
+  @include mix.respond-to('mobile') {
     display: none;
   }
-  &_dark{
+
+  &_dark {
     color: #080808;
   }
 }
@@ -223,7 +224,7 @@
     span {
       transition: all 0.3s ease 0s;
       position: absolute;
-      left: 2px;
+      left: 0;
       bottom: 5px;
       width: 100%;
       height: mix.rem(1);
@@ -235,12 +236,12 @@
     &::before {
       content: "";
       transition: all 0.3s ease 0s;
-      left: 2px;
+      left: 0px;
       position: absolute;
       width: 100%;
       height: mix.rem(1);
       background-color: var(--white);
-      @include mix.respond-to('tablet') {
+      @include mix.respond-to('mobile') {
         left: 0;
       }
     }
@@ -255,7 +256,7 @@
       @include mix.respond-to('tablet') {
         left: 53px;
       }
-      @media (max-width: 767px) {
+      @include mix.respond-to('mobile') {
         content: '';
         display: none;
       }

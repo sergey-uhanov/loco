@@ -22,15 +22,15 @@
   //padding-top: 384px;
   color: #fafafa;
 
-  &__content{
+  &__content {
     position: absolute;
     top: 42vh;
     padding-left: 12.47rem;
 
-    @include mix.respond-to('mobile'){
+    @include mix.respond-to('mobile') {
       padding-left: mix.rem(137);
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       padding-left: 0;
     }
   }
@@ -43,11 +43,11 @@
     font-weight: 700;
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
-    @include mix.respond-to('mobile'){
+    @include mix.respond-to('mobile') {
 
       font-size: 2rem;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
 
       font-size: 1.62rem;
     }
@@ -71,20 +71,21 @@
     width: 80px;
     margin-left: 20px;
 
-    &:after,&:before{
+    &:after, &:before {
       content: "";
       display: block;
       height: 0.5px;
       background: #fff;
     }
 
-    &:after{
+    &:after {
       width: 8px;
       position: absolute;
       bottom: 5px;
       left: -20px;
     }
-    &:before{
+
+    &:before {
       width: 56px;
       position: absolute;
       bottom: 5px;

@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+          content="Discover stylish interior design ideas and a sweet recipe for maple bacon donuts.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Interior Design Ideas | Maple Bacon Donuts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.min.css">
-    <script type="module" src="./js/bundle.js" defer></script>
-    <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+              rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" sizes="16x16">
 </head>
 <body>
 @@include('../partials/preloader.html')
@@ -85,42 +91,46 @@
 
     <section class="about-team">
         <div class="about-team__container">
-           <div class="about-team__content">
-               <div class="about-team__top-text">
-                   <div class="about-team__title">Roman Viktorovich</div>
-                   <div class="about-team__position">Founder and CEO of Hilight
-                   </div>
-                   <div class="about-team__description">We can also help you create harmony out of seemingly completely
-                       incompatible elements in the interior or the exterior design.
-                   </div>
-               </div>
-               <div class="about-team__top-image"><img src="./assets/ceo.png" alt="photo ceo"></div>
-               <div class="about-team__bottom-image"><img src="./assets/team.png" alt="photo ceo"></div>
-               <div class="about-team__bottom-text">
-                   <ul class="about-team__numbers">
-                       <li class="about-team__item">
-                           <span>5</span> companies
-                           cooperate
-                       </li>
-                       <li class="about-team__item">
-                           <span>4</span> year of
-                           market entry
-                       </li>
-                       <li class="about-team__item">
-                           <span>3</span> companies
-                           cooperate
-                       </li>
+            <div class="about-team__content">
+                <div class="about-team__top-text">
+                    <div class="about-team__title">Roman Viktorovich</div>
+                    <div class="about-team__position">Founder and CEO of Hilight
+                    </div>
+                    <div class="about-team__description">We can also help you create harmony out of seemingly completely
+                        incompatible elements in the interior or the exterior design.
+                    </div>
+                </div>
+                <div class="about-team__top-image"><img src="./assets/ceo.png" alt="photo ceo"></div>
+                <div class="about-team__bottom-image"><img src="./assets/team.png" alt="photo ceo"></div>
+                <div class="about-team__bottom-text">
+                    <ul class="about-team__numbers">
+                        <li class="about-team__item">
+                            <span>5</span> companies
+                            cooperate
+                        </li>
+                        <li class="about-team__item">
+                            <span>4</span> year of
+                            market entry
+                        </li>
+                        <li class="about-team__item">
+                            <span>3</span> companies
+                            cooperate
+                        </li>
 
-                   </ul>
-                   <div class="about-team__text-description">
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl sit risus pharetra nisl metus
-                       aliquet. Nibh eu posuere sodales sem tellus. Vulputate est nisl convallis sed. Fames in dignissim
-                       erat fermentum sed sed. In massa, adipiscing aliquet mi semper facilisis ornare nisi. Non elit amet
-                       enim at cursus mauris senectus dolor ac. Egestas lectus in praesent mi arcu. Vitae nisl viverra enim
-                       nulla at. Fusce porta elementum quis.
-                   </div>
-               </div>
-           </div>
+                    </ul>
+                    <div class="about-team__text-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl sit risus pharetra nisl
+                        metus
+                        aliquet. Nibh eu posuere sodales sem tellus. Vulputate est nisl convallis sed. Fames in
+                        dignissim
+                        erat fermentum sed sed. In massa, adipiscing aliquet mi semper facilisis ornare nisi. Non elit
+                        amet
+                        enim at cursus mauris senectus dolor ac. Egestas lectus in praesent mi arcu. Vitae nisl viverra
+                        enim
+                        nulla at. Fusce porta elementum quis.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -189,5 +199,6 @@
     </section>
 
 </main>
+<script type="module" src="./js/bundle.js"></script>
 </body>
 </html>

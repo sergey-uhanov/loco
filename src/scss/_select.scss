@@ -20,9 +20,11 @@
   border-radius: 40px;
   transition: background 0.2s ease;
 }
-.select__toggle:hover{
-background: rgba(255, 255, 255, 0.1);
+
+.select__toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
+
 .select__toggle::after {
   content: url('../images/row-icon.svg');
   position: absolute;

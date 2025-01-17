@@ -8,7 +8,7 @@
   @include mix.respond-to('mobile') {
     padding-top: 8.9rem;
   }
-  @include mix.respond-to(600){
+  @include mix.respond-to(600) {
     padding-top: 7.5rem;
   }
 
@@ -31,7 +31,7 @@
       max-width: mix.rem(520);
       margin-bottom: 2.5rem;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       margin-left: 0;
       margin-bottom: 3.4rem;
     }
@@ -50,7 +50,7 @@
     @include mix.respond-to('mobile') {
       margin-bottom: 0.9rem;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       font-size: 1.62rem;
       max-width: 18rem;
     }
@@ -92,7 +92,7 @@
       padding-bottom: 0rem;
       padding-left: 4.7rem;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       top: 3px;
       padding-bottom: 0rem;
       padding-left: 0rem;
@@ -145,13 +145,12 @@
 }
 
 
-
 .one-news-posters {
   &__container {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       row-gap: 1rem;
     }
   }
@@ -167,7 +166,7 @@
   @include mix.respond-to('mobile') {
     padding-bottom: 6.2rem;
   }
-  @include mix.respond-to(600){
+  @include mix.respond-to(600) {
     padding-bottom: 4.3rem;
   }
 
@@ -186,7 +185,7 @@
       padding-left: 4.7rem;
       margin-bottom: 3rem;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       font-size: 1.62rem;
       padding-left: 0;
       margin-bottom: 2.5rem;
@@ -222,14 +221,14 @@
       width: 100% !important;
       margin-right: 20px;
     }
-    @include mix.respond-to(600){
+    @include mix.respond-to(600) {
       max-width: mix.rem(290);
       margin-right: 26px;
     }
 
   }
 
-  &__slide:hover{
+  &__slide:hover {
     transform: scale(1.03) !important;
   }
 

@@ -22,12 +22,12 @@
 @use "_preloader.scss";
 
 
-
-body{
+body {
   color: var(--pri-color);
-  font-family: var(--font-family);
+  font-family: var(--font-family), Arial, sans-serif;
   overflow-x: hidden;
 }
-.page-wrapper{
+
+.page-wrapper {
   overflow: visible;
 }
