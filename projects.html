@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.min.css">
-    <script type="module" src="./js/bundle.js" defer></script>
-    <link rel="icon" href="./images/favicon.svg" type="image/gif" sizes="16x16">
+    <meta name="description"
+          content="Discover stylish interior design ideas and a sweet recipe for maple bacon donuts.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+              rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" sizes="16x16">
 </head>
 <body>
 <div class="popup " id="popup">
@@ -192,7 +197,7 @@
         </ul>
     </div>
     <div class="header__container">
-        <button type="button" class="icon-menu "><span></span></button>
+        <button type="button" class="icon-menu " aria-label="Открыть меню"><span></span></button>
         <div class="header__menu menu">
 
             <div class="menu__logo"><a href="/loco" class="  logo-main-link">Logo</a></div>
@@ -249,7 +254,8 @@
                             <ul class="custom-dropdown__menu" role="menu" hidden>
                                 <li class="custom-dropdown__item filter-button" data-filter="house" role="house">House
                                 </li>
-                                <li class="custom-dropdown__item filter-button" data-filter="Apartments" role="Apartments">
+                                <li class="custom-dropdown__item filter-button" data-filter="Apartments"
+                                    role="Apartments">
                                     Apartments
                                 </li>
                                 <li class="custom-dropdown__item filter-button" data-filter="commerce" role="Commerce">
@@ -285,7 +291,7 @@
                         <img class="double-poster__item" src="./assets/posterhalf1-pc.webp"
                              alt="photo apartment interior">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <div  class="double-poster__link">Discover more</div>
+                        <div class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -299,7 +305,7 @@
                         <img class="full-poster__item" src="./assets/posterfull1-pc.webp" alt="photo apartment interior">
                     </picture>
                     <div class="full-poster__description">Residence by the <br> lighthouse</div>
-                    <div  class="full-poster__link">Discover more</div>
+                    <div class="full-poster__link">Discover more</div>
                     <ul class="full-poster__data">
                         <li class="double-poster__data-item">Lodz</li>
                         <li class="double-poster__data-item">16.10.2018</li>
@@ -311,7 +317,7 @@
                         <img class="double-poster__item" src="./assets/posterhalf3-pc.webp"
                              alt="photo apartment interior">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <div  class="double-poster__link">Discover more</div>
+                        <div class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -322,7 +328,7 @@
                         <img class="double-poster__item" src="./assets/poster-half-5.webp"
                              alt="photo apartment interior">
                         <div class="double-poster__description">Eyewear store interior</div>
-                        <div  class="double-poster__link">Discover more</div>
+                        <div class="double-poster__link">Discover more</div>
                         <ul class="double-poster__data">
                             <li class="double-poster__data-item">Lodz</li>
                             <li class="double-poster__data-item">16.10.2018</li>
@@ -337,7 +343,7 @@
                         <img class="full-poster__item" src="./assets/poster-full-5.webp" alt="photo apartment interior">
                     </picture>
                     <div class="full-poster__description">Residence by the <br> lighthouse</div>
-                    <div  class="full-poster__link">Discover more</div>
+                    <div class="full-poster__link">Discover more</div>
                     <ul class="full-poster__data">
                         <li class="double-poster__data-item">Lodz</li>
                         <li class="double-poster__data-item">16.10.2018</li>
@@ -551,5 +557,6 @@
     </div>
 </div>
 </main>
+<script type="module" src="./js/bundle.js"></script>
 </body>
 </html>
