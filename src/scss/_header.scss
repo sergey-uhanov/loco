@@ -3,7 +3,7 @@
 .header {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 15;
   padding: mix.rem(24) 0;
   font-weight: 600;
   font-size: 0.69rem;
@@ -69,7 +69,7 @@
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    color: #fff;
+    color: var(--white);
     transition: opacity 0.3s ease-in-out;
   }
 
@@ -88,7 +88,7 @@
 }
 
 .popup-button {
-  color: #fff;
+  color: var(--white);
   border: 1px solid rgba(253, 253, 253, 0.32);
   font-weight: 600;
   font-size: 0.69rem;
@@ -105,7 +105,7 @@
   }
 
   &_dark {
-    color: #080808;
+    color: var(--pri-color);
   }
 }
 
@@ -140,7 +140,7 @@
   height: 105vh;
   width: 100%;
   overflow-y: auto;
-  background-color: #080808;
+  background-color: var(--pri-color);
   padding-top: mix.rem(212);
   padding-left: mix.rem(212);
   padding-bottom: 40px;

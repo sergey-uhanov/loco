@@ -13,9 +13,8 @@
   }
 
   &__nav-block {
-    color: #080808;
+    color: var(--pri-color);
     display: flex;
-
     align-items: center;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
@@ -52,6 +51,7 @@
 
   &__total-slides {
     margin-left: 34px;
+    cursor: pointer;
   }
 
   &__pagination-item {

@@ -1,7 +1,7 @@
 @use "_mixins.scss" as mix;
 
 .news-slider-section {
-  padding-top: 13.1rem;
+  padding-top: 12.9rem;
   padding-bottom: 8.55rem;
   @include mix.respond-to('tablet') {
     padding-top: 10.1rem;
@@ -33,11 +33,17 @@
     }
   }
 
+  &__container{
+    @include mix.respond-to(400){
+      padding: 0 1.5rem;
+    }
+  }
+
   &__title {
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 1.3;
-    color: #080808;
+    color: var(--pri-color);
     margin-left: mix.rem(133);
 
     @include mix.respond-to('tablet') {
@@ -58,8 +64,8 @@
 
   &__filter-buttons {
     display: flex;
-    column-gap: 1.8rem;
-    margin-right: 7.17rem;
+    column-gap: 2rem;
+    margin-right: 8.48rem;
     font-size: 0.9rem;
     position: relative;
     top: 4px;
@@ -84,7 +90,9 @@
     color: var(--sec-color);
     white-space: nowrap;
     transition: opacity 0.2s ease;
-
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    font-size: 0.69rem;
     &:hover {
       opacity: 0.5;
     }
@@ -117,7 +125,7 @@
 
 .describe {
   position: relative;
-  padding: 8.45rem 0 0 0;
+  padding: 8.55rem 0 0 0;
   color: var(--white);
   @include mix.respond-to('tablet') {
     padding-top: 7.7rem;
@@ -130,8 +138,8 @@
   }
 
   &_white-bg {
-    background-color: #fff;
-    color: #080808;
+    background-color: var(--white);
+    color: var(--pri-color);
     position: relative;
   }
 
@@ -321,8 +329,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color: var(--bc-thirth);
+    border: 1px solid var(--border-color);
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
@@ -339,8 +347,8 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: var(--white);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     margin: 4px 0 0;
     padding: 8px 0;
@@ -357,7 +365,7 @@
   }
 
   &__item:hover {
-    background: #f0f0f0;
+    background: var(--bc-thirth);
   }
 }
 

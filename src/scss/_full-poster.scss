@@ -2,11 +2,16 @@
 
 .full-poster {
   max-width: 100%;
+
+  aspect-ratio: 2/1;
   position: relative;
   transition: transform 0.3s ease;
   overflow: hidden;
   display: inline-block;
-
+  @include mix.respond-to('mobile') {
+    aspect-ratio: 1/1;
+    max-width: mix.rem(672);
+  }
   &__description,
   &__link,
   &__data {
@@ -42,15 +47,16 @@
     font-weight: 400;
     font-size: 0.62rem;
     line-height: 1.7066;
-    color: #fff;
+    color: var(--white);
     opacity: 0;
     transition: opacity .3s;
   }
 
   &__item {
     max-width: 100%;
-    transition: transform 0.3s ease; // Плавный переход
-    transform-origin: center; // Увеличение из центра
+    //height: 100%;
+    transition: transform 0.3s ease;
+    transform-origin: center;
   }
 
   &__description {
@@ -60,7 +66,7 @@
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.26;
-    color: #fafafa;
+    color: var(--text-color);
     @include mix.respond-to('mobile') {
       bottom: 4.18rem;
       left: 2.07rem;
@@ -76,7 +82,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     text-align: right;
-    color: #fff;
+    color: var(--white);
     @include mix.respond-to('mobile') {
       bottom: 1.78rem;
       right: auto;

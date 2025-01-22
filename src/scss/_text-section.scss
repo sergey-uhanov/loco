@@ -2,7 +2,7 @@
 
 .text-section {
 
-  padding: mix.rem(96) 0 mix.rem(96) mix.rem(0);
+  padding: 5.7rem 0 mix.rem(96) mix.rem(0);
   @include mix.respond-to('tablet') {
     padding: mix.rem(88) 0 mix.rem(82) mix.rem(0);
   }
@@ -115,7 +115,7 @@
     font-weight: 300;
     font-size: 0.88rem;
     line-height: 1.70;
-    color: #080808;
+    color: var(--pri-color);
     opacity: 0.7;
     @include mix.respond-to('tablet') {
       margin-bottom: 1.9rem;
@@ -149,7 +149,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     text-align: right;
-    color: #080808;
+    color: var(--pri-color);
     position: relative;
 
     @include mix.respond-to('tablet') {

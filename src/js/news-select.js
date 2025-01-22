@@ -3,7 +3,7 @@ export function newsSelect(){
     const dropdownMenu = document.querySelector('.custom-dropdown__menu');
     const dropdownItems = document.querySelectorAll('.custom-dropdown__item');
 
-    // Toggle dropdown visibility
+
     if(dropdownToggle) {
     dropdownToggle.addEventListener('click', () => {
         const isOpen = dropdownMenu.hasAttribute('hidden');

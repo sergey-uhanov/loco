@@ -20,7 +20,7 @@
   position: relative;
   z-index: 1;
   //padding-top: 384px;
-  color: #fafafa;
+  color: var(--text-color);
 
   &__content {
     position: absolute;
@@ -75,7 +75,7 @@
       content: "";
       display: block;
       height: 0.5px;
-      background: #fff;
+      background: var(--white);
     }
 
     &:after {

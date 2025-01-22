@@ -19,6 +19,7 @@
     }
     @include mix.respond-to(600) {
       flex-wrap: wrap;
+      gap: 4rem;
     }
   }
 
@@ -29,8 +30,9 @@
   }
 
   &__poster-wrapper {
-    background-color: var(--white);
+
     max-width: 40.81rem;
+    aspect-ratio: 1/1;
     width: 100%;
     position: relative;
     z-index: 8;
@@ -48,6 +50,8 @@
     &:hover {
       .double-poster__item {
         transform: scale(1.03);
+
+
       }
 
       .double-poster__description,
@@ -58,14 +62,18 @@
         visibility: visible;
       }
     }
-
     @include mix.respond-to('mobile') {
       max-width: 42rem;
     }
+    &_long{
+      aspect-ratio: 1/1.19;
+    }
+
   }
 
   &__item {
     width: 100%;
+    height: 100%;
     position: relative;
     z-index: 9;
     transition: transform 0.3s ease;
@@ -79,7 +87,7 @@
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.26;
-    color: #fafafa;
+    color: var(--text-color);
     z-index: 10;
     opacity: 0;
   }
@@ -91,7 +99,7 @@
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 1.269;
-    color: #fff;
+    color: var(--white);
     z-index: 10;
   }
 
@@ -105,7 +113,7 @@
     font-weight: 400;
     font-size: 0.62rem;
     line-height: 1.7066;
-    color: #fff;
+    color: var(--white);
     opacity: 0;
     transition: opacity .3s;
   }
@@ -119,7 +127,7 @@
     font-size: 0.62rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--white);
     transition: color 0.2s ease;
     @include mix.respond-to('mobile') {
       bottom: mix.rem(28);
@@ -169,15 +177,17 @@
   }
 
   &__link_alt-color:after, &__link_alt-color:before {
-    background: #838383;
+    background: var(--bc-secodary);
   }
 
   &__poster-wrapper_white-bc {
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 40.81rem;
     width: 100%;
+
     @include mix.respond-to('tablet') {
       max-width: 42rem;
     }
@@ -188,14 +198,20 @@
     }
   }
 
+  &__poster-wrapper_white-bc-home {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
   &__title-card {
     font-weight: 700;
     font-size: 1.38rem;
     line-height: 1.26776;
-    color: #080808;
-    margin-bottom: 23px;
-    padding-top: 17%;
+    color: var(--pri-color);
+    margin-bottom: 27px;
+    padding-top: 23%;
     transition: color 0.2s ease;
+    white-space: nowrap;
     @include mix.respond-to("tablet") {
       font-size: 1.25rem;
       line-height: 1.26776;
@@ -217,31 +233,41 @@
     }
   }
 
-  &__microposter {
-    max-width: 15.69rem;
+  &__microposter-wrapper {
+    margin: 0 auto;
+    max-width: 243px;
+    max-height: 323px;
+    width: 100%;
+    aspect-ratio: 1/1.3;
     @include mix.respond-to(1439) {
-      max-width: 10.49rem;
+      max-width: 190px;
     }
-    @include mix.respond-to('870') {
-      max-width: 7.56rem;
-    }
-    @include mix.respond-to('mobile') {
-      max-width: 15.69rem;
-    }
-    @include mix.respond-to('750') {
-      max-width: 7.56rem;
-    }
+    //@include mix.respond-to('870') {
+    //  max-width: 7.56rem;
+    //}
+    //@include mix.respond-to('mobile') {
+    //  max-width: 15.69rem;
+    //}
+    //@include mix.respond-to('750') {
+    //  max-width: 7.56rem;
+    //}
+  }
+
+  &__microposter {
+    width: 100%;
+    height: 100%;
+
   }
 
   &__title {
     font-weight: 700;
     font-size: 1.75rem;
-    color: #080808;
+    color: var(--pri-color);
     max-width: 23rem;
     position: absolute;
     left: mix.rem(56);
-    bottom: 13.46rem;
-    line-height: 1.3;
+    bottom: 13.96rem;
+    line-height: 1.2;
     @include mix.respond-to('tablet') {
       font-size: 1.25rem;
       bottom: 13.36rem;
@@ -260,7 +286,9 @@
       @include mix.respond-to(600) {
         max-width: 16.6rem;
         left: 1.5rem;
-        bottom: 2.9rem;
+      }
+      @include mix.respond-to(374){
+        bottom: 0;
       }
     }
 
@@ -285,12 +313,12 @@
 
   &__subtitle {
     position: absolute;
-    bottom: mix.rem(125);
+    bottom: 8.01rem;
     left: mix.rem(56);
     font-weight: 300;
     font-size: 0.88rem;
-    line-height: 1.7066;
-    color: #080808;
+    line-height: 1.7;
+    color: var(--pri-color);
     opacity: 0.7;
     max-width: mix.rem(433);
     @include mix.respond-to('tablet') {

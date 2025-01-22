@@ -15,9 +15,9 @@ export function elevationCompensation() {
             const isHeaderBlack = header.classList.contains('header_dark')
 
            if (isHeaderBlack) {
-               header.style.backgroundColor = 'rgba(239,239,239,0.75)';
+               header.style.backgroundColor = 'rgba(239,239,239,0.9)';
            }else{
-               header.style.backgroundColor = 'rgba(69,69,69,0.71)';
+               header.style.backgroundColor = 'rgba(0,0,0,0.9)';
            }
 
         } else {

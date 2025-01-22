@@ -16,6 +16,7 @@
   }
 
   &_white {
+    padding-top: 10.5rem;
     color: var(--pri-color);
 
     .photos-collage__button {
@@ -36,7 +37,7 @@
   }
 
   &_dark-bg {
-    background: #000;
+    background:var(--black);
   }
 
   &__container {
@@ -118,7 +119,7 @@
   }
 
   &__text {
-    margin-bottom: mix.rem(41);
+    margin-bottom: 2.66rem;
     position: relative;
     z-index: 2;
     pointer-events: none;
@@ -137,10 +138,11 @@
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    padding: 17px 48px;
+    padding: 16px 49px;
     color: var(--pri-color);
     background: var(--white);
     max-width: 11.44rem;
+    white-space: nowrap;
     transition: background 0.3s ease, transform 0.3s ease;
     @include mix.respond-to('tablet') {
       margin: 0 auto;
@@ -152,7 +154,7 @@
   }
 
   &__button:hover {
-    background: #a1a1a1;
+    background: var(--bc-secodary);
   }
 
   &__button:active {

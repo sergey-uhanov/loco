@@ -16,8 +16,8 @@
   }
 
   &_dark-bg {
-    background-color: #080808;
-    color: #fff;
+    background-color: var(--pri-color);
+    color: var(--white);
   }
 
   &__content {
@@ -28,7 +28,6 @@
   &__title {
     font-weight: 700;
     font-size: 3.5rem;
-
     margin-bottom: 1.5rem;
     @include mix.respond-to('tablet') {
       font-size: 3rem;
@@ -55,14 +54,14 @@
 
   &__photo-item:nth-child(1) {
     top: 0;
-    right: 48px;
+    right: mix.rem(48);
     @include mix.respond-to('tablet') {
-      top: 64px;
+      top: mix.rem(64);
 
-      width: 334px;
+      width: mix.rem(334);
     }
     @include mix.respond-to('mobile') {
-      top: 85px;
+      top: mix.rem(85);
       right: -122px;
       width: 312px;
     }

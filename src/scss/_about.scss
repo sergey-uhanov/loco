@@ -1,13 +1,14 @@
 @use "./_mixins.scss" as mix;
 
 .main-screen-about {
-  margin-top: 95px;
-  height: calc(100vh);
+  margin-top: mix.rem(95);
+  height: calc(100vh - 95px);
   width: 100vw;
   background: url("../assets/main-about.webp") 50%/cover no-repeat;
   color: var(--white);
   @include mix.respond-to('mobile') {
-    margin-top: 65px;
+    margin-top: mix.rem(65);
+    height: calc(100vh - 65px);
   }
 
 
@@ -21,7 +22,8 @@
     font-weight: 700;
     font-size: 2.25rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.9rem;
+    line-height: 1.2;
   }
 
   &__text {
@@ -35,7 +37,7 @@
 }
 
 .about-slider-section {
-  padding: mix.rem(140) 0 mix.rem(291) 0;
+  padding: mix.rem(140) 0 17.58rem 0;
 
   @include mix.respond-to('tablet') {
     padding: mix.rem(140) 0 4.7rem 0;
@@ -53,7 +55,7 @@
   &__text {
     max-width: mix.rem(383);
     width: 100%;
-    margin-left: 200px;
+    margin-left: mix.rem(200);
     padding-top: 6.1rem;
     @include mix.respond-to('tablet') {
       margin: 0 auto;
@@ -64,7 +66,7 @@
   &__title {
     font-weight: 700;
     font-size: 2.25rem;
-    color: #080808;
+    color: var(--pri-color);
     margin-bottom: 0.4rem;
     line-height: 1.3;
   }
@@ -73,7 +75,7 @@
     ont-weight: 300;
     font-size: 0.88rem;
     line-height: 1.7066;
-    color: #080808;
+    color: var(--pri-color);
   }
 }
 
@@ -89,13 +91,67 @@
 
   &__wrapper {
     position: absolute;
-    max-height: 444px;
+    max-height: mix.rem(444);
+  }
+
+  &__nav-block {
+    color: var(--sec-color);
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    position: relative;
+    top: mix.rem(44);
+    left: mix.rem(8);
+    width: mix.rem(316);
+    display: flex;
+    opacity: 0.5;
+    height: mix.rem(10);
+    @include mix.respond-to('tablet') {
+
+    }
+    @include mix.respond-to('mobile') {
+
+    }
+    @include mix.respond-to(600) {
+
+    }
+    @include mix.respond-to(374) {
+
+    }
+  }
+
+  &__scrollbar {
+    height: 3px; /* Высота полосы */
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 11;
+    width: mix.rem(227);
+    background-color: rgba(163, 163, 163, 0.42);
+    margin: 0 mix.rem(10);
+  }
+
+  &__custom-scrollbar {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 0;
+    background-color: var(--bc-primery);
+    border-radius: mix.rem(5);
+    transition: width 0.3s ease;
+  }
+
+  &__scrollbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
   }
 
   &__slide {
-    max-width: 552px;
+    max-width: mix.rem(552);
     width: 100%;
-    height: 447px !important;
+    height: mix.rem(447) !important;
     overflow: hidden;
     @include mix.respond-to('mobile') {
       max-width: 75vw;
@@ -103,7 +159,7 @@
     }
     @include mix.respond-to(500) {
       max-width: 65vw;
-      height: 347px !important;
+      height: mix.rem(347) !important;
     }
 
     img {
@@ -127,9 +183,9 @@
   }
 
   &__img {
-    margin-left: 66px;
-    flex: 1 0 400px;
-    max-width: 516px;
+    margin-left: mix.rem(66);
+    flex: 1 0 mix.rem(400);
+    max-width: mix.rem(516);
 
     img {
       width: 100%;
@@ -137,14 +193,14 @@
     }
 
     @include mix.respond-to('tablet') {
-      max-width: 400px;
+      max-width: mix.rem(400);
       margin: 0 auto;
     }
   }
 
   &__text {
     padding-top: mix.rem(90);
-    min-width: 300px;
+    min-width: mix.rem(300);
     @include mix.respond-to('tablet') {
 
       margin: 0 auto;
@@ -168,17 +224,17 @@
   }
 
   &__item {
-    width: 91px;
+    width: mix.rem(91);
     font-weight: 300;
     font-size: 0.88rem;
     line-height: 1.32;
-    color: #080808;
+    color: var(--pri-color);
 
     span {
       display: block;
       font-weight: 700;
       font-size: 3.5rem;
-      color: #080808;
+      color: var(--pri-color);
       @include mix.respond-to('tablet') {
         font-size: 2.5rem;
       }
@@ -193,7 +249,7 @@
     font-weight: 300;
     font-size: 0.88rem;
     line-height: 1.7066;
-    color: #080808;
+    color: var(--pri-color);
     @include mix.respond-to('tablet') {
       margin: 0 auto;
       max-width: 40rem;
@@ -203,7 +259,7 @@
   &__img-small {
     position: absolute;
     right: 0;
-    bottom: -41px;
+    bottom: mix.rem(-41);
     @include mix.respond-to(1320) {
       display: none;
     }
@@ -214,12 +270,18 @@
 .about-team {
   padding-top: mix.rem(180);
   padding-bottom: 9.1rem;
-  color: #080808;
+  color: var(--pri-color);
+  @include mix.respond-to('mobile') {
+    padding: 7rem 0;
+  }
+  @include mix.respond-to(600) {
+    padding: 3rem 0;
+  }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 76px auto;
+    grid-template-rows: auto mix.rem(76) auto;
     column-gap: 7.35rem;
     @include mix.respond-to('tablet') {
       grid-template-columns: 100%;
@@ -241,27 +303,27 @@
 
     img {
       width: 93%;
-
     }
 
     @include mix.respond-to('tablet') {
       grid-column: 1;
       grid-row: auto;
       padding-right: 0;
+      margin: 0 auto;
       img {
         width: 100%;
-        max-width: 500px;
+        max-width: mix.rem(500);
       }
     }
 
     @include mix.respond-to(600) {
       img {
-        width: 300px;
+        width: mix.rem(300);
       }
     }
     @include mix.respond-to(374) {
       img {
-        width: 250px;
+        width: mix.rem(250);
       }
     }
 
@@ -272,7 +334,6 @@
     padding-top: 4.3rem;
     grid-column-start: 1;
     grid-column-end: 2;
-
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -299,12 +360,30 @@
   }
 
   &__description {
+    position: relative;
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.7;
     opacity: 0.7;
 
+    &:before {
+      content: '“';
+      display: block;
+      position: absolute;
+      top: -7px;
+      left: -3.1rem;
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: var(--pri-color);
+      @include mix.respond-to(900) {
+        left: -1.9rem;
+      }
+      @include mix.respond-to(600) {
+        display: none;
+      }
+    }
   }
+
 
   &__bottom-image {
     padding-left: mix.rem(134);
@@ -319,19 +398,21 @@
       padding-left: 0;
 
     }
+    @include mix.respond-to('mobile') {
+      margin: 0 auto;
+    }
     @include mix.respond-to(374) {
       img {
-        width: 250px;
+        width: mix.rem(250);
       }
     }
 
   }
 
   &__bottom-text {
-    padding-top: 5.75rem;
+    padding-top: 6.25rem;
     grid-column-start: 2;
     grid-column-end: 3;
-
     grid-row-start: 3;
     grid-row-end: 4;
 
@@ -344,8 +425,8 @@
 
   &__numbers {
     display: flex;
-    column-gap: 3.8rem;
-    margin-bottom: 3rem;
+    column-gap: 3.5rem;
+    margin-bottom: 3.2rem;
     @include mix.respond-to('mobile') {
       flex-wrap: wrap;
     }
@@ -353,7 +434,7 @@
   }
 
   &__item {
-    width: 100px;
+    width: mix.rem(107);
     font-weight: 300;
     font-size: 0.88rem;
     line-height: 1.32;
@@ -361,7 +442,8 @@
     span {
       display: block;
       font-weight: 700;
-      font-size: 4rem;
+      font-size: 3.5rem;
+      margin-bottom: 5px;
       @include mix.respond-to('tablet') {
         font-size: 3rem;
       }

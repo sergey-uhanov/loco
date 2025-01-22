@@ -8,14 +8,14 @@
   height: 100%;
   z-index: 9999;
   overflow: hidden;
-  background: #080808;
+  background:var(--pri-color);
 
   &__content {
     display: flex;
     font-weight: 300;
     font-size: 1.5rem;
     letter-spacing: 0.26em;
-    color: #fafafa;
+    color: var(--text-color);
     margin: 0 auto;
     width: 137px;
     position: relative;

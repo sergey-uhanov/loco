@@ -9,7 +9,7 @@ export class FormsValidation {
 
     errorMessages = {
         valueMissing: () => 'Please fill in this field',
-        patternMismatch: ({ title }) => title || 'Data does not match the email format',
+        patternMismatch: ({ title }) => title || 'Data does not match format',
         tooShort: ({ minLength }) => `Value too short, minimum characters — ${minLength}`,
         tooLong: ({ maxLength }) => `Value too long, character limit — ${maxLength}`,
     }

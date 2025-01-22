@@ -113,10 +113,10 @@
     position: relative;
     z-index: 10;
     height: 100%;
-    width: 0%; /* Начальное значение прогресса */
-    background-color: #e4e4e4; /* Цвет прогрессбара */
+    width: 0%;
+    background-color: var(--bc-primery);
     border-radius: 5px;
-    transition: width 0.3s ease; /* Анимация изменения ширины */
+    transition: width 0.3s ease;
   }
 
   &__scrollbar-container {
@@ -291,7 +291,7 @@
   }
 
   &__item:hover {
-    color: #828282;
+    color: var(--sec-color);
   }
 
   &__select {
@@ -305,7 +305,7 @@
   }
 
   &__contact-phone {
-    margin-right: 33px;
+    margin-right: 31px;
     transition: opacity 0.3s ease;
 
     &:hover {
@@ -328,7 +328,6 @@
   &__email {
     font-weight: 600;
     font-size: 0.69rem;
-    letter-spacing: 0.16em;
     transition: opacity 0.3s ease;
 
     &:hover {
@@ -434,13 +433,13 @@
     position: relative;
     padding-left: 8.22rem;
     @include mix.respond-to('tablet') {
-      padding-left: 6.22rem;
+      padding-left: 3.52rem;
     }
     @include mix.respond-to('mobile') {
       padding-left: 4.72rem;
     }
     @include mix.respond-to(600) {
-      padding-left: 0;
+      padding-left: 1.5rem;
 
     }
   }
@@ -462,7 +461,7 @@
     max-width: 41.18rem;
     padding-top: mix.rem(80);
     padding-bottom: mix.rem(262);
-    padding-left: 8.22rem;
+    padding-left: 4rem;
     @include mix.respond-to(1200) {
       padding-left: 0;
       padding-top: mix.rem(56);
@@ -558,9 +557,9 @@
     display: block;
     height: 1px;
     width: 56px;
-    background: #828282;
+    background: var(--sec-color);
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 5px;
     opacity: 0.3;
   }
@@ -572,7 +571,7 @@
   &__bottom-block {
     display: flex;
     column-gap: 20.8rem;
-    padding-left: 8.22rem;
+    padding-left: 4rem;
     @include mix.respond-to('tablet') {
       column-gap: 13rem;
       padding-left: 0;
@@ -594,13 +593,18 @@
   &__main-img {
 
     @include mix.respond-to('tablet') {
-      width: 190px;
+
+      max-width: 190px;
+      max-height: 237px;
+      aspect-ratio: 16 / 9;
     }
     @include mix.respond-to('mobile') {
       width: 153px;
+
     }
     @include mix.respond-to(600) {
       width: 131px;
+      height: 163px;
     }
   }
 
@@ -663,7 +667,7 @@
     transform: translateY(-7px);
     font-weight: 700;
     font-size: 2.25rem;
-    color: #080808;
+    color: var(--pri-color);
     @include mix.respond-to('tablet') {
       left: -30px;
       font-size: 1.62rem;
@@ -676,7 +680,7 @@
 }
 
 .footer {
-  padding-top: mix.rem(123);
+  padding-top: 7.48rem;
   position: relative;
   background-image: url("../assets/footer-bgi.webp");
   background-size: cover;
@@ -780,7 +784,7 @@
     font-size: 0.88rem;
     line-height: 1.7066;
     max-width: mix.rem(390);
-    margin-bottom: 3.8rem;
+    margin-bottom: 4rem;
     opacity: 0.6;
     @include mix.respond-to('tablet') {
       margin-bottom: 3.5rem;
@@ -867,13 +871,13 @@
   }
 
   &__row:not(:last-child) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
 
   &__row:first-child {
     letter-spacing: 0.0em;
     opacity: 1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.36528;
@@ -916,14 +920,14 @@
   }
 
   &__country-link:hover {
-    color: #567;
+    color: var(--sec-text-color);
   }
 
   &__button {
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    padding: 17px 48px;
+    padding: 18px 49px;
     background: var(--white);
     color: var(--pri-color);
     transition: background 0.2s ease-in-out;
@@ -943,7 +947,7 @@
 
   &__small-footer {
     position: relative;
-    margin-top: 7.3rem;
+    margin-top: 7.5rem;
     z-index: 10;
     width: 100%;
     @include mix.respond-to('mobile') {

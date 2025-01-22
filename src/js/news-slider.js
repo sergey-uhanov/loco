@@ -64,24 +64,6 @@ export function initNewsSlider() {
 
 }
 
-function totalValueSlides(swiper){
-    const totalSlidesEl = document.querySelector('.news-swiper__total-slides');
-    const isEndNear = swiper.activeIndex <= swiper.slides.length - 3
-
-    if(swiper.slides.length < 4 ) {
-        totalSlidesEl.textContent = ''
-        return
-    }
-
-    if (totalSlidesEl && isEndNear) {
-        swiper.slides.length > 9
-            ? totalSlidesEl.textContent = `${swiper.slides.length}`
-    : totalSlidesEl.textContent = `0${swiper.slides.length}`;
-    }else {
-        totalSlidesEl.textContent = ''
-    }
-
-}
 
 function initSlideNumbers(swiper) {
     const paginationEl = document.querySelector('.news-swiper__pagination');
@@ -106,7 +88,7 @@ function renderPagination(swiper, paginationEl) {
             const formattedNumber = slideNumber.toString().padStart(2, '0');
             return `<span class="news-swiper__pagination-item ${
                 slideNumber === currentSlide ? 'active' : ''
-            }">${formattedNumber}</span>`;
+            }" data-slide="${slideNumber}">${formattedNumber}</span>`;
         })
         .join(' ');
 
@@ -117,6 +99,9 @@ function renderPagination(swiper, paginationEl) {
     if (visibleSlides[visibleSlides.length - 1] < totalSlides) {
         paginationEl.innerHTML += ' ...';
     }
+
+    // Добавляем обработчики событий для клика на номера слайдов
+    addPaginationClickListeners(swiper);
 }
 
 function calculateVisibleSlides(current, total) {
@@ -132,5 +117,48 @@ function updateVisibleSlideNumbers(swiper) {
     const paginationEl = document.querySelector('.news-swiper__pagination');
     if (paginationEl) {
         renderPagination(swiper, paginationEl);
+    }
+}
+
+function addPaginationClickListeners(swiper) {
+    const paginationItems = document.querySelectorAll('.news-swiper__pagination-item');
+
+    paginationItems.forEach((item) => {
+        item.addEventListener('click', (event) => {
+            const targetSlide = parseInt(event.target.getAttribute('data-slide'), 10);
+            if (!isNaN(targetSlide)) {
+                swiper.slideTo(targetSlide - 1); // Переход на нужный слайд (индексация с 0)
+            }
+        });
+    });
+}
+
+function totalValueSlides(swiper) {
+    const totalSlidesEl = document.querySelector('.news-swiper__total-slides');
+    const isEndNear = swiper.activeIndex <= swiper.slides.length - 3;
+
+    if (swiper.slides.length < 4) {
+        if (totalSlidesEl) totalSlidesEl.textContent = '';
+        return;
+    }
+
+    if (totalSlidesEl && isEndNear) {
+        totalSlidesEl.textContent =
+            swiper.slides.length > 9
+                ? `${swiper.slides.length}`
+                : `0${swiper.slides.length}`;
+    } else if (totalSlidesEl) {
+        totalSlidesEl.textContent = '';
+    }
+
+    // Добавляем обработчик события клика для перехода на последний слайд
+    if (totalSlidesEl) {
+        totalSlidesEl.removeEventListener('click', goToLastSlide); // Удаляем старый обработчик, чтобы избежать дублирования
+        totalSlidesEl.addEventListener('click', goToLastSlide);
+    }
+
+    // Функция для перехода на последний слайд
+    function goToLastSlide() {
+        swiper.slideTo(swiper.slides.length - 1); // Переход на последний слайд
     }
 }

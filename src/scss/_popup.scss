@@ -29,10 +29,9 @@
   &__content {
     max-width: mix.rem(1046);
     margin: 0 auto 0 auto;
-
-    padding: mix.rem(56) mix.rem(123);
+    padding: mix.rem(56) mix.rem(123) 2.9rem mix.rem(123);
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.04);
-    background: #f2f2f2;
+    background: var(--bc-primery);
 
     @include mix.respond-to('tablet') {
       padding: mix.rem(32) mix.rem(51) mix.rem(32) mix.rem(51);
@@ -168,7 +167,7 @@
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
-    color: #3a3e4b;
+    color: var(--sec-text-color);
     margin-bottom: mix.rem(24);
     @include mix.respond-to('mobile') {
 
@@ -180,7 +179,7 @@
     font-size: 0.88rem;
     line-height: 1.7066;
     text-align: center;
-    color: #3a3e4b;
+    color: var(--sec-text-color);
     opacity: 0.7;
     word-spacing: -0.1em;
     margin-bottom: mix.rem(40);
@@ -192,9 +191,10 @@
     font-size: 0.69rem;
     letter-spacing: 0.06em;
     text-align: center;
-    color: #fff;
-    background: #3A3E4B;
+    color: var(--white);
+    background: var(--sec-text-color);
     padding: 14px 40px 17px 40px;
+
   }
 }
 
@@ -211,7 +211,7 @@
 .popup-form {
 
   &__group {
-    background-color: #fff;
+    background-color: var(--white);
     padding: mix.rem(44) mix.rem(70);
     @include mix.respond-to('tablet') {
       padding: mix.rem(44) mix.rem(52);
@@ -239,7 +239,7 @@
     font-size: 1.38rem;
     line-height: 1.26776;
     text-align: center;
-    color: #3a3e4b;
+    color: var(--sec-text-color);
     @include mix.respond-to('mobile') {
       font-size: 1.5rem;
     }
@@ -262,7 +262,7 @@
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    color: #3a3e4b;
+    color: var(--sec-text-color);
     margin-bottom: mix.rem(24);
     @include mix.respond-to(767) {
       margin-left: 50px;
@@ -286,10 +286,11 @@
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    color: #fff;
-    background: #3a3e4b;
+    color: var(--white);
+    background: var(--sec-text-color);
     padding: 18px 47px 17px 47px;
     white-space: nowrap;
+    margin-right: 1rem;
   }
 
   &__description {
@@ -299,7 +300,7 @@
     line-height: 1.40625;
     letter-spacing: 0.06em;
     text-align: center;
-    color: #afb0b2;
+    color: var(--sec-color);
     max-width: mix.rem(600);
     @include mix.respond-to('tablet') {
       display: none;
@@ -328,10 +329,9 @@
 
 
   &__button {
-    width: 100%;
     padding: 10px 0;
     font-size: 14px;
-    background-color: #fff;
+    background-color: var(--white);
     cursor: pointer;
     text-align: left;
     position: relative;
@@ -375,8 +375,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     display: none;
     z-index: 10;
@@ -389,7 +389,7 @@
   }
 
   &__item:hover {
-    background-color: #f0f0f0;
+    background-color: var(--bc-primery);
   }
 }
 
@@ -440,7 +440,7 @@
     font-weight: 500;
     font-size: 0.56rem;
     letter-spacing: 0.06em;
-    color: #3a3e4b;
+    color: var(--sec-text-color);
     @include mix.respond-to('mobile') {
       width: 80px;
       text-align: center;
@@ -461,7 +461,7 @@
       bottom: -30px;
 
       border-radius: 50%;
-      background-color: #fff;
+      background-color: var(--white);
       transition: all 0.3s;
     }
 
@@ -472,8 +472,7 @@
       transform: translateX(-50%) scale(0);
       width: 20px;
       height: 20px;
-      //background-color: #1d1f26;
-      border: 8px solid #1d1f26;
+      border: 8px solid var(--border-color-thi);
       border-radius: 50%;
       bottom: -28px;
       transition: transform 0.3s;
@@ -520,7 +519,7 @@
   }
 
   &__icon {
-    border: 1px solid #828282;
+    border: 1px solid var(--sec-color);
     border-radius: 50%;
     width: 39px;
     height: 39px;
@@ -536,7 +535,7 @@
     font-weight: 600;
     font-size: 0.69rem;
     letter-spacing: 0.06em;
-    color: #3a3e4b;
+    color: var(--sec-text-color);
 
     span {
       display: block;

@@ -41,7 +41,7 @@
     font-weight: 700;
     font-size: 2.25rem;
     max-width: mix.rem(474);
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.2rem;
     line-height: 1.15;
     @include mix.respond-to('tablet') {
       font-size: 2rem;
@@ -100,7 +100,7 @@
   }
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   &__links {
@@ -136,8 +136,8 @@
   }
 
   &__link-wrapper_other {
-    background: #ffffff;
-    border: 1px solid grey;
+    background: var(--white);
+    border: 1px solid var(--border-color-sec);
     width: 26px;
     height: 26px;
   }
@@ -174,7 +174,7 @@
     font-weight: 700;
     font-size: 2.25rem;
     color: var(--pri-color);
-    margin-bottom: mix.rem(72);
+    margin-bottom: 4.8rem;
     padding-left: mix.rem(138);
     @include mix.respond-to('tablet') {
       font-size: 2rem;
@@ -241,8 +241,8 @@
     font-weight: 700;
     font-size: 0.88rem;
     line-height: 1.3716;
-    color: #3a3e4b;
-    margin-bottom: mix.rem(16);
+    color:var(--sec-text-color);
+    margin-bottom: 0.9rem;
 
     @include mix.respond-to('mobile') {
       max-width: mix.rem(250);
@@ -254,7 +254,7 @@
     font-weight: 300;
     font-size: 0.62rem;
     line-height: 1.7066;
-    color: #828282;
+    color: var(--sec-color);
   }
 
 
