@@ -19,7 +19,6 @@
 .not-found {
   position: relative;
   z-index: 1;
-  //padding-top: 384px;
   color: var(--text-color);
 
   &__content {
@@ -35,20 +34,14 @@
     }
   }
 
-  &__container {
-
-  }
-
   &__title {
     font-weight: 700;
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
     @include mix.respond-to('mobile') {
-
       font-size: 2rem;
     }
     @include mix.respond-to(600) {
-
       font-size: 1.62rem;
     }
   }

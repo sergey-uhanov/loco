@@ -50,8 +50,6 @@
     &:hover {
       .double-poster__item {
         transform: scale(1.03);
-
-
       }
 
       .double-poster__description,
@@ -62,10 +60,12 @@
         visibility: visible;
       }
     }
+
     @include mix.respond-to('mobile') {
       max-width: 42rem;
     }
-    &_long{
+
+    &_long {
       aspect-ratio: 1/1.19;
     }
 
@@ -242,15 +242,6 @@
     @include mix.respond-to(1439) {
       max-width: 190px;
     }
-    //@include mix.respond-to('870') {
-    //  max-width: 7.56rem;
-    //}
-    //@include mix.respond-to('mobile') {
-    //  max-width: 15.69rem;
-    //}
-    //@include mix.respond-to('750') {
-    //  max-width: 7.56rem;
-    //}
   }
 
   &__microposter {
@@ -287,7 +278,7 @@
         max-width: 16.6rem;
         left: 1.5rem;
       }
-      @include mix.respond-to(374){
+      @include mix.respond-to(374) {
         bottom: 0;
       }
     }

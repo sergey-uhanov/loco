@@ -33,8 +33,8 @@
     }
   }
 
-  &__container{
-    @include mix.respond-to(400){
+  &__container {
+    @include mix.respond-to(400) {
       padding: 0 1.5rem;
     }
   }
@@ -93,6 +93,7 @@
     letter-spacing: 0.06em;
     font-weight: 600;
     font-size: 0.69rem;
+
     &:hover {
       opacity: 0.5;
     }
@@ -112,6 +113,7 @@
     width: 100%;
     height: 1px;
     background-color: var(--pri-color);
+
     @include mix.respond-to('tablet') {
       bottom: -4px;
     }
@@ -178,7 +180,6 @@
       margin-left: 0;
       font-size: 1.62rem;
       line-height: 1.3;
-
     }
   }
 
@@ -276,7 +277,7 @@
     border-bottom: 1px solid rgba(186, 186, 186, 0.59);
     outline: none;
     background: transparent;
-    color:white;
+    color: white;
   }
 
   &__label {

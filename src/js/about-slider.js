@@ -58,10 +58,10 @@ export function aboutSlider() {
         const currentSlideEl = document.querySelector('.about-slider__current-slide');
         const totalSlidesEl = document.querySelector('.about-slider__total-slides');
 
-        if (currentSlideEl && totalSlidesEl) {
+        try {
             currentSlideEl.textContent = `0${swiper.realIndex + 1}`;
             totalSlidesEl.textContent = `0${swiper.slides.length}`;
-        } else {
+        } catch {
             console.warn('Элементы .swiper-current-slide или .swiper-total-slides не найдены в DOM.');
         }
     }

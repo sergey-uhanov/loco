@@ -9,6 +9,7 @@ export function initPopup() {
     const header = document.querySelector('.header');
 
     const headerHeight = header.offsetHeight;
+
     // Открытие popup
     openPopupButtons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -39,7 +40,6 @@ export function initPopup() {
     window.addEventListener('click', (event) => {
         if (event.target === popup) {
             popupContainer.classList.remove('popup__content_open');
-            // popup.classList.toggle('open');
 
             popupContainer.classList.add('popup__content_close');
             unlockScroll();
@@ -71,7 +71,7 @@ export function initPopup() {
         },
     };
 
-    // Блокировка скролла
+
     function lockScroll() {
 
         scrollController.disabledScroll();
@@ -84,7 +84,7 @@ export function initPopup() {
         });
     }
 
-    // Разблокировка скролла
+
     function unlockScroll() {
 
         scrollController.enabledScroll();
@@ -105,15 +105,17 @@ export function initPopup() {
     document.getElementById('file-upload__input').addEventListener('change', function (event) {
 
         const fileInput = event.target;
-        const fileName = fileInput.files[0] ? fileInput.files[0].name : "No file chosen";
+        const fileName = fileInput.files[0]
         const fileTextElement = document.querySelector('.file-upload__text');
 
-        // Изменяем текст в элементе
+
         if (fileInput.files[0]) {
-            fileTextElement.innerHTML = `File selected: <strong>${fileName}</strong>`;
-        } else {
-            fileTextElement.innerHTML = `Attach your file <span>File size not more than 10 MB</span>`;
+            return fileTextElement.innerHTML = `File selected: <strong>${fileName}</strong>`;
+
         }
+
+        fileTextElement.innerHTML = `Attach your file <span>File size not more than 10 MB</span>`;
+
     });
 }
 

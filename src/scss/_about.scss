@@ -106,18 +106,6 @@
     display: flex;
     opacity: 0.5;
     height: mix.rem(10);
-    @include mix.respond-to('tablet') {
-
-    }
-    @include mix.respond-to('mobile') {
-
-    }
-    @include mix.respond-to(600) {
-
-    }
-    @include mix.respond-to(374) {
-
-    }
   }
 
   &__scrollbar {

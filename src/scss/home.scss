@@ -5,9 +5,7 @@
 @use "_small-footer.scss";
 
 
-.main {
 
-}
 
 .background-slider {
   position: absolute;
@@ -17,9 +15,6 @@
   width: 100%;
   overflow: hidden;
   z-index: 1;
-  @include mix.respond-to('tablet') {
-
-  }
   @include mix.respond-to('mobile') {
     height: 100vh;
   }

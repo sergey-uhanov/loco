@@ -26,7 +26,7 @@
 }
 
 .select__toggle::after {
-  content: url('../images/row-icon.svg');
+  content: url('../assets/images/row-icon.svg');
   position: absolute;
   right: 9.5px;
   top: 5px;
@@ -34,7 +34,7 @@
 }
 
 .select__toggle:before {
-  content: url('../images/location-icon.svg');
+  content: url('../assets/images/location-icon.svg');
   position: absolute;
   left: 12px;
   top: 5px;

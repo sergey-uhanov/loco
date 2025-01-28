@@ -151,7 +151,6 @@
     text-align: right;
     color: var(--pri-color);
     position: relative;
-
     @include mix.respond-to('tablet') {
       margin-left: 1rem;
     }

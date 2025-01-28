@@ -348,7 +348,7 @@
 
   &__button:after {
     content: '';
-    background-image: url("../images/popup-select-row.svg");
+    background-image: url("../assets/images/popup-select-row.svg");
     display: block;
     width: 10px;
     height: 5px;
@@ -452,14 +452,13 @@
     &::before {
       content: '';
       position: absolute;
-      background-image: url("../images/radiobutton.svg");
+      background-image: url("../assets/images/radiobutton.svg");
       width: 20px;
       height: 20px;
       display: block;
       left: 50%;
       transform: translateX(-50%);
       bottom: -30px;
-
       border-radius: 50%;
       background-color: var(--white);
       transition: all 0.3s;
