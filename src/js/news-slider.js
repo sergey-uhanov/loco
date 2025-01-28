@@ -39,23 +39,23 @@ export function initNewsSlider() {
             const clickedButton = event.target.closest('.filter-button');
             if (!clickedButton) return;
 
-            // Добавляем класс 'active' на текущую кнопку
+
 
             clickedButton.classList.add('news-slider-section__filter-button-active');
 
             const filter = button.getAttribute('data-filter');
 
-            // Убираем старые слайды
+
             const swiperWrapper = document.querySelector('.swiper-wrapper');
             swiperWrapper.innerHTML = '';
 
-            // Добавляем только подходящие под фильтр
+
             const filteredSlides = Array.from(slides).filter(slide =>
                 filter === 'all' || slide.getAttribute('data-topic') === filter
             );
             filteredSlides.forEach(slide => swiperWrapper.appendChild(slide));
 
-            // Перезапуск Swiper
+
             newsSwiper.update();
             newsSwiper.slideTo(0); // Переходим на первый слайд
             totalValueSlides(newsSwiper);
@@ -79,10 +79,10 @@ function renderPagination(swiper, paginationEl) {
     const currentSlide = swiper.activeIndex + 1;
     const totalSlides = swiper.slides.length;
 
-    // Вычисляем диапазон отображаемых слайдов
+
     const visibleSlides = calculateVisibleSlides(currentSlide, totalSlides);
 
-    // Обновляем HTML пагинации
+
     paginationEl.innerHTML = visibleSlides
         .map((slideNumber) => {
             const formattedNumber = slideNumber.toString().padStart(2, '0');
@@ -92,7 +92,7 @@ function renderPagination(swiper, paginationEl) {
         })
         .join(' ');
 
-    // Добавляем многоточия, если нужно
+
     if (visibleSlides[0] > 1) {
         paginationEl.innerHTML = `... ${paginationEl.innerHTML}`;
     }
@@ -100,7 +100,7 @@ function renderPagination(swiper, paginationEl) {
         paginationEl.innerHTML += ' ...';
     }
 
-    // Добавляем обработчики событий для клика на номера слайдов
+
     addPaginationClickListeners(swiper);
 }
 
@@ -151,13 +151,13 @@ function totalValueSlides(swiper) {
         totalSlidesEl.textContent = '';
     }
 
-    // Добавляем обработчик события клика для перехода на последний слайд
+
     if (totalSlidesEl) {
         totalSlidesEl.removeEventListener('click', goToLastSlide); // Удаляем старый обработчик, чтобы избежать дублирования
         totalSlidesEl.addEventListener('click', goToLastSlide);
     }
 
-    // Функция для перехода на последний слайд
+
     function goToLastSlide() {
         swiper.slideTo(swiper.slides.length - 1); // Переход на последний слайд
     }

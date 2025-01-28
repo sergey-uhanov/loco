@@ -2,12 +2,9 @@ import gulp from 'gulp';
 import gulpSass from 'gulp-sass';
 import * as dartSass from 'sass';
 import cleanCSS from 'gulp-clean-css';
-import uglify from 'gulp-uglify';
 import imagemin from 'gulp-imagemin';
 import autoprefixer from 'gulp-autoprefixer';
-import fontmin from 'gulp-fontmin';
 import concat from 'gulp-concat';
-import babel from 'gulp-babel';
 import browserSync from 'browser-sync';
 import {deleteAsync} from 'del';
 import fileInclude from 'gulp-file-include';
@@ -16,7 +13,6 @@ import webpackStream from 'webpack-stream';
 import gulpFilter from 'gulp-filter';
 import webp from 'gulp-webp';
 import replace from 'gulp-replace';
-import path from 'path';
 import ghPages from 'gh-pages';
 
 const bs = browserSync.create();
@@ -49,6 +45,10 @@ const paths = {
         dest: 'dist/assets',
     },
     deploy: 'dist/**/*',
+    preloader: {
+        src: 'src/js/preloader.js',
+        dest: 'dist/js/'
+    }
 
 };
 
@@ -75,13 +75,20 @@ export const scripts = async () => {
         .pipe(browserSync.stream());
 };
 
+export const copyPreloader = () => {
+    return gulp
+        .src(paths.preloader.src)
+        .pipe(gulp.dest(paths.preloader.dest))
+        .pipe(browserSync.stream());
+};
+
 // Оптимизация изображений
 export const images = () => gulp.src(paths.images.src)
     .pipe(imagemin())
     .pipe(gulp.dest(paths.images.dest));
 
 // копирование шрифтов
-export const fonts = () => gulp.src(paths.fonts.src, { buffer: false }) // Включаем потоковый режим
+export const fonts = () => gulp.src(paths.fonts.src, {buffer: false}) // Включаем потоковый режим
     .pipe(gulp.dest(paths.fonts.dest));
 
 // Копирование HTML
@@ -140,7 +147,7 @@ export const serve = () => {
 
 export const build = gulp.series(
     clean,
-    gulp.parallel(styles, scripts, images, fonts, html, assets, convertWebp),
+    gulp.parallel(styles, scripts,copyPreloader, images, fonts, html, assets, convertWebp),
     replaceHtml
 );
 

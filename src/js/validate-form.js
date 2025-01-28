@@ -122,7 +122,7 @@ export class FormsValidation {
             return;
         }
 
-        // Если валидация пройдена
+
         event.preventDefault(); // Предотвращаем стандартную отправку формы
 
 
@@ -147,39 +147,6 @@ export class FormsValidation {
         },3000)
 
 
-        // // Сбор данных формы
-        // const formData = new FormData(event.target);
-        //
-        // // Пример добавления значения из кастомного select
-        // const selectValueElement = document.querySelector(this.selectors.selectValue);
-        // if (selectValueElement) {
-        //     formData.append('selectValue', selectValueElement.textContent);
-        // }
-        //
-        // for (let [key, value] of formData.entries()) {
-        //     console.log(`${key}: ${value}`);
-        // }
-        // // Отправка данных на сервер
-        // fetch('/example-endpoint', {
-        //     method: 'POST',
-        //     body: formData,
-        // })
-        //     .then((response) => {
-        //         if (!response.ok) {
-        //             throw new Error('Ошибка при отправке формы');
-        //         }
-        //         return response.json();
-        //     })
-        //     .then((data) => {
-        //         console.log('Успех:', data);
-        //         // Здесь можно добавить действия после успешной отправки
-        //     })
-        //     .catch((error) => {
-        //         console.error('Ошибка:', error);
-        //         // Обработка ошибок
-        //     });
-
-
     }
 
     clearForm(formElement) {
@@ -188,22 +155,22 @@ export class FormsValidation {
             return;
         }
 
-        // Сбрасываем стандартные поля формы
+
         formElement.reset();
 
-        // Очищаем кастомные поля, если они есть
+
         const selectValueElement = document.querySelector(this.selectors.selectValue);
         if (selectValueElement) {
             selectValueElement.textContent = 'Property type'; // Устанавливаем значение по умолчанию
         }
 
-        // Убираем отображаемые ошибки (если есть)
+
         const errorElements = formElement.querySelectorAll(this.selectors.fieldErrors);
         errorElements.forEach((errorElement) => {
             errorElement.innerHTML = '';
         });
 
-        // Обнуляем состояние aria-invalid для всех полей
+
         const inputFields = formElement.querySelectorAll('[aria-invalid="true"]');
         inputFields.forEach((field) => {
             field.removeAttribute('aria-invalid');

@@ -4,12 +4,12 @@ export function popupSelect  (){
     const dropdown = select.querySelector('.custom-select__dropdown');
     const items = select.querySelectorAll('.custom-select__item');
     const label = select.querySelector('.custom-select__label');
-    // Открыть/закрыть dropdown
+
     button.addEventListener('click', () => {
         select.classList.toggle('custom-select--open');
     });
 
-    // Выбор элемента
+
     items.forEach(item => {
         item.addEventListener('click', () => {
             label.textContent = item.textContent;
@@ -17,7 +17,7 @@ export function popupSelect  (){
         });
     });
 
-    // Закрыть dropdown при клике вне
+
     document.addEventListener('click', (e) => {
         if (!select.contains(e.target)) {
             select.classList.remove('custom-select--open');

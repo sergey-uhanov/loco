@@ -10,7 +10,7 @@ export function initPopup() {
 
     const headerHeight = header.offsetHeight;
 
-    // Открытие popup
+
     openPopupButtons.forEach((button) => {
         button.addEventListener('click', () => {
             popupContainer.classList.remove('popup__content_close');
@@ -20,7 +20,7 @@ export function initPopup() {
         });
     });
 
-    // Закрытие popup
+
     closePopup.addEventListener('click', () => {
         popupContainer.classList.remove('popup__content_open');
         popupContainer.classList.add('popup__content_close');
@@ -36,7 +36,7 @@ export function initPopup() {
     })
 
 
-    // Закрытие при клике вне области popup
+
     window.addEventListener('click', (event) => {
         if (event.target === popup) {
             popupContainer.classList.remove('popup__content_open');
@@ -133,22 +133,22 @@ function clearForm(formElement) {
         return;
     }
 
-    // Сбрасываем стандартные поля формы
+
     formElement.reset();
 
-    // Очищаем кастомные поля, если они есть
+
     const selectValueElement = document.querySelector('#selectValue');
     if (selectValueElement) {
         selectValueElement.textContent = 'Property type'; // Устанавливаем значение по умолчанию
     }
 
-    // Убираем отображаемые ошибки (если есть)
+
     const errorElements = formElement.querySelectorAll('[data-js-form-field-errors]');
     errorElements.forEach((errorElement) => {
         errorElement.innerHTML = '';
     });
 
-    // Обнуляем состояние aria-invalid для всех полей
+
     const inputFields = formElement.querySelectorAll('[aria-invalid="true"]');
     inputFields.forEach((field) => {
         field.removeAttribute('aria-invalid');
