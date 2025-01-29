@@ -1,0 +1,71 @@
+@use "../global/mixins" as mixins;
+@use "sass:math";
+
+@font-face {
+  font-family: 'Adieu';
+  src: url('../../fonts/adieu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('../../fonts/freight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --font-family: 'Montserrat', sans-serif;
+  --second-family: "Freight", sans-serif;
+  --third-family: "Adieu", sans-serif;
+  --font3: "Roboto", sans-serif;
+
+  --pri-color: #080808;
+  --sec-color: #828282;
+  --label-color: #3a3e4b;
+  --text-color: #fafafa;
+  --sec-text-color: #3a3e4b;
+  --white: #fff;
+  --black: #000;
+  --bc-primery: #e4e4e4;
+  --bc-secodary: #838383;
+  --bc-thirth:#f0f0f0;
+  --border-color: #ccc;
+  --border-color-sec: grey;
+  --border-color-thi: #1d1f26;
+
+
+}
+
+$maineColor: var(--font-family);
+$fontSize: mixins.rem(16);
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1314;
+$containerPadding: 126;
+$containerWidth: $maxWidthContainer + $containerPadding;
+$pc: mixins.rem($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: mixins.rem(1024); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: mixins.rem(768); // Телефони L
+$mobileSmall: mixins.rem(375); // Телефони S
+
+[class*="__container"] {
+  @if ($maxWidthContainer>0) {
+    max-width: mixins.rem($containerWidth);
+    padding: 0 mixins.rem(62) 0 mixins.rem(64);
+    margin: 0 auto;
+  }
+  @media(max-width: $tablet) {
+    padding: 0 mixins.rem(56)
+  }
+  @media(max-width: $mobile) {
+    padding: 0 mixins.rem(48)
+  }
+  @media(max-width: $mobileSmall) {
+    padding: 0 mixins.rem(24)
+  }
+}

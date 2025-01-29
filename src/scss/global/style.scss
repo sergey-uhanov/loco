@@ -1,0 +1,18 @@
+@use "header";
+@use "preloader";
+@use "reset";
+@use "popup";
+@use "small-footer";
+@use "../base/custom-Input";
+@use "../global/mixins" as mix;
+
+
+body {
+  color: var(--pri-color);
+  font-family: var(--font-family), Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  overflow: visible;
+}

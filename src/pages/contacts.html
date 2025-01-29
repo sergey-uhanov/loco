@@ -8,70 +8,25 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.min.css">
+    <link rel="stylesheet" href="./css/global/style.css">
+    <link rel="stylesheet" href="./css/pages/contacts.css">
     <script  src="./js/preloader.js" defer></script>
-    <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="./js/main-script.js" defer></script>
     <link rel="icon" href="./assets/images/favicon.svg" type="image/gif" sizes="16x16">
     <title>Contacts</title>
 </head>
 <body class="body">
-@@include('../partials/preloader.html')
+@@include('../partials/global/preloader.html')
 <div class="page-wrapper contact-page">
-    @@include('../partials/popup.html')
-    @@include('../partials/header.html')
+    @@include('../partials/global/popup.html')
+    @@include('../partials/global/header.html')
     <main>
-        <section class="contact-section">
-            <div class="footer footer_contact-section">
-                <div class="footer__container">
-                    <div class="footer__content">
-                        <div class="footer__title">Drop us a line</div>
-                        <div class="footer__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
-                            posuere.
-                        </div>
-                        <div class="footer__contacts">
-                            <div class="footer__locations">
-                                <ul class="footer__location-item">
-                                    <li class="footer__row">Kyiv</li>
-                                    <li class="footer__row">
-                                        <a class="footer__phone" href="tel:+12095550104" >(209) 555-0104</a>
-                                    </li>
-                                    <li class="footer__row">6391 Elgin St. Celina,</li>
-                                    <li class="footer__row">Delaware 10299</li>
-                                </ul>
-                                <ul class="footer__location-item">
-                                    <li class="footer__row">Lviv</li>
-                                    <li class="footer__row">
-                                        <a  class="footer__phone" href="tel:+12095550104">(209) 555-0104</a>
-                                    </li>
-                                    <li class="footer__row">6391 Elgin St. Celina,</li>
-                                    <li class="footer__row">Delaware 10299</li>
-                                </ul>
-                                <ul class="footer__location-item">
-                                    <li class="footer__row">Kharkiv</li>
-                                    <li class="footer__row">
-                                        <a  class="footer__phone" href="tel:+12095550104">(209) 555-0104</a>
-                                    </li>
-                                    <li class="footer__row">6391 Elgin St. Celina,</li>
-                                    <li class="footer__row">Delaware 10299</li>
-                                </ul>
-                            </div>
-                            <div class="footer__strange-block">
-                                <div class="footer__email">info@gmail.com</div>
-                                <a  class="footer__country-link" href="#">Fb</a>
-                                <a  class="footer__country-link" href="#">In</a>
-                                <a  class="footer__country-link" href="#">Be</a>
-                            </div>
-                        </div>
 
-                        <button class="footer__button openPopup">Make request</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        @@include('../partials/pages/contacts/contact-section.html')
+
     </main>
     <div class="contact-section__footer">
-        @@include('../partials/small-footer.html')
+        @@include('../partials/global/small-footer.html')
     </div>
 </div>
 

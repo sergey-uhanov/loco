@@ -8,8 +8,14 @@ const __dirname = dirname(__filename);
 export default {
     mode: 'production',
     entry: {
-        main: './src/js/main.js',
+        // main: './src/js/main.js',
         preloader: './src/js/preloader.js',
+        'main-script': './src/js/main-script.js',
+        home: './src/js/home.js',
+        news: './src/js/news.js',
+        'one-news': './src/js/one-news.js',
+        projects: './src/js/projects.js',
+        about: './src/js/about.js',
     },
     output: {
         filename: '[name].js',

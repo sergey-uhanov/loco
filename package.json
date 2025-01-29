@@ -15,7 +15,6 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@fluejs/noscroll": "^1.0.0",
     "babel-loader": "^9.2.1",
     "babelify": "^10.0.0",
     "browser-sync": "^3.0.3",

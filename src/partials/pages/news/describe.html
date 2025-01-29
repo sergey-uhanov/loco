@@ -1,0 +1,57 @@
+<section class="describe">
+
+    <img class="describe__background" src="./assets/background-poster.png" alt="background image">
+
+    <div class="describe__container">
+
+        <div class="describe__title">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+
+        <form action="#" class="describe__form">
+
+            <div class="describe__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae
+                posuere. Ut at luctus ligula. Nunc ante felis, aliquam.
+            </div>
+
+            <div class="describe__input-field">
+
+                <input
+                        required
+                        type="email"
+                        pattern="[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}"
+                        title="Email address must be formatted as [email@example.com]"
+                        class="describe__input"
+                        id="email-describe"
+                        placeholder=" "
+                        name="email">
+
+                <label for="email-describe" class="describe__label">Email</label>
+
+                <button class="describe__submit-btn" type="submit">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                            <path d="M4 12H20" stroke="white"/>
+                            <path d="M14 6L20 12L14 18" stroke="white"/>
+                        </g>
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="describe__footer">
+
+        @@include('../partials/global/small-footer.html')
+
+    </div>
+
+</section>

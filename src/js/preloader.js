@@ -1,12 +1,14 @@
-import {disablePageScroll, enablePageScroll} from '@fluejs/noscroll';
 
+
+
+import {lockScroll, unlockScroll} from "./utils/scroll-lock.js";
 
 const preloaderNum = document.querySelector('.preloader__number');
 const preloader = document.querySelector('.preloader');
 
 let progress = 0;
 
-disablePageScroll();
+lockScroll()
 
 const interval = setInterval(() => {
     progress += 1;
@@ -24,6 +26,7 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         preloader.style.display = 'none';
-        enablePageScroll();
+
+        unlockScroll()
     }, 1000);
 });

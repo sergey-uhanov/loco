@@ -1,0 +1,134 @@
+@use "../global/mixins" as mix;
+
+
+.posters-section {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(15, 15, 15) 0%, rgb(8, 8, 8) 100%);
+  padding: 9.05rem 0 0 0;
+  position: relative;
+
+  @include mix.respond-to('tablet') {
+    padding: 7.85rem 0 0 0;
+  }
+  @include mix.respond-to('mobile') {
+    padding: 6.75rem 0 0 0;
+  }
+  @include mix.respond-to(600) {
+    padding: 5.3rem 0 0 0;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__name-section {
+    position: absolute;
+    top: 26px;
+    left: 40px;
+    font-weight: 700;
+    font-size: .5rem;
+    line-height: 1.7066;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.13);
+    transform: rotate(-90deg);
+    @include mix.respond-to(600) {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -55px;
+      width: 50px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.13);
+      display: block;
+    }
+  }
+
+  &__text {
+    max-width: 28.16rem;
+    margin: 0 auto;
+    color: var(--white);
+    padding-bottom: mix.rem(135);
+    @include mix.respond-to('tablet') {
+      padding-bottom: 7.3rem;
+    }
+    @include mix.respond-to('mobile') {
+      padding-bottom: 6rem;
+    }
+    @include mix.respond-to(600) {
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--white);
+    margin-bottom: mix.rem(34);
+    @include mix.respond-to('tablet') {
+      font-size: 2rem;
+      margin-bottom: 1.7rem
+    }
+    @include mix.respond-to('mobile') {
+      margin-bottom: 1.5rem
+    }
+    @include mix.respond-to(600) {
+      text-align: left;
+      font-size: 1.62rem;
+      margin-bottom: 0.9rem;
+    }
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 0.88rem;
+    line-height: 1.7066;
+    text-align: center;
+    color:var(--sec-color);
+    @include mix.respond-to(600) {
+      text-align: left;
+    }
+  }
+
+  &__posters-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    @include mix.respond-to('tablet') {
+      gap: mix.rem(6);
+    }
+    @include mix.respond-to('mobile') {
+      gap: mix.rem(5);
+    }
+    &_short-gap{
+      gap: 0.3rem;
+    }
+  }
+
+  &__background-text{
+    position: absolute;
+    top: -44px;
+    left: 23%;
+    font-weight: 700;
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3841911764705882) 32%, rgba(255,255,255,0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.06;
+    @include mix.respond-to('tablet'){
+      display: none;
+    }
+
+  }
+
+  &_white-bg {
+    padding: 0;
+    background: transparent;
+  }
+
+}

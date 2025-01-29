@@ -61,7 +61,7 @@ export const styles = () =>
         .pipe(sass().on('error', sass.logError)) // Компиляция SCSS
         .pipe(autoprefixer({cascade: false})) // Добавление автопрефиксов
         .pipe(cleanCSS()) // Минификация CSS
-        .pipe(concat('styles.min.css')) // Объединение в один файл
+        // .pipe(concat('styles.min.css')) // Объединение в один файл
         .pipe(gulp.dest(paths.styles.dest)) // Сохранение в папку назначения
         .pipe(bs.stream()); // Обновление в браузере
 

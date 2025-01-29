@@ -1,0 +1,115 @@
+@use "../global/mixins" as mix;
+
+
+.full-poster {
+  max-width: 100%;
+  aspect-ratio: 2/1;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: inline-block;
+
+  @include mix.respond-to('mobile') {
+    aspect-ratio: 1/1;
+    max-width: mix.rem(672);
+  }
+
+  &__description,
+  &__link,
+  &__data {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &:hover {
+    .full-poster__item {
+      transform: scale(1.03);
+    }
+
+    .full-poster__description,
+    .full-poster__link,
+    .full-poster__data {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &_alt {
+
+  }
+
+  &__data {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 400;
+    font-size: 0.62rem;
+    line-height: 1.7066;
+    color: var(--white);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &__item {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: mix.rem(27);
+    left: mix.rem(30);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.26;
+    color: var(--text-color);
+    @include mix.respond-to('mobile') {
+      bottom: 4.18rem;
+      left: 2.07rem;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: mix.rem(35);
+    right: mix.rem(150);
+    font-weight: 700;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--white);
+    @include mix.respond-to('mobile') {
+      bottom: 1.78rem;
+      right: auto;
+      left: 3rem;
+    }
+  }
+
+  &__link::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 9px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    bottom: 5px;
+    left: -15px;
+  }
+
+  &__link:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 63px;
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    bottom: 5px;
+    right: -75px;
+  }
+}
