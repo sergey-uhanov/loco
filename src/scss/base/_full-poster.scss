@@ -35,10 +35,6 @@
     }
   }
 
-  &_alt {
-
-  }
-
   &__data {
     position: absolute;
     top: 2rem;
@@ -68,6 +64,7 @@
     font-size: 1.25rem;
     line-height: 1.26;
     color: var(--text-color);
+
     @include mix.respond-to('mobile') {
       bottom: 4.18rem;
       left: 2.07rem;
@@ -84,6 +81,7 @@
     text-transform: uppercase;
     text-align: right;
     color: var(--white);
+
     @include mix.respond-to('mobile') {
       bottom: 1.78rem;
       right: auto;

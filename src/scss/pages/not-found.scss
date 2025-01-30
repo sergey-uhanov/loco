@@ -13,7 +13,6 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
-
 }
 
 .not-found {
@@ -29,6 +28,7 @@
     @include mix.respond-to('mobile') {
       padding-left: mix.rem(137);
     }
+
     @include mix.respond-to(600) {
       padding-left: 0;
     }
@@ -38,9 +38,11 @@
     font-weight: 700;
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
+
     @include mix.respond-to('mobile') {
       font-size: 2rem;
     }
+
     @include mix.respond-to(600) {
       font-size: 1.62rem;
     }

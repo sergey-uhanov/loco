@@ -1,6 +1,5 @@
 @use "../global/mixins" as mix;
 
-//====================================================================================================
 .header {
   position: fixed;
   top: 0;
@@ -47,6 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include mix.respond-to('tablet') {
       flex-grow: 0;
     }
@@ -55,11 +55,12 @@
   &__list {
     display: flex;
     align-items: center;
-
     column-gap: 3rem;
+
     @include mix.respond-to('tablet') {
       column-gap: 3rem;
     }
+
     @include mix.respond-to('500') {
       column-gap: 5rem;
     }
@@ -97,10 +98,12 @@
   padding: mix.rem(17) mix.rem(48);
   margin-left: 2.2rem;
   transition: border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
+
   @include mix.respond-to('tablet') {
     padding: mix.rem(14.5) mix.rem(35);
     margin-left: 0.5rem;
   }
+
   @include mix.respond-to('mobile') {
     display: none;
   }
@@ -120,6 +123,7 @@
 }
 
 .menu__list_pc-menu {
+
   @include mix.respond-to('tablet') {
     display: none;
   }
@@ -133,7 +137,6 @@
 }
 
 
-//====================================================================================================
 .menu-burger {
   position: absolute;
   top: 0;
@@ -147,10 +150,12 @@
   transition: transform 1s ease;
   transform: translateX(0%);
   z-index: 10;
+
   @include mix.respond-to('mobile') {
     padding-top: mix.rem(356);
     padding-left: mix.rem(188);
   }
+
   @include mix.respond-to(600) {
     padding-top: mix.rem(152);
     padding-left: 86px;
@@ -158,11 +163,11 @@
 
   &__list {
     max-width: mix.rem(233);
+
     @include mix.respond-to('mobileSmall') {
       display: flex;
       flex-direction: column;
       align-items: center;
-
     }
   }
 
@@ -172,9 +177,9 @@
     color: var(--white);
     opacity: 0.5;
     transition: transform 0.3s ease-in-out;
+
     @include mix.respond-to('mobileSmall') {
       font-size: 1.62rem;
-
     }
   }
 
@@ -184,6 +189,7 @@
 
   &__item_button {
     display: none;
+
     @include mix.respond-to(767) {
       display: block;
       width: 9.87rem;
@@ -206,10 +212,9 @@
 }
 
 
-//Burger
-
 .icon-menu {
   display: none;
+
   @include mix.respond-to('tablet') {
     display: block;
     position: absolute;
@@ -218,9 +223,11 @@
     width: mix.rem(28);
     height: mix.rem(18);
     z-index: 5;
+
     @media (any-hover: none) {
       cursor: default;
     }
+
     span {
       transition: all 0.3s ease 0s;
       position: absolute;
@@ -229,10 +236,12 @@
       width: 100%;
       height: mix.rem(1);
       background-color: var(--white);
+
       @include mix.respond-to('tablet') {
         left: 0;
       }
     }
+
     &::before {
       content: "";
       transition: all 0.3s ease 0s;
@@ -241,10 +250,12 @@
       width: 100%;
       height: mix.rem(1);
       background-color: var(--white);
+
       @include mix.respond-to('mobile') {
         left: 0;
       }
     }
+
     &::after {
       content: "Menu";
       transition: all 0.3s ease 0s;
@@ -253,9 +264,11 @@
       position: absolute;
       width: 100%;
       height: mix.rem(2);
+
       @include mix.respond-to('tablet') {
         left: 53px;
       }
+
       @include mix.respond-to('mobile') {
         content: '';
         display: none;
@@ -282,9 +295,11 @@
       }
     }
   }
+
   @include mix.respond-to('mobile') {
     left: 12.41rem;
   }
+
   @include mix.respond-to(767) {
     left: auto;
     right: 23px;

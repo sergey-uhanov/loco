@@ -4,12 +4,15 @@
 .text-section {
 
   padding: 5.7rem 0 mix.rem(96) mix.rem(0);
+
   @include mix.respond-to('tablet') {
     padding: mix.rem(88) 0 mix.rem(82) mix.rem(0);
   }
+
   @include mix.respond-to('mobile') {
     padding: 4.52rem 0 4.92rem mix.rem(0);
   }
+
   @include mix.respond-to(600) {
     padding: 4.02rem 0 2.62rem mix.rem(0);
   }
@@ -25,6 +28,7 @@
       padding-top: 6.5rem;
       padding-bottom: 3.7rem;
     }
+
     @include mix.respond-to(600) {
       padding-top: 0.4rem;
       padding-bottom: 2.3rem;
@@ -33,14 +37,17 @@
 
   &__content {
     padding-left: mix.rem(133);
+
     @include mix.respond-to('tablet') {
       padding-left: mix.rem(103);
     }
+
     @include mix.respond-to('mobile') {
       padding-left: 4.73rem;
     }
+
     @include mix.respond-to(600) {
-      padding-left: 0rem;
+      padding-left: 0;
     }
   }
 
@@ -51,6 +58,7 @@
     color: var(--pri-color);
     max-width: mix.rem(419);
     margin-bottom: 0.9rem;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 1.5rem;
     }
@@ -69,30 +77,35 @@
     color: var(--pri-color);
     opacity: 0.7;
     max-width: mix.rem(715);
+
     @include mix.respond-to('mobile') {
       max-width: mix.rem(522);
     }
 
     &_alt-width {
+
       @include mix.respond-to('tablet') {
         max-width: mix.rem(602);
 
       }
+
       @include mix.respond-to('mobile') {
         max-width: mix.rem(520);
-
       }
     }
   }
 
   &__paragraph:not(:last-child) {
     margin-bottom: mix.rem(40);
+
     @include mix.respond-to('tablet') {
       margin-bottom: 1.2rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 2rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 1.3rem;
     }
@@ -118,14 +131,17 @@
     line-height: 1.70;
     color: var(--pri-color);
     opacity: 0.7;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 1.9rem;
     }
+
     @include mix.respond-to('mobile') {
       max-width: mix.rem(470);
       line-height: 1.60;
       margin-bottom: 1.9rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 2.3rem;
     }
@@ -152,6 +168,7 @@
     text-align: right;
     color: var(--pri-color);
     position: relative;
+
     @include mix.respond-to('tablet') {
       margin-left: 1rem;
     }

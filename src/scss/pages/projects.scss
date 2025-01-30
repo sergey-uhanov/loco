@@ -8,12 +8,15 @@
 .project-first-screen {
   padding-top: 13rem;
   padding-bottom: mix.rem(5);
+
   @include mix.respond-to('tablet') {
     padding-top: 4.2rem;
   }
+
   @include mix.respond-to('mobile') {
     padding-top: 2.9rem;
   }
+
   @include mix.respond-to(600) {
     padding-top: 3.5rem;
   }
@@ -34,12 +37,14 @@
     line-height: 1.7066;
     color: var(--pri-color);
     margin-bottom: 2rem;
+
     @include mix.respond-to('tablet') {
       margin-left: 6.4rem;
       font-size: 0.88rem;
       line-height: 1.7066;
       margin-bottom: 2.1rem;
     }
+
     @include mix.respond-to(600) {
       margin-left: 0;
       margin-bottom: 0.2rem;
@@ -50,14 +55,16 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: mix.rem(124);
+
     @include mix.respond-to('tablet') {
       flex-direction: column;
       margin-bottom: 6.6rem;
     }
-    @include mix.respond-to('mobile') {
 
+    @include mix.respond-to('mobile') {
       margin-bottom: 6.5rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 3.9rem;
     }
@@ -70,15 +77,17 @@
     color: var(--pri-color);
     margin-left: mix.rem(133);
     white-space: nowrap;
+
     @include mix.respond-to('tablet') {
       margin-left: 6.3rem;
       margin-bottom: 0.6rem;
     }
+
     @include mix.respond-to('mobile') {
       font-size: 2rem;
       margin-left: 5.2rem;
-
     }
+
     @include mix.respond-to(600) {
       font-size: 1.62rem;
       margin-left: 0;
@@ -92,13 +101,14 @@
     font-size: 0.9rem;
     position: relative;
     top: 4px;
+
     @include mix.respond-to('tablet') {
       column-gap: 1.7rem;
       margin-left: 6.5rem;
       font-weight: 500;
       font-size: 0.69rem;
-
     }
+
     @include mix.respond-to('mobile') {
       margin-left: 5rem;
       column-gap: 1.8rem;
@@ -131,9 +141,11 @@
     width: 100%;
     height: 1px;
     background-color: var(--pri-color);
+
     @include mix.respond-to('tablet') {
       bottom: -4px;
     }
+
     @include mix.respond-to(650) {
       bottom: 5px;
       width: 95%;
@@ -144,6 +156,7 @@
 .custom-dropdown {
   position: relative;
   display: none;
+
   @include mix.respond-to(650) {
     display: block;
   }

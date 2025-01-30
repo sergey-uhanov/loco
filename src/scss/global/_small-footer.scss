@@ -3,6 +3,7 @@
 .small-footer {
   color: var(--sec-color);
   padding-bottom: mix.rem(26);
+
   @include mix.respond-to(600) {
     padding-bottom: 3.3rem;
   }
@@ -16,6 +17,7 @@
     height: mix.rem(26);
     display: flex;
     justify-content: space-between;
+
     @include mix.respond-to(600) {
       flex-direction: column;
     }
@@ -26,6 +28,7 @@
     font-size: 0.75rem;
     line-height: 1.52375;
     color: var(--sec-color);
+
     @include mix.respond-to(600) {
       margin-bottom: 1rem;
     }
@@ -37,32 +40,28 @@
     line-height: 1.52375;
     display: flex;
     column-gap: 1.9rem;
+
     @include mix.respond-to(600) {
       column-gap: 2.8rem;
     }
-
   }
 
   &__logo {
     width: 5.06rem;
-    font-family: var(--second-family);
+    font-family: var(--second-family) sans-serif;
     font-weight: 400;
     font-size: 0.94rem;
     line-height: 0.8;
     position: relative;
     text-align: right;
-    font-weight: 400;
-    font-size: 0.94rem;
-    line-height: 0.8;
 
     span {
       display: block;
       text-align: left;
-      font-family: var(--third-family);
+      font-family: var(--third-family) sans-serif;
       font-weight: 400;
       font-size: 0.81rem;
       line-height: 0.8;
-
     }
   }
 }

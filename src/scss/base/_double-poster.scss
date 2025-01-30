@@ -17,6 +17,7 @@
     @include mix.respond-to('mobile') {
       flex-wrap: nowrap;
     }
+
     @include mix.respond-to(600) {
       flex-wrap: wrap;
       gap: 4rem;
@@ -30,7 +31,6 @@
   }
 
   &__poster-wrapper {
-
     max-width: 40.81rem;
     aspect-ratio: 1/1;
     width: 100%;
@@ -129,6 +129,7 @@
     text-transform: uppercase;
     color: var(--white);
     transition: color 0.2s ease;
+
     @include mix.respond-to('mobile') {
       bottom: mix.rem(28);
       left: mix.rem(48);
@@ -161,19 +162,21 @@
     color: var(--pri-color);
     bottom: 3.5rem;
     left: 4.6rem;
+
     @include mix.respond-to('tablet') {
       bottom: 2.7rem;
       left: 4.1rem;
     }
+
     @include mix.respond-to('mobile') {
       bottom: 2.1rem;
       left: 2.9rem;
     }
+
     @include mix.respond-to(600) {
       bottom: 1.7rem;
       left: 2.6rem;
     }
-
   }
 
   &__link_alt-color:after, &__link_alt-color:before {
@@ -191,6 +194,7 @@
     @include mix.respond-to('tablet') {
       max-width: 42rem;
     }
+
     @include mix.respond-to('mobile') {
       max-width: 42rem;
       aspect-ratio: 1 / 1;
@@ -212,15 +216,18 @@
     padding-top: 23%;
     transition: color 0.2s ease;
     white-space: nowrap;
+
     @include mix.respond-to("tablet") {
       font-size: 1.25rem;
       line-height: 1.26776;
       padding-top: 13.6%;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 2rem;
       padding-top: 22%;
     }
+
     @include mix.respond-to(600) {
       padding-top: 19.8%;
       margin-bottom: 1rem;
@@ -228,6 +235,7 @@
   }
 
   &__poster-wrapper_white-bc:hover {
+
     .double-poster__title-card {
       color: var(--sec-color);
     }
@@ -239,6 +247,7 @@
     max-height: 323px;
     width: 100%;
     aspect-ratio: 1/1.3;
+
     @include mix.respond-to(1439) {
       max-width: 190px;
     }
@@ -247,7 +256,6 @@
   &__microposter {
     width: 100%;
     height: 100%;
-
   }
 
   &__title {
@@ -259,6 +267,7 @@
     left: mix.rem(56);
     bottom: 13.96rem;
     line-height: 1.2;
+
     @include mix.respond-to('tablet') {
       font-size: 1.25rem;
       bottom: 13.36rem;
@@ -274,32 +283,36 @@
         line-height: 1.26776;
         max-width: 12.6rem;
       }
+
       @include mix.respond-to(600) {
         max-width: 16.6rem;
         left: 1.5rem;
       }
+
       @include mix.respond-to(374) {
         bottom: 0;
       }
     }
 
     &_alt-bottom {
+
       @include mix.respond-to('tablet') {
         bottom: 5.8rem;
       }
+
       @include mix.respond-to('mobile') {
         bottom: 5.3rem;
         font-size: 1rem;
         line-height: 1.26776;
         max-width: 12.6rem;
       }
+
       @include mix.respond-to(600) {
         max-width: 16.6rem;
         left: 1.5rem;
         bottom: 2.6rem;
       }
     }
-
   }
 
   &__subtitle {
@@ -312,11 +325,13 @@
     color: var(--pri-color);
     opacity: 0.7;
     max-width: mix.rem(433);
+
     @include mix.respond-to('tablet') {
       left: 2.9rem;
       max-width: 20rem;
       bottom: 6.21rem;
     }
+
     @include mix.respond-to(374) {
       display: none;
     }
@@ -337,11 +352,11 @@
 
   &__mini-poster {
     display: none;
+
     @include mix.respond-to(600) {
       display: block;
       margin-bottom: 8.7rem;
     }
-
   }
 }
 

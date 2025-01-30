@@ -21,21 +21,20 @@
   }
 
   &__container {
-    //transform: translateY(-45%);
     width: 100%;
     margin-left: mix.rem(133);
     color: #fff;
+
     @include mix.respond-to('tablet') {
       margin-left: mix.rem(105);
-
     }
+
     @include mix.respond-to('mobile') {
       margin-left: 4.87rem;
-
     }
+
     @include mix.respond-to(600) {
       margin-left: 0;
-
     }
   }
 
@@ -44,6 +43,7 @@
     font-size: 2.25rem;
     color: var(--white);
     margin-bottom: 1.5rem;
+
     @include mix.respond-to('tablet') {
       font-size: 2rem;
       max-width: mix.rem(297);
@@ -51,9 +51,11 @@
         display: block;
       }
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 1.6rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 0.6rem;
       font-size: 1.62rem;
@@ -67,15 +69,17 @@
     line-height: 1.7;
     max-width: mix.rem(462);
     margin-bottom: mix.rem(62);
+
     @include mix.respond-to('tablet') {
       margin-bottom: 3rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 2rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 2rem;
-
     }
   }
 
@@ -86,7 +90,6 @@
       flex-direction: column;
       gap: 1.4rem;
     }
-
   }
 
   &__item {
@@ -114,10 +117,12 @@
       gap: 3.23rem;
       align-items: center;
     }
+
     @include mix.respond-to('mobile') {
       left: 3rem;
       gap: 1.7rem;
     }
+
     @include mix.respond-to(600) {
       left: 1.4rem;
       bottom: 1.5rem;
@@ -145,7 +150,6 @@
       transform: scale(1.1);
     }
   }
-
 }
 
 .one-project-posters {
@@ -155,9 +159,11 @@
   @include mix.respond-to('tablet') {
     padding-bottom: 7.9rem;
   }
+
   @include mix.respond-to('mobile') {
     padding-bottom: 6.5rem;
   }
+
   @include mix.respond-to(600) {
     padding-bottom: 4.7rem;
   }
@@ -190,6 +196,7 @@
     @include mix.respond-to('tablet') {
       margin: 3.9rem auto 0 auto;
     }
+
     @include mix.respond-to('mobile') {
       margin: 3.1rem auto 0 auto;
     }
@@ -198,7 +205,6 @@
 
 .next-project {
   position: relative;
-  //top: -1px;
   background: #000;
 
   &__sub-title {
@@ -229,15 +235,15 @@
       font-size: 2rem;
       margin-bottom: mix.rem(96);
     }
+
     @include mix.respond-to('mobile') {
 
       margin-bottom: mix.rem(72);
     }
+
     @include mix.respond-to(600) {
       font-size: 1.62rem;
       margin-bottom: 2.8rem;
     }
-
   }
-
 }

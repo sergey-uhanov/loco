@@ -18,6 +18,7 @@
   width: 100%;
   overflow: hidden;
   z-index: 1;
+
   @include mix.respond-to('mobile') {
     height: 100vh;
   }
@@ -48,6 +49,7 @@
     @include mix.respond-to(1440) {
       max-width: 85.3vw;
     }
+
     @include mix.respond-to('tablet') {
       max-width: 84.3vw;
     }
@@ -55,13 +57,14 @@
     @include mix.respond-to('mobile') {
       max-width: 85vw;
     }
+
     @include mix.respond-to(600) {
       max-width: 84.3vw;
     }
+
     @include mix.respond-to('mobileSmall') {
       max-width: 84.3vw;
     }
-
   }
 
   &__nav-block {
@@ -171,15 +174,18 @@
     bottom: 42.7%;
     transform: translateY(50%);
     padding-left: 12.4rem;
+
     @include mix.respond-to(1400) {
       bottom: 41.7%;
       padding-left: 6.2rem;
     }
+
     @include mix.respond-to(900) {
       bottom: 44.4%;
       padding-left: 4.7rem;
       max-width: 19.4rem;
     }
+
     @include mix.respond-to('600') {
       bottom: 37%;
       padding-left: 0;
@@ -191,18 +197,20 @@
     font-size: 3.4rem;
     letter-spacing: 0.02em;
     line-height: 1.2;
+
     @include mix.respond-to('tablet') {
       font-size: 3rem;
       letter-spacing: 0.01em;
     }
+
     @include mix.respond-to('mobile') {
       font-size: 2.7rem;
       line-height: 1.25;
     }
+
     @include mix.respond-to('600') {
       font-size: 2.5rem;
       line-height: 0.9752;
-
     }
   }
 
@@ -215,13 +223,16 @@
     text-transform: uppercase;
     position: relative;
     max-width: mix.rem(106);
+
     @include mix.respond-to('tablet') {
       margin-top: 1.9rem;
       margin-left: 1.2rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-top: 1.8rem;
     }
+
     @include mix.respond-to(600) {
       margin-top: 2.3rem;
       margin-left: 1rem;
@@ -260,10 +271,11 @@
     position: absolute;
     z-index: 10;
     bottom: 41px;
+
     @include mix.respond-to('tablet') {
       bottom: 31px;
-
     }
+
     @include mix.respond-to(600) {
       bottom: 23px;
     }
@@ -273,12 +285,15 @@
     display: flex;
     gap: 15px;
     margin-right: 7.73rem;
+
     @include mix.respond-to('tablet') {
       margin-right: 4.83rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-right: 4rem;
     }
+
     @include mix.respond-to(650) {
       display: none;
     }
@@ -295,9 +310,11 @@
 
   &__select {
     margin-right: mix.rem(72);
+
     @include mix.respond-to('tablet') {
       margin-right: 2.6rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-right: 2rem;
     }
@@ -314,9 +331,11 @@
     @include mix.respond-to('tablet') {
       margin-right: 2.5rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-right: 2rem;
     }
+
     @include mix.respond-to(600) {
       position: absolute;
       bottom: 17px;
@@ -338,6 +357,7 @@
       font-size: 0.69rem;
       letter-spacing: 0.06em;
     }
+
     @include mix.respond-to(600) {
       white-space: nowrap;
       position: absolute;
@@ -359,8 +379,8 @@
     line-height: 0.9752;
     letter-spacing: 0.04em;
     color: transparent;
-
     -webkit-text-stroke: 0.5px var(--white);
+
     @include mix.respond-to('tablet') {
       font-size: 2rem;
       line-height: 0.9752;
@@ -368,6 +388,7 @@
       right: 22px;
       bottom: 55px;
     }
+
     @include mix.respond-to('mobile') {
       font-size: 2rem;
       line-height: 0.9752;
@@ -376,6 +397,7 @@
       bottom: 59px;
       white-space: nowrap;
     }
+
     @include mix.respond-to(600) {
       position: absolute;
       font-size: 1.12rem;
@@ -387,6 +409,7 @@
       white-space: nowrap;
       color: var(--white);
     }
+
     @include mix.respond-to(374) {
       right: -24px;
       bottom: 104px;
@@ -416,14 +439,15 @@
     padding-left: 6.22rem;
     padding-bottom: mix.rem(124);
   }
+
   @include mix.respond-to('mobile') {
     padding-top: 8.37rem;
     padding-left: 4.72rem;
     padding-bottom: 6.1rem;
   }
+
   @include mix.respond-to(700) {
     padding-top: mix.rem(24.5);
-
     padding-left: 0;
     padding-bottom: mix.rem(64);
   }
@@ -431,26 +455,30 @@
   &__container {
     position: relative;
     padding-left: 8.22rem;
+
     @include mix.respond-to('tablet') {
       padding-left: 3.52rem;
     }
+
     @include mix.respond-to('mobile') {
       padding-left: 4.72rem;
     }
+
     @include mix.respond-to(600) {
       padding-left: 1.5rem;
-
     }
   }
 
   &__big-img {
     position: absolute;
     right: 0;
+
     @include mix.respond-to(1320) {
       img {
         width: 349px;
       }
     }
+
     @include mix.respond-to(950) {
       display: none;
     }
@@ -461,17 +489,20 @@
     padding-top: mix.rem(80);
     padding-bottom: mix.rem(262);
     padding-left: 4rem;
+
     @include mix.respond-to(1200) {
       padding-left: 0;
       padding-top: mix.rem(56);
       padding-bottom: mix.rem(193);
       max-width: 27.8rem;
     }
+
     @include mix.respond-to('mobile') {
       padding-top: mix.rem(0);
       padding-bottom: mix.rem(204);
       max-width: mix.rem(520);
     }
+
     @include mix.respond-to('600') {
       padding-bottom: mix.rem(198);
     }
@@ -488,6 +519,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(130, 130, 130, 0.35);
+
     @include mix.respond-to('tablet') {
       left: -46px;
       top: 80px;
@@ -503,14 +535,17 @@
     font-size: 2.25rem;
     color: var(--pri-color);
     margin-bottom: 2rem;
+
     @include mix.respond-to('tablet') {
       font-size: 2rem;
       line-height: 1.3;
       margin-bottom: 0.6rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 0.8rem;
     }
+
     @include mix.respond-to(600) {
       font-size: 1.62rem;
     }
@@ -530,9 +565,11 @@
 
   &__description:nth-child(3) {
     margin-bottom: 3.7rem;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 2.3rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 2.1rem;
     }
@@ -571,17 +608,19 @@
     display: flex;
     column-gap: 20.8rem;
     padding-left: 4rem;
+
     @include mix.respond-to('tablet') {
       column-gap: 13rem;
       padding-left: 0;
     }
+
     @include mix.respond-to('mobile') {
       column-gap: 4.9rem;
       padding-left: 0;
     }
+
     @include mix.respond-to(600) {
       flex-direction: column;
-
     }
   }
 
@@ -592,15 +631,15 @@
   &__main-img {
 
     @include mix.respond-to('tablet') {
-
       max-width: 190px;
       max-height: 237px;
       aspect-ratio: 16 / 9;
     }
+
     @include mix.respond-to('mobile') {
       width: 153px;
-
     }
+
     @include mix.respond-to(600) {
       width: 131px;
       height: 163px;
@@ -611,21 +650,25 @@
     position: absolute;
     top: mix.rem(-124);
     left: mix.rem(238);
+
     @include mix.respond-to('tablet') {
       width: 190px;
       top: -5.95rem;
       left: 9.7rem;
     }
+
     @include mix.respond-to('mobile') {
       width: 383px;
       top: -8.75rem;
       left: 8.7rem;
     }
+
     @include mix.respond-to(600) {
       width: 264px;
       top: -7.15rem;
       left: 3.8rem;
     }
+
     @include mix.respond-to(374) {
       width: 220px;
     }
@@ -640,6 +683,7 @@
     opacity: 0.7;
     padding-top: mix.rem(152);
     position: relative;
+
     @include mix.respond-to('tablet') {
       font-weight: 300;
       font-size: 1rem;
@@ -647,10 +691,12 @@
       padding-top: 3.45rem;
       max-width: 19.65rem;
     }
+
     @include mix.respond-to('mobile') {
       padding-top: 13.25rem;
       max-width: 17.85rem;
     }
+
     @include mix.respond-to(600) {
       max-width: 100%;
       padding-top: 4.9rem;
@@ -667,13 +713,15 @@
     font-weight: 700;
     font-size: 2.25rem;
     color: var(--pri-color);
+
     @include mix.respond-to('tablet') {
       left: -30px;
       font-size: 1.62rem;
       transform: translateY(-3px);
     }
+
     @include mix.respond-to(600) {
-      left: 0px;
+      left: 0;
     }
   }
 }
@@ -690,9 +738,11 @@
   @include mix.respond-to('tablet') {
     padding-top: mix.rem(100);
   }
+
   @include mix.respond-to('mobile') {
     padding-top: 86px;
   }
+
   @include mix.respond-to(600) {
     padding-top: 58px;
   }
@@ -758,12 +808,15 @@
     position: relative;
     z-index: 1;
     padding: 0 8.3rem 0 8.1rem;
+
     @include mix.respond-to('tablet') {
       padding: 0 6.4rem 0 6.3rem;
     }
+
     @include mix.respond-to('mobile') {
       padding: 0 6.7rem 0 4.7rem;
     }
+
     @include mix.respond-to(600) {
       padding: 0;
     }
@@ -773,6 +826,7 @@
     font-weight: 700;
     font-size: 2.25rem;
     margin-bottom: 1.1rem;
+
     @include mix.respond-to(600) {
       font-size: 1.62rem;
     }
@@ -785,12 +839,15 @@
     max-width: mix.rem(390);
     margin-bottom: 4rem;
     opacity: 0.6;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 3.5rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 3rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 2.4rem;
     }
@@ -800,15 +857,18 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 4.5rem;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 3.8rem;
     }
+
     @include mix.respond-to('mobile') {
       flex-wrap: wrap;
       justify-content: end;
       row-gap: mix.rem(58);
       margin-bottom: 0;
     }
+
     @include mix.respond-to(600) {
       justify-content: flex-start;
     }
@@ -817,13 +877,11 @@
   &__locations {
     display: flex;
     gap: mix.rem(106);
+
     @include mix.respond-to('tablet') {
       gap: 2.82rem;
     }
-    @include mix.respond-to('mobile') {
 
-
-    }
     @include mix.respond-to(600) {
       flex-wrap: wrap;
       row-gap: 2.5rem;
@@ -832,6 +890,7 @@
 
   &__location-item:nth-child(1) {
     width: 129px;
+
     @include mix.respond-to('mobile') {
       width: 100%;
       max-width: 129px;
@@ -840,13 +899,15 @@
 
   &__location-item:nth-child(2) {
     width: 158px;
+
     @include mix.respond-to('mobile') {
       width: 100%;
       max-width: 158px;
       margin-right: 1.6rem;
     }
+
     @include mix.respond-to(600) {
-      margin-right: 0rem;
+      margin-right: 0;
       max-width: 134px;
     }
   }
@@ -888,10 +949,12 @@
   &__strange-block {
     position: relative;
     top: 6px;
+
     @include mix.respond-to('mobile') {
       top: 0;
       right: 21px;
     }
+
     @include mix.respond-to(600) {
       right: 0;
       top: -1rem;
@@ -903,6 +966,7 @@
     font-size: 0.69rem;
     letter-spacing: 0.06em;
     margin-bottom: 1.4rem;
+
     @include mix.respond-to('mobile') {
       margin-bottom: 0.8rem;
     }
@@ -930,10 +994,12 @@
     background: var(--white);
     color: var(--pri-color);
     transition: background 0.2s ease-in-out;
+
     @include mix.respond-to('mobile') {
       position: relative;
       top: -45px;
     }
+
     @include mix.respond-to(600) {
       position: static;
       margin-top: 1.8rem;
@@ -949,6 +1015,7 @@
     margin-top: 7.5rem;
     z-index: 10;
     width: 100%;
+
     @include mix.respond-to('mobile') {
       margin-top: 3.2rem;
     }

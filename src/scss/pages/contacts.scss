@@ -10,7 +10,6 @@
 
 .contact-section {
   padding-top: 6rem;
-  //padding-bottom: 10rem;
 
   &__container {
     position: relative;
@@ -24,9 +23,11 @@
   }
 
 }
-main{
-  flex: 1 ;
+
+main {
+  flex: 1;
 }
+
 .contact-page {
   display: flex;
   flex-direction: column;
@@ -45,9 +46,11 @@ main{
   @include mix.respond-to('tablet') {
     padding-top: mix.rem(100);
   }
+
   @include mix.respond-to('mobile') {
     padding-top: 86px;
   }
+
   @include mix.respond-to(600) {
     padding-top: 58px;
   }
@@ -113,12 +116,15 @@ main{
     position: relative;
     z-index: 1;
     padding: 0 8.3rem 0 8.1rem;
+
     @include mix.respond-to('tablet') {
       padding: 0 6.4rem 0 6.3rem;
     }
+
     @include mix.respond-to('mobile') {
       padding: 0 6.7rem 0 4.7rem;
     }
+
     @include mix.respond-to(600) {
       padding: 0;
     }
@@ -128,6 +134,7 @@ main{
     font-weight: 700;
     font-size: 2.25rem;
     margin-bottom: 1.1rem;
+
     @include mix.respond-to(600) {
       font-size: 1.62rem;
     }
@@ -140,12 +147,15 @@ main{
     max-width: mix.rem(390);
     margin-bottom: 4rem;
     opacity: 0.6;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 3.5rem;
     }
+
     @include mix.respond-to('mobile') {
       margin-bottom: 3rem;
     }
+
     @include mix.respond-to(600) {
       margin-bottom: 2.4rem;
     }
@@ -155,15 +165,18 @@ main{
     display: flex;
     justify-content: space-between;
     margin-bottom: 4.5rem;
+
     @include mix.respond-to('tablet') {
       margin-bottom: 3.8rem;
     }
+
     @include mix.respond-to('mobile') {
       flex-wrap: wrap;
       justify-content: end;
       row-gap: mix.rem(58);
       margin-bottom: 0;
     }
+
     @include mix.respond-to(600) {
       justify-content: flex-start;
     }
@@ -172,13 +185,11 @@ main{
   &__locations {
     display: flex;
     gap: mix.rem(106);
+
     @include mix.respond-to('tablet') {
       gap: 2.82rem;
     }
-    @include mix.respond-to('mobile') {
 
-
-    }
     @include mix.respond-to(600) {
       flex-wrap: wrap;
       row-gap: 2.5rem;
@@ -187,6 +198,7 @@ main{
 
   &__location-item:nth-child(1) {
     width: 129px;
+
     @include mix.respond-to('mobile') {
       width: 100%;
       max-width: 129px;
@@ -195,11 +207,13 @@ main{
 
   &__location-item:nth-child(2) {
     width: 158px;
+
     @include mix.respond-to('mobile') {
       width: 100%;
       max-width: 158px;
       margin-right: 1.6rem;
     }
+
     @include mix.respond-to(600) {
       margin-right: 0rem;
       max-width: 134px;
@@ -207,12 +221,10 @@ main{
   }
 
   &__location-item:nth-child(3) {
+
     @include mix.respond-to('mobile') {
-      width: 160px;
-      @include mix.respond-to('mobile') {
-        width: 100%;
-        max-width: 160px;
-      }
+      width: 100%;
+      max-width: 160px;
     }
   }
 
@@ -235,6 +247,7 @@ main{
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.36528;
+
     @include mix.respond-to(600) {
       margin-bottom: 1rem;
     }
@@ -243,10 +256,12 @@ main{
   &__strange-block {
     position: relative;
     top: 6px;
+
     @include mix.respond-to('mobile') {
       top: 0;
       right: 21px;
     }
+
     @include mix.respond-to(600) {
       right: 0;
       top: -1rem;
@@ -258,6 +273,7 @@ main{
     font-size: 0.69rem;
     letter-spacing: 0.06em;
     margin-bottom: 1.4rem;
+
     @include mix.respond-to('mobile') {
       margin-bottom: 0.8rem;
     }
@@ -285,10 +301,12 @@ main{
     background: var(--white);
     color: var(--pri-color);
     transition: background 0.2s ease-in-out;
+
     @include mix.respond-to('mobile') {
       position: relative;
       top: -45px;
     }
+
     @include mix.respond-to(600) {
       position: static;
       margin-top: 1.8rem;
@@ -304,10 +322,10 @@ main{
     margin-top: 7.5rem;
     z-index: 10;
     width: 100%;
+
     @include mix.respond-to('mobile') {
       margin-top: 3.2rem;
     }
   }
-
 }
 
